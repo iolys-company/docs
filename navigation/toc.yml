@@ -22,8 +22,6 @@
       href: ../guide/parallel-workspaces.md
     - name: Usage & costs
       href: ../guide/usage.md
-    - name: Web interface
-      href: ../guide/web.md
     - name: Settings
       href: ../guide/settings.md
 - name: Providers & models
@@ -39,8 +37,6 @@
       href: ../providers/kimi.md
     - name: Kiro
       href: ../providers/kiro.md
-    - name: API providers
-      href: ../providers/api-providers.md
     - name: OpenRouter
       href: ../providers/openrouter.md
     - name: DeepSeek
@@ -51,6 +47,8 @@
       href: ../providers/databricks.md
     - name: Ollama
       href: ../providers/ollama.md
+    - name: API providers
+      href: ../providers/api-providers.md
     - name: Reasoning & speed
       href: ../providers/reasoning.md
 - name: Customize your workflow

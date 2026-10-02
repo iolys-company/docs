@@ -1,0 +1,59 @@
+# iolys documentation
+
+> iolys is an AI development workspace for Visual Studio on Windows. Connect coding-agent providers, hosted APIs, or Ollama models to work with your solution, review changes, and customize agent workflows.
+
+The published documentation is at https://docs.getiolys.com/.
+The links below point to the Markdown sources of these guides.
+Available models, tools, authentication, and usage reporting depend on the provider and account. Screenshots illustrate the interface and are not current model or pricing inventories.
+
+## Get started
+
+- [Introduction](https://raw.githubusercontent.com/iolys-company/docs/main/index.md): Product overview and starting points.
+- [Installation](https://raw.githubusercontent.com/iolys-company/docs/main/guide/installation.md): Requirements, extension installation, and first provider connection.
+- [Your first task](https://raw.githubusercontent.com/iolys-company/docs/main/guide/quickstart.md): Attach context, plan a task, implement changes, and review the result.
+
+## Work with iolys
+
+- [Conversations](https://raw.githubusercontent.com/iolys-company/docs/main/guide/chat.md): Manage tasks, follow-ups, and conversation history.
+- [Files, images, and context](https://raw.githubusercontent.com/iolys-company/docs/main/guide/context.md): Attach files, selections, and images to a conversation.
+- [Review and undo changes](https://raw.githubusercontent.com/iolys-company/docs/main/guide/review.md): Inspect differences and undo tracked edits.
+- [Git and GitHub](https://raw.githubusercontent.com/iolys-company/docs/main/guide/git.md): Work with repository changes, commits, and pull requests.
+- [Parallel workspaces](https://raw.githubusercontent.com/iolys-company/docs/main/guide/parallel-workspaces.md): Create, use, and clean up isolated Git worktrees.
+- [Usage and costs](https://raw.githubusercontent.com/iolys-company/docs/main/guide/usage.md): Understand context, quotas, token usage, and cost estimates.
+- [Settings](https://raw.githubusercontent.com/iolys-company/docs/main/guide/settings.md): Find provider, model, permission, integration, and chat controls.
+
+## Providers and models
+
+- [Choose a provider](https://raw.githubusercontent.com/iolys-company/docs/main/providers/index.md): Compare connection routes and authentication requirements.
+- [Claude Code](https://raw.githubusercontent.com/iolys-company/docs/main/providers/claude-code.md): Managed CLI installation, sign-in, tools, and usage.
+- [Codex](https://raw.githubusercontent.com/iolys-company/docs/main/providers/codex.md): Managed CLI setup, models, reasoning controls, and account usage.
+- [Kimi](https://raw.githubusercontent.com/iolys-company/docs/main/providers/kimi.md): Kimi Code connection, models, tools, and subscription usage.
+- [Kiro](https://raw.githubusercontent.com/iolys-company/docs/main/providers/kiro.md): Managed CLI installation, authentication, and supported features.
+- [API providers](https://raw.githubusercontent.com/iolys-company/docs/main/providers/api-providers.md): Provider API keys and compatible endpoints.
+- [OpenRouter](https://raw.githubusercontent.com/iolys-company/docs/main/providers/openrouter.md): Models, native tools, reasoning, and account credit.
+- [DeepSeek](https://raw.githubusercontent.com/iolys-company/docs/main/providers/deepseek.md): API connection, reasoning, Web Search, and account balance.
+- [OpenCode Go](https://raw.githubusercontent.com/iolys-company/docs/main/providers/opencode-go.md): Subscription connection, models, context, and usage.
+- [Databricks](https://raw.githubusercontent.com/iolys-company/docs/main/providers/databricks.md): Model Serving endpoints and model capabilities.
+- [Ollama](https://raw.githubusercontent.com/iolys-company/docs/main/providers/ollama.md): Local or remote servers, models, and context allocation.
+- [Reasoning and speed](https://raw.githubusercontent.com/iolys-company/docs/main/providers/reasoning.md): Reasoning effort and supported service tiers.
+
+## Customize your workflow
+
+- [Tools and capabilities](https://raw.githubusercontent.com/iolys-company/docs/main/customization/tools.md): Built-in tools, provider capabilities, and integrations.
+- [Permissions](https://raw.githubusercontent.com/iolys-company/docs/main/customization/permissions.md): Approval modes and tool, command, and MCP access.
+- [Agent skills](https://raw.githubusercontent.com/iolys-company/docs/main/customization/skills.md): Reusable workflows and project knowledge.
+- [Custom agents](https://raw.githubusercontent.com/iolys-company/docs/main/customization/agents.md): Specialist instructions and explicit tool access.
+- [MCP servers](https://raw.githubusercontent.com/iolys-company/docs/main/customization/mcp.md): External tools through Model Context Protocol.
+
+## Reference and help
+
+- [Tool reference](https://raw.githubusercontent.com/iolys-company/docs/main/reference/tools.md): Built-in tools and their availability conditions.
+- [Shortcuts and commands](https://raw.githubusercontent.com/iolys-company/docs/main/reference/shortcuts.md): Keyboard actions and chat commands.
+- [Data and privacy](https://raw.githubusercontent.com/iolys-company/docs/main/reference/privacy.md): Provider requests, local storage, analytics, and diagnostic reports.
+- [Troubleshooting](https://raw.githubusercontent.com/iolys-company/docs/main/guide/troubleshooting.md): Startup, provider, context, permission, and workspace issues.
+
+## Optional
+
+- [Product website](https://getiolys.com/): Product news and release articles.
+- [Install from Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=iolys.iolys-visual-studio): Extension listing.
+- [Community](https://discord.com/invite/NMnFZmPsc5): Questions and feedback.

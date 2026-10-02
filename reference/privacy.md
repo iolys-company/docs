@@ -41,8 +41,6 @@ Reported information includes:
 
 The analytics payload excludes prompt text, source contents, filesystem paths, Git URLs, conversation titles, and user-defined provider configuration names. Deleting a conversation or worktree does not remove previously accumulated analytics totals.
 
-Administrators can disable backend enrollment/reporting for a server process with `BackendEnrollment__Enabled=false`. This is a server configuration setting, not a chat permission switch; apply it to the companion server's environment before startup. It does not disable external model requests or MCP connections.
-
 ## Diagnostic reports
 
 `/send_diagnostics` opens a report card for the selected session. Review the destination and choose **Send diagnostics**, **Send without a message**, or **Cancel**.
