@@ -427,3 +427,8 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# DocFX output and local tooling
+_site/
+.cache/
+.preview/

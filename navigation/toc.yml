@@ -1,0 +1,75 @@
+- name: Get started
+  expanded: true
+  items:
+    - name: Introduction
+      href: ../index.md
+    - name: Installation
+      href: ../guide/installation.md
+    - name: Your first task
+      href: ../guide/quickstart.md
+- name: Work with iolys
+  expanded: true
+  items:
+    - name: Conversations
+      href: ../guide/chat.md
+    - name: Files, images & context
+      href: ../guide/context.md
+    - name: Review & undo changes
+      href: ../guide/review.md
+    - name: Git & GitHub
+      href: ../guide/git.md
+    - name: Parallel workspaces
+      href: ../guide/parallel-workspaces.md
+    - name: Usage & costs
+      href: ../guide/usage.md
+    - name: Web interface
+      href: ../guide/web.md
+    - name: Settings
+      href: ../guide/settings.md
+- name: Providers & models
+  expanded: true
+  items:
+    - name: Choose a provider
+      href: ../providers/index.md
+    - name: Claude Code
+      href: ../providers/claude-code.md
+    - name: Codex
+      href: ../providers/codex.md
+    - name: Kimi
+      href: ../providers/kimi.md
+    - name: Kiro
+      href: ../providers/kiro.md
+    - name: API providers
+      href: ../providers/api-providers.md
+    - name: OpenRouter
+      href: ../providers/openrouter.md
+    - name: Databricks
+      href: ../providers/databricks.md
+    - name: Ollama
+      href: ../providers/ollama.md
+    - name: Reasoning & speed
+      href: ../providers/reasoning.md
+- name: Customize your workflow
+  expanded: true
+  items:
+    - name: Tools & capabilities
+      href: ../customization/tools.md
+    - name: Permissions & modes
+      href: ../customization/permissions.md
+    - name: Agent Skills
+      href: ../customization/skills.md
+    - name: Custom agents
+      href: ../customization/agents.md
+    - name: MCP servers
+      href: ../customization/mcp.md
+- name: Reference & help
+  expanded: true
+  items:
+    - name: Tool reference
+      href: ../reference/tools.md
+    - name: Shortcuts & commands
+      href: ../reference/shortcuts.md
+    - name: Data & privacy
+      href: ../reference/privacy.md
+    - name: Troubleshooting
+      href: ../guide/troubleshooting.md
