@@ -5,7 +5,7 @@ description: Confirmed keyboard actions and slash commands in the Visual Studio 
 
 # Keyboard and chat commands
 
-These actions apply to the **Visual Studio chat**. Focus matters: keys used by a suggestion popup, title editor, or transcript are handled by that control. The companion web interface and Visual Studio's own editor shortcuts can differ.
+These actions apply to the **Visual Studio chat**. Focus matters: keys used by a suggestion popup, title editor, or transcript are handled by that control. Visual Studio's own editor shortcuts can differ.
 
 ## Compose a message
 

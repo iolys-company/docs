@@ -6,7 +6,7 @@ $failures = [System.Collections.Generic.List[string]]::new()
 $htmlFiles = @(Get-ChildItem -LiteralPath $root -Filter '*.html' -Recurse)
 $idCache = @{}
 
-foreach ($required in @('index.html', '404.html', 'index.json', 'toc.json', 'navigation/toc.json', 'public/main.css', 'public/main.js', '.nojekyll')) {
+foreach ($required in @('index.html', '404.html', 'index.json', 'toc.json', 'navigation/toc.json', 'public/main.css', 'public/main.js', '.nojekyll', 'llm.txt', 'llms.txt', 'robots.txt', 'sitemap.xml')) {
     if (-not (Test-Path -LiteralPath (Join-Path $root $required) -PathType Leaf)) {
         $failures.Add("Missing generated file: $required")
     }
@@ -46,9 +46,32 @@ foreach ($file in $htmlFiles) {
 
 # Search and navigation are loaded at runtime and must resolve under a project subpath.
 $search = Get-Content (Join-Path $root 'index.json') -Raw | ConvertFrom-Json -AsHashtable
+$config = Get-Content (Join-Path $PSScriptRoot '../docfx.json') -Raw | ConvertFrom-Json
+$canonicalBase = [Uri]::new($config.build.globalMetadata._siteUrl)
+[xml]$sitemap = Get-Content (Join-Path $root 'sitemap.xml') -Raw
+$sitemapUrls = @($sitemap.urlset.url.loc)
+if ($config.build.sitemap.baseUrl -cne $canonicalBase.AbsoluteUri) {
+    $failures.Add('Sitemap base URL does not match the canonical site URL.')
+}
+$robots = Get-Content (Join-Path $root 'robots.txt') -Raw
+if ($robots -notmatch "(?m)^Sitemap: $([regex]::Escape($canonicalBase.AbsoluteUri + 'sitemap.xml'))\r?$") {
+    $failures.Add('robots.txt does not point to the canonical sitemap.')
+}
 foreach ($entry in $search.Keys) {
-    if (-not (Test-Path -LiteralPath (Join-Path $root $entry) -PathType Leaf)) {
+    $page = Join-Path $root $entry
+    if (-not (Test-Path -LiteralPath $page -PathType Leaf)) {
         $failures.Add("Search index: missing page '$entry'")
+        continue
+    }
+    $expectedCanonical = [Uri]::new($canonicalBase, $entry).AbsoluteUri
+    $head = [regex]::Match((Get-Content -LiteralPath $page -Raw), '(?is)<head\b[^>]*>(.*?)</head>').Groups[1].Value
+    $canonicalLinks = [regex]::Matches($head, '(?i)<link\b[^>]*\brel\s*=\s*["'']canonical["''][^>]*>')
+    $canonicalHref = [regex]::Match(($canonicalLinks.Value -join ''), '(?i)\bhref\s*=\s*["'']([^"'']+)["'']').Groups[1].Value
+    if ($canonicalLinks.Count -ne 1 -or $canonicalHref -cne $expectedCanonical) {
+        $failures.Add("${entry}: expected one canonical link to '$expectedCanonical' in the HTML head.")
+    }
+    if ($sitemapUrls -cnotcontains $expectedCanonical) {
+        $failures.Add("Sitemap: missing canonical URL '$expectedCanonical'")
     }
 }
 if ($search.Count -lt 20) { $failures.Add('Search index contains fewer than 20 articles.') }
@@ -57,4 +80,4 @@ if ($failures.Count) {
     $failures | ForEach-Object { Write-Output $_ }
     throw "$($failures.Count) site validation error(s)."
 }
-Write-Output "Checked $($htmlFiles.Count) HTML files and $($search.Count) search entries: all local links, anchors, and assets resolve."
+Write-Output "Checked $($htmlFiles.Count) HTML files and $($search.Count) search entries: local links, anchors, assets, canonical URLs, and sitemap references are valid."

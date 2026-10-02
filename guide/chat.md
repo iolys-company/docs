@@ -59,7 +59,3 @@ Use a handoff when a new conversation needs the current discussion:
 4. Review the new conversation's draft, add your next request, and send it.
 
 Loading starts a new conversation and places the handoff in the composer; it does not send automatically. Saving uses the same filename, so preserve an earlier handoff under another name if you need both. The file contains conversation text: review it before sharing or committing it.
-
-## Use the companion web interface
-
-Select **View > Iolys Web** to open the companion local web interface. Choose the connected Visual Studio instance, then open or create a task. It shares conversation state with the local server and supports streamed replies, model selection, permissions, clarification prompts, and cancellation.

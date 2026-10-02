@@ -19,12 +19,19 @@ Open <http://localhost:8080>. Rebuild after editing Markdown or the theme. Gener
 
 1. Push this repository to `iolys-company/docs` on GitHub.
 2. In **Settings → Pages → Build and deployment**, select **GitHub Actions** as the source.
-3. Push to `main` or manually run the **Documentation** workflow.
-4. Open <https://iolys-company.github.io/docs/> after the deployment succeeds.
+3. Configure `docs.getiolys.com` as the custom domain in GitHub Pages settings, with its DNS pointing to GitHub Pages.
+4. Push to `main` or manually run the **Documentation** workflow.
+5. Open <https://docs.getiolys.com/> after the deployment succeeds.
 
 The workflow restores the pinned tool, builds with warnings treated as errors, validates generated links and assets, and deploys `_site`. Pull requests run build and validation only. Deployment uses GitHub's Pages artifact and environment; it does not require a personal access token or a `gh-pages` branch.
 
-For a different repository name or a custom domain, update `build.sitemap.baseUrl` in `docfx.json` and the recovery link in `404.html`. Configure the custom domain in GitHub Pages settings. Content, assets, navigation, and search use relative links so the documentation works under `/docs/` as well as at a domain root. The error page is self-contained so it also works for missing nested URLs.
+The canonical domain is `https://docs.getiolys.com/`. The theme emits an absolute `rel="canonical"` link for each documentation page using `build.globalMetadata._siteUrl` and its generated HTML path, including `index.html`, matching the sitemap. The 404 page remains `noindex`. Content, assets, navigation, and search use relative links so local previews and project subpaths still work. The error page is self-contained so it also works for missing nested URLs.
+
+## Crawler and AI discovery files
+
+DocFX copies `llm.txt`, `llms.txt`, and `robots.txt` into the generated site. The two LLM files contain the same overview and links to the documentation's Markdown sources on GitHub; keep them identical when updating the guides. `llms.txt` is the conventional filename for AI discovery, while `llm.txt` provides an alternate URL. The site check requires all three files and the sitemap.
+
+`robots.txt` allows crawling and points to `https://docs.getiolys.com/sitemap.xml`. It is published at the [host root required by crawlers](https://developers.google.com/crawling/docs/robots-txt/create-robots-txt): `https://docs.getiolys.com/robots.txt`. When changing the public URL, update `build.globalMetadata._siteUrl` and `build.sitemap.baseUrl` in `docfx.json`, the sitemap URL in `robots.txt`, the documentation URL in both LLM files, and the recovery link in `404.html`.
 
 ## Edit the documentation
 
@@ -36,6 +43,7 @@ For a different repository name or a custom domain, update `build.sitemap.baseUr
 | `customization/` | Permissions, tools, skills, agents, and MCP |
 | `reference/` | Tool catalog, shortcuts, and data handling |
 | `navigation/toc.yml` | Article hierarchy and previous/next order |
+| `templates/iolys/layout/_master.tmpl` | DocFX modern layout with a canonical URL for each page |
 | `templates/iolys/public/main.css` | Brand colors and responsive layout |
 | `templates/iolys/public/main.js` | Theme defaults, search shortcut, and screenshot links |
 | `assets/` | Local brand assets, product screenshots, and explanatory diagrams |
@@ -44,7 +52,7 @@ Add a Markdown page, include it in `navigation/toc.yml`, and link to its `.md` p
 
 Place screenshots beside the steps they illustrate and follow each with a short italic caption. Name the provider when showing provider-specific controls, and identify illustrative models or account values. Reuse existing assets rather than duplicating them. Keep explanatory diagrams in `assets/diagrams/` and give each SVG an accessible title and description. Record new image sources in `SOURCES.md`.
 
-The theme extends DocFX's `default` and `modern` templates. Search, mobile navigation, theme switching, code copying, the page outline, and article navigation remain DocFX features. Press **Ctrl+K** (or **Command+K**) to focus search; screenshots open at full size when clicked.
+The theme extends DocFX's `default` and `modern` templates. Its master layout copies the pinned modern template with one addition: the canonical link. Recheck that override when upgrading DocFX. Search, mobile navigation, theme switching, code copying, the page outline, and article navigation remain DocFX features. Press **Ctrl+K** (or **Command+K**) to focus search; clicking an image opens a large preview over the article. Close it with **Escape**, the close button, or a click outside the image.
 
 ## Content provenance and maintenance
 

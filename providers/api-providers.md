@@ -1,6 +1,6 @@
 ---
 title: API providers
-description: Configure OpenAI, Anthropic, Gemini, Groq, NVIDIA NIM, DeepSeek, OpenCode Go, and compatible endpoints in iolys.
+description: Configure OpenAI, Anthropic, Gemini, Groq, NVIDIA NIM, and compatible endpoints in iolys.
 ---
 
 # API providers
@@ -17,10 +17,6 @@ Connect hosted models with an API key or use your own compatible endpoint. API c
 6. Return to Chat, choose a tool-capable model, and follow the [quickstart](../guide/quickstart.md).
 
 Use the key-management link in the provider form when available. Keep credentials in provider settings rather than chat messages or project files. Access, quotas, model availability, and charges are controlled by the provider account.
-
-![OpenCode Go connection panel with the API Key field and Test Connection button](../assets/docs/provider/opencode_go/img/config.png)
-
-*Example saved-provider panel for OpenCode Go. Other API providers can show additional connection fields; no real key is displayed.*
 
 ## OpenAI
 
@@ -45,24 +41,6 @@ These providers have preset endpoints. Select the corresponding provider, enter 
 | NVIDIA NIM | NVIDIA Build | `https://integrate.api.nvidia.com/v1` |
 
 Use capability badges rather than assuming every model offers function tools, vision, or configurable reasoning. These hosted presets do not configure a separately deployed private model server.
-
-## OpenRouter
-
-Connect several model vendors through one OpenRouter API key. Its dedicated panel includes model search, capability and price filters, pinned selections, and account/key usage.
-
-Follow the [OpenRouter guide](openrouter.md) for setup, credit eligibility, reasoning, native tools, images, and reported costs.
-
-## DeepSeek
-
-Use the dedicated DeepSeek provider to connect with an API key, select a model, configure native **Web Search**, and read the account's reported balance.
-
-Follow the [DeepSeek guide](deepseek.md) for setup, reasoning, image support, search controls, and troubleshooting.
-
-## OpenCode Go
-
-Use the dedicated OpenCode Go provider for the Go subscription's model catalog, model-specific reasoning controls, and account usage windows. Go and Zen pay-as-you-go are separate services.
-
-Follow the [OpenCode Go guide](opencode-go.md) for setup, model selection, context limits, tools, images, and quota troubleshooting.
 
 ## Compatible endpoints
 
