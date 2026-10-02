@@ -9,6 +9,10 @@ A custom agent combines a reusable role, instructions, and a tool selection. Cre
 
 Agents appear beside **Agent** and **Plan** in the chat's agent selector. An agent definition describes a role; [parallel workspaces](../guide/parallel-workspaces.md) provide separate checkouts for tasks that need file isolation.
 
+![Custom agent workflow: define a role, capture it when a conversation starts, and keep that snapshot under existing permissions](../assets/diagrams/agent-snapshot.svg)
+
+*Each new conversation captures the selected agent definition. Later edits do not rewrite that conversation's role or tool selection.*
+
 ## Create an agent from chat
 
 1. Open the agent selector and choose **Create agent**.

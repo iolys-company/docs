@@ -18,6 +18,10 @@ Connect hosted models with an API key or use your own compatible endpoint. API c
 
 Use the key-management link in the provider form when available. Keep credentials in provider settings rather than chat messages or project files. Access, quotas, model availability, and charges are controlled by the provider account.
 
+![OpenCode Go connection panel with the API Key field and Test Connection button](../assets/docs/provider/opencode_go/img/config.png)
+
+*Example saved-provider panel for OpenCode Go. Other API providers can show additional connection fields; no real key is displayed.*
+
 ## OpenAI
 
 Choose **OpenAI** and set the server URL to `https://api.openai.com/v1` for the official API. Enter an instance name and OpenAI API key, select **Create**, and choose a model returned by the endpoint. The saved provider panel labels this address **Base URL**.

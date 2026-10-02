@@ -16,6 +16,11 @@ description: Learn how to install iolys, connect your AI providers, and build wi
 
 <div class="doc-meta"><span class="status-dot"></span> For Visual Studio on Windows <span class="meta-separator">/</span> Currently in beta</div>
 
+<figure class="product-figure">
+<img src="assets/docs/screenshots/wide-chat-history.png" alt="iolys inside Visual Studio with task history beside an API-client conversation and its model controls." width="1628" height="966">
+<figcaption>Your tasks, code discussions, and model controls in Visual Studio. Select a screenshot to open it at full size. Examples throughout these guides illustrate the interface; models and controls can vary by version.</figcaption>
+</figure>
+
 ## Start here
 
 Choose a starting point. Each guide takes you through the controls you will use in iolys.
@@ -32,11 +37,6 @@ Choose a starting point. Each guide takes you through the controls you will use 
 iolys is an AI development workspace for Visual Studio. It connects your solution, models, conversations, and development tools in one interface. You bring a provider account, API credentials, or a local model; iolys supplies the workflow around it.
 
 An agent can inspect project files, explain code, propose a plan, make changes, and use Visual Studio's build and test tools. The available actions depend on the model, enabled tools, selected mode, and permissions.
-
-<figure class="product-figure">
-<img src="assets/screenshots/theme/conversation-dark.png" alt="iolys conversation showing a cancellation-support task, completed tool calls, a code response, and the model and permission selectors." loading="lazy" width="1400" height="1520">
-<figcaption>A task, its tool activity, and your next message in the same workspace. Screenshots illustrate the interface; models and controls can vary by version.</figcaption>
-</figure>
 
 ## Choose your workflow
 

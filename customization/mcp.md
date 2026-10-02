@@ -7,6 +7,10 @@ description: Connect external tools with Model Context Protocol and control thei
 
 Model Context Protocol (MCP) connects iolys to additional tools, such as a documentation service, issue tracker, or database integration. Configure a server once and its enabled tools become available to selected [models with tool support](../providers/index.md).
 
+![MCP workflow: connect a server, enable its tools, and check each call against settings and permissions](../assets/diagrams/mcp-tool-call.svg)
+
+*Connecting a server makes its tools available for selection. Every call remains subject to tool settings, agent restrictions, and permissions.*
+
 ## Add a custom server
 
 1. Open **Tools and Skills**, select **Tools**, then **+ > Add custom MCP server**.

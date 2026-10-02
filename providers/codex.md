@@ -31,6 +31,10 @@ New conversations use standard speed. Additional speed tiers appear only when ad
 
 Codex streams responses and tool activity into Chat. You can cancel work, resume saved sessions, and send instructions during an active turn when steering is available.
 
+![Codex conversation showing file inspection, edits, verification activity, and the selected reasoning effort](../assets/docs/provider/codex/img/conversation-codex.png)
+
+*Tool progress appears above the response; model and effort remain visible in the composer. Demonstration conversation.*
+
 Shared [iolys tools](../customization/tools.md) and [MCP tools](../customization/mcp.md) respect the selected agent, mode, and permissions. The integration permits Codex-native Web Search, Generate Image, and Get Goal; actual availability depends on Codex. Native capabilities are not a promise that every wider Codex feature is available in iolys.
 
 Attach images to a model marked **Vision**. Shared project [skills](../customization/skills.md) can be invoked explicitly from the skill picker. Use the controls presented in iolys to configure the current task.
@@ -40,6 +44,10 @@ Attach images to a model marked **Vision**. Shared project [skills](../customiza
 The context view uses Codex counters when available and estimates its breakdown. iolys can compact context automatically before a new turn when usage reaches its configured threshold. Context size comes from model metadata when available.
 
 Open **Usage** for reported quota windows, reset times, and account credits. These account values can include activity outside this conversation. The Codex adapter does not calculate a dollar cost for each turn. See [usage and context](../guide/usage.md).
+
+![Codex Usage showing quota windows, credits, and an available usage reset](../assets/docs/provider/codex/img/usage-codex.png)
+
+*Illustrative quotas and credits. Reset controls appear only when the account reports an eligible reset.*
 
 ## Troubleshooting
 

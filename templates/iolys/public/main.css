@@ -113,8 +113,13 @@ article .table td { padding: .75rem; vertical-align: top; }
 article .alert { border-radius: 6px; border-left: 3px solid var(--iolys-cyan); color: var(--iolys-text); background: var(--iolys-panel); }
 article .alert h5 { font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; }
 article .alert p:last-child { margin-bottom: 0; }
-article img { display: block; max-width: 100%; height: auto; margin: 1.5rem auto; border: 1px solid var(--iolys-border); border-radius: 8px; }
-.screenshot-link { display: block; text-decoration: none; }
+article img { display: block; max-width: 100%; max-height: 680px; width: auto; height: auto; margin: 1.5rem auto; border: 1px solid var(--iolys-border); border-radius: 8px; }
+.screenshot-link { display: block; width: fit-content; max-width: 100%; margin-inline: auto; text-decoration: none; cursor: zoom-in; }
+.screenshot-link img { box-shadow: 0 8px 28px color-mix(in srgb, var(--iolys-canvas) 35%, transparent); }
+.screenshot-link:hover img { border-color: var(--iolys-gold); }
+article p:has(> .screenshot-link) { margin: 1.8rem 0 .65rem; }
+article p:has(> .screenshot-link) img { margin-block: 0; }
+article p:has(> .screenshot-link) + p:has(> em:only-child) { margin: 0 0 1.8rem; font-size: .8rem; line-height: 1.65; }
 .product-figure { margin-top: 1.6rem; }
 .product-figure img { max-height: 620px; width: auto; }
 figcaption { margin-top: .7rem; color: var(--iolys-muted); font-size: .76rem; line-height: 1.6; }

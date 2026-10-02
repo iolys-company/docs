@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="556" viewBox="0 0 520 556" role="img" aria-labelledby="mcp-title mcp-desc">
+  <title id="mcp-title">From MCP server to tool call</title>
+  <desc id="mcp-desc">Connect an MCP server using Streamable HTTP or a local stdio process. Enable the tools the agent can use. Each call is checked against tool settings and permissions, with approval requested when required.</desc>
+  <rect width="520" height="556" rx="20" fill="#100d1c"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="24" y="42" fill="#f5efff" font-size="28" font-weight="600">From MCP server to tool call</text>
+    <rect x="24" y="68" width="472" height="128" rx="14" fill="#1b172a" stroke="#47367e" stroke-width="2"/>
+    <circle cx="61" cy="106" r="20" fill="#d8a85d"/>
+    <text x="61" y="114" text-anchor="middle" fill="#100d1c" font-size="23" font-weight="700">1</text>
+    <text x="90" y="115" fill="#f5efff" font-size="26" font-weight="600">Connect a server</text>
+    <text x="90" y="149" fill="#c5bad7" font-size="22">Use Streamable HTTP</text>
+    <text x="90" y="178" fill="#c5bad7" font-size="22">or a local stdio process.</text>
+    <path d="M260 206 V220 M253 216 L260 224 L267 216" fill="none" stroke="#69c7d6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="24" y="236" width="472" height="128" rx="14" fill="#1b172a" stroke="#47367e" stroke-width="2"/>
+    <circle cx="61" cy="274" r="20" fill="#d8a85d"/>
+    <text x="61" y="282" text-anchor="middle" fill="#100d1c" font-size="23" font-weight="700">2</text>
+    <text x="90" y="283" fill="#f5efff" font-size="26" font-weight="600">Enable its tools</text>
+    <text x="90" y="317" fill="#c5bad7" font-size="22">Choose which server tools</text>
+    <text x="90" y="346" fill="#c5bad7" font-size="22">the agent can use.</text>
+    <path d="M260 374 V388 M253 384 L260 392 L267 384" fill="none" stroke="#69c7d6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="24" y="404" width="472" height="128" rx="14" fill="#1b172a" stroke="#47367e" stroke-width="2"/>
+    <circle cx="61" cy="442" r="20" fill="#d8a85d"/>
+    <text x="61" y="450" text-anchor="middle" fill="#100d1c" font-size="23" font-weight="700">3</text>
+    <text x="90" y="451" fill="#f5efff" font-size="26" font-weight="600">Check each call</text>
+    <text x="90" y="485" fill="#c5bad7" font-size="22">Apply tool settings and permissions.</text>
+    <text x="90" y="514" fill="#c5bad7" font-size="22">Ask when approval is required.</text>
+  </g>
+</svg>

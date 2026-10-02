@@ -19,6 +19,10 @@ Select **Context window usage** beside the composer. The window shows the availa
 
 The data depends on the provider and the available server snapshot. Read the explanatory text in the window: an estimate or a message saying no snapshot is available should not be treated as an exact provider measurement. For image-capable models, image accounting can also differ from text token estimates.
 
+![Context window usage expanded into system and user-context categories.](../assets/docs/provider/opencode_go/img/context-window.png)
+
+*Example context breakdown. The note below the categories explains which values are estimated.*
+
 When a task has accumulated unrelated material, start a new conversation and supply the relevant files or a concise summary. [Handoffs](chat.md#continue-with-a-handoff) can transfer a discussion to a new task, but a full transcript handoff still carries text; it is not automatic context compression.
 
 ## Check provider quotas
@@ -26,6 +30,10 @@ When a task has accumulated unrelated material, start a new conversation and sup
 Select **Show usage** in the chat toolbar. This button is shown when the selected provider supports usage reporting.
 
 Depending on the provider, the window can show percentages, used and remaining capacity, reset dates, credits, or account-specific limits. For example, Claude Code can report 5-hour and 7-day subscription quotas, model-specific weekly limits, and enabled extra usage when those values are available.
+
+![Claude Code Usage showing subscription windows, used and remaining percentages, and reset dates.](../assets/docs/provider/claude_code/img/usage.png)
+
+*Illustrative Claude Code quotas and dates. Available rows depend on the account and provider.*
 
 These limits belong to the provider account. Other clients using the same account may contribute to them. Consult the matching [provider guide](../providers/index.md) for its setup and supported reporting.
 
@@ -41,6 +49,10 @@ Open **Session statistics** from the toolbar. The view identifies the provider a
 - Estimated cost, estimated credits, and average credits per turn when supported.
 
 Session duration and processing time measure different parts of the workflow. A conversation can remain open while no model request is running.
+
+![Session Statistics showing duration, prompt, turn, tool-call, and modified-file counts.](../assets/screenshots/session-statistics.png)
+
+*An example session's statistics. Counts describe that conversation, while provider quotas describe account usage.*
 
 The window also provides the session ID and **Send diagnostics** for support. See [Troubleshooting](troubleshooting.md#send-a-diagnostic-report) before submitting a report.
 

@@ -25,6 +25,10 @@ For a code explanation, reading and search tools are usually enough. Implementin
 | Provider-native tools | Capabilities executed by the selected CLI or API, such as web search. | The model's tool group or provider settings, where supported. |
 | External MCP tools | Capabilities exposed by a connected service. | Server and tool controls under **MCP servers**. |
 
+![Tools and Skills picker with separate built-in, model, and MCP sections and individual tool checkboxes](../assets/docs/provider/openrouter/img/conversation-native-tools.png)
+
+*The picker separates built-in, model, and MCP tools. This OpenRouter example uses demonstration data; available tools depend on the provider.*
+
 The [tool reference](../reference/tools.md) lists built-in identifiers. Providers expose different native tools, and some native entries are informational: **This tool cannot be disabled during the session** means the integration does not support an individual toggle.
 
 ## Work with command integrations

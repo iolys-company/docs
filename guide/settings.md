@@ -15,6 +15,10 @@ Use the provider's setup page to install or update its supported CLI, complete a
 
 Use [Providers](../providers/index.md) to compare connection routes and find their individual setup instructions.
 
+![Manage Providers with connected providers and an OpenRouter model catalog.](../assets/screenshots/theme/models-dark.png)
+
+*Provider management with illustrative model names and prices. Each provider presents the controls it supports.*
+
 ## Set reasoning effort and speed
 
 Reasoning effort appears only when the selected model offers supported levels. Select one of the values shown for that model. The list is provider-specific: a level available on one model may disappear when you switch to another.
@@ -33,6 +37,10 @@ Where supported, the picker also offers **Speed** or **Fast mode**. Accelerated 
 | [Tool picker](../customization/tools.md) | The enabled built-in, native, skill, and external MCP capabilities. |
 
 These controls work together. Selecting a custom agent or enabling a tool does not bypass a permission request or a Plan-mode restriction.
+
+![The permission picker displaying Interactive, Auto, and Full Access with their descriptions.](../assets/docs/screenshots/permission-mode-picker.png)
+
+*Choose the permission level separately from the model and Agent or Plan mode.*
 
 For credential storage and automatic iolys backend reporting, see [Data and privacy](../reference/privacy.md). Chat permissions govern agent actions; they do not configure analytics or external services' retention policies.
 

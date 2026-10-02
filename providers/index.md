@@ -33,6 +33,10 @@ iolys brings your models and coding agents into one Visual Studio workflow. Add 
 
 For managed coding agents, iolys provides installation, version selection, updates, and removal. An existing CLI on your system does not replace the iolys-managed executable. Claude Code, Codex, and Kimi also use their own managed profiles, so sign in from iolys even if another application is already connected.
 
+![Manage Providers showing OpenRouter, Codex, and Claude Code connections beside a searchable model catalog.](../assets/screenshots/theme/models-dark.png)
+
+*Switch connections on the left and manage the selected provider on the right. This OpenRouter catalog shows demonstration models and prices.*
+
 ## Read model capabilities
 
 **Tools** identifies models that can use development tools. **Vision** indicates image input support. **Thinking** indicates reasoning support; adjustable reasoning effort is available only when the integration has valid choices for that model. See [reasoning and speed](reasoning.md) for the available controls.

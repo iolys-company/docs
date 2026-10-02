@@ -38,12 +38,20 @@ Plan mode supports investigation while restricting workspace-changing operations
 
 Select **Agent**. For a first task, choose **Interactive** permissions so you can inspect requests to edit files or run commands.
 
+![The permission picker showing Interactive, Auto, and Full Access.](../assets/docs/screenshots/permission-mode-picker.png)
+
+*Open the permission picker beside the model controls and choose Interactive for this walkthrough.*
+
 ```text
 Implement the cancellation change we discussed. Keep the existing public API
 compatible. Add a focused regression test and run the relevant tests.
 ```
 
 iolys shows the agent's tool activity as it works. When an approval request appears, check the action and its scope before choosing an option. You can use **Stop generating** to cancel active work.
+
+![An example cancellation-support task with completed tool calls, the code response, and a summary of verified behavior.](../assets/screenshots/theme/conversation-dark.png)
+
+*Read the tool activity and the explanation together. This example illustrates the workflow; verify the actual changes and tests in your solution.*
 
 ## 5. Review the result
 

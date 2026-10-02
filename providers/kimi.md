@@ -33,11 +33,19 @@ A recent cached model list can appear before a live session has authenticated. C
 
 For images, choose a **Vision** model and keep the iolys **read_image** tool enabled. Kimi receives an instruction to inspect the attachment through that tool. The file must be accessible to the server, and files outside the workspace can require permission. Restricting the tool in a custom agent can prevent image inspection.
 
+![Kimi conversation with an attached screenshot and image-inspection tool activity](../assets/docs/provider/kimi/img/conversation-image-support.png)
+
+*Kimi inspects attachments through the shared image tool. This screenshot illustrates the workflow with demonstration data.*
+
 Kimi's native **Web Search**, **Fetch URL**, and **Skill** tools are available with this integration and cannot be disabled individually in the session picker. Workspace edits, shell commands, and IDE operations use the shared [iolys tools](../customization/tools.md), subject to [permissions](../customization/permissions.md). Additional tools come from your [MCP configuration](../customization/mcp.md).
 
 ## Usage and sessions
 
 Open **Usage** for the reported plan, rolling quota windows, remaining allowance, reset dates, and quota warnings. iolys does not calculate Kimi-specific per-turn dollar costs. The context indicator is an estimate, not a billing report.
+
+![Kimi Usage showing rolling quota windows, remaining allowance, and reset labels](../assets/docs/provider/kimi/img/usage-kimi.png)
+
+*Usage windows are listed separately. The plan, allowance, and percentages are demonstration values.*
 
 Saved sessions resume when the CLI supports loading them and the session still exists. If a fresh CLI session is created, the visible iolys transcript does not establish that the original provider context was restored.
 

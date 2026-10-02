@@ -38,9 +38,11 @@ For a different repository name or a custom domain, update `build.sitemap.baseUr
 | `navigation/toc.yml` | Article hierarchy and previous/next order |
 | `templates/iolys/public/main.css` | Brand colors and responsive layout |
 | `templates/iolys/public/main.js` | Theme defaults, search shortcut, and screenshot links |
-| `assets/` | Local brand assets and product screenshots |
+| `assets/` | Local brand assets, product screenshots, and explanatory diagrams |
 
 Add a Markdown page, include it in `navigation/toc.yml`, and link to its `.md` path. DocFX rewrites those links to HTML. Give each page a title, description, and one H1. Use relative asset paths, descriptive image alt text, and screenshots with demonstration data.
+
+Place screenshots beside the steps they illustrate and follow each with a short italic caption. Name the provider when showing provider-specific controls, and identify illustrative models or account values. Reuse existing assets rather than duplicating them. Keep explanatory diagrams in `assets/diagrams/` and give each SVG an accessible title and description. Record new image sources in `SOURCES.md`.
 
 The theme extends DocFX's `default` and `modern` templates. Search, mobile navigation, theme switching, code copying, the page outline, and article navigation remain DocFX features. Press **Ctrl+K** (or **Command+K**) to focus search; screenshots open at full size when clicked.
 

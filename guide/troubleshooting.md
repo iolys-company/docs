@@ -57,6 +57,10 @@ Open the affected conversation and submit:
 
 You can also select **Send diagnostics** in **Session statistics**. The report card lets you add an optional description, choose **Send diagnostics** or **Send without a message**, or cancel. An autocomplete suggestion only inserts the command; it does not submit a report.
 
+![Diagnostic report card with an optional message, submission actions, included-files disclosure, and Cancel.](../assets/docs/images/send-diagnostics-preview.png)
+
+*Existing product-UI preview with example session data. Inspect Included files and coverage before submitting.*
+
 Review **Included files and coverage** before sending. The archive contains the captured session, including conversation text, persisted attachments, plans, permission decisions, and tool output, plus selected diagnostic logs. Session content can include source code or other sensitive material. This is an explicit support upload, not automatic reporting. See [Data and privacy](../reference/privacy.md#diagnostic-reports) for the distinction between session reports and automatic usage analytics.
 
 Only a confirmed submission shows **Sent** and a copyable support code. If offered, **Retry / check submission** checks or retries the same report. **Cancel** cannot retract data already accepted by support, and **Dismiss** only closes the card.

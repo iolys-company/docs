@@ -33,11 +33,19 @@ Attach PNG, JPEG, GIF, or WebP images up to **5 MiB per attachment**. An unreada
 
 Claude Code uses shared iolys workspace tools and configured [MCP tools](../customization/mcp.md). **Web Search** and **Fetch URL** are native Claude tools and can each be disabled under **Model Tools**. Other native Claude tools are outside this integration's allowlist; file and shell operations use iolys tools and permissions.
 
+![Claude Code's Model Tools section with separate Fetch URL and Web Search checkboxes](../assets/docs/provider/claude_code/img/conversation-native-tools.png)
+
+*Enable Claude's web tools individually. The conversation and completed calls are demonstration data.*
+
 Shared project [skills](../customization/skills.md) are supported. This provider also discovers project `.claude/skills` directories. Loading a skill does not enable Claude-specific hooks, shell interpolation, or native skill permission overrides. The shared iolys permission rules still apply.
 
 ## Usage and maintenance
 
 Open **Usage** for reported subscription quota windows, percentages, reset times, and additional model limits when available. iolys does not show a Claude Code per-turn dollar charge. Context usage is an estimate based on the most recent response, including reported cache tokens.
+
+![Claude Code Usage showing five-hour and weekly quota windows with reset times](../assets/docs/provider/claude_code/img/usage.png)
+
+*Compare quota windows and their resets. Plan details and percentages shown here are illustrative.*
 
 Use the provider panel to update, reinstall, or switch to a listed CLI version. **Uninstall removes the managed authentication and Claude session files.** A remaining iolys transcript does not recreate deleted Claude context. Disconnecting is a separate action and does not uninstall the CLI.
 

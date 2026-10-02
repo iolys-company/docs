@@ -47,6 +47,10 @@ Administrators can disable backend enrollment/reporting for a server process wit
 
 `/send_diagnostics` opens a report card for the selected session. Review the destination and choose **Send diagnostics**, **Send without a message**, or **Cancel**.
 
+![Diagnostic report card showing its destination, optional message, Included files and coverage, and send or cancel actions](../assets/docs/images/send-diagnostics-preview.png)
+
+*The report card identifies the destination and lets you inspect Included files and coverage before sending. Example data.*
+
 The archive includes the complete captured session folder and selected diagnostic logs. It can contain prompts, source excerpts, attachments, plans, tool output, and permission decisions. Supplemental logs are redacted, but that is not a promise to remove sensitive content from the original session files.
 
 There is no automatic session-diagnostics submission. **Sent** confirms remote receipt and provides a support code and expiration. Cancelling cannot retract data already accepted; dismissing the card only closes it.

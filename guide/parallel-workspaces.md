@@ -9,8 +9,6 @@ iolys can create a separate workspace and Git branch for an independent task, th
 
 This uses **Git worktrees**. You need Git and an open solution in a Git repository.
 
-![The Git worktrees window with branches, local changes, merge status, and open and removal actions.](../assets/screenshots/worktrees-window.png)
-
 ## Create an isolated task
 
 1. In Chat, select **Create a Git worktree** from the worktree control.
@@ -37,6 +35,10 @@ Use the regular [review workflow](review.md) in each workspace. Isolation separa
 ## Find and reopen workspaces
 
 Select **View Git worktrees**, or **View all worktrees** from the creation dialog. The window shows each branch and folder, local changes, merge information, and GitHub pull request status when available.
+
+![The Git worktrees window with branches, local changes, merge status, and open and removal actions.](../assets/screenshots/worktrees-window.png)
+
+*Illustrative branches, paths, and pull requests. Check local changes and merge status before removing a workspace.*
 
 **Open** loads a worktree in the current Visual Studio instance. Its dropdown also offers opening it in a new window. Use **Refresh** to update the list and status checks.
 

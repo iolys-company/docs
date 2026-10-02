@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="556" viewBox="0 0 520 556" role="img" aria-labelledby="agents-title agents-desc">
+  <title id="agents-title">From agent definition to conversation</title>
+  <desc id="agents-desc">Define a role with instructions and allowed tools. Starting a conversation captures the selected definition. That conversation keeps its snapshot; later edits affect new conversations, and permissions still apply.</desc>
+  <rect width="520" height="556" rx="20" fill="#100d1c"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="24" y="42" fill="#f5efff" font-size="28" font-weight="600">From definition to conversation</text>
+    <rect x="24" y="68" width="472" height="128" rx="14" fill="#1b172a" stroke="#47367e" stroke-width="2"/>
+    <circle cx="61" cy="106" r="20" fill="#d8a85d"/>
+    <text x="61" y="114" text-anchor="middle" fill="#100d1c" font-size="23" font-weight="700">1</text>
+    <text x="90" y="115" fill="#f5efff" font-size="26" font-weight="600">Define the role</text>
+    <text x="90" y="149" fill="#c5bad7" font-size="22">Give the agent instructions</text>
+    <text x="90" y="178" fill="#c5bad7" font-size="22">and choose its allowed tools.</text>
+    <path d="M260 206 V220 M253 216 L260 224 L267 216" fill="none" stroke="#69c7d6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="24" y="236" width="472" height="128" rx="14" fill="#1b172a" stroke="#47367e" stroke-width="2"/>
+    <circle cx="61" cy="274" r="20" fill="#d8a85d"/>
+    <text x="61" y="282" text-anchor="middle" fill="#100d1c" font-size="23" font-weight="700">2</text>
+    <text x="90" y="283" fill="#f5efff" font-size="26" font-weight="600">Start a conversation</text>
+    <text x="90" y="317" fill="#c5bad7" font-size="22">Capture the selected definition</text>
+    <text x="90" y="346" fill="#c5bad7" font-size="22">as this conversation's snapshot.</text>
+    <path d="M260 374 V388 M253 384 L260 392 L267 384" fill="none" stroke="#69c7d6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="24" y="404" width="472" height="128" rx="14" fill="#1b172a" stroke="#47367e" stroke-width="2"/>
+    <circle cx="61" cy="442" r="20" fill="#d8a85d"/>
+    <text x="61" y="450" text-anchor="middle" fill="#100d1c" font-size="23" font-weight="700">3</text>
+    <text x="90" y="451" fill="#f5efff" font-size="26" font-weight="600">Keep the snapshot</text>
+    <text x="90" y="485" fill="#c5bad7" font-size="22">Later edits affect new chats.</text>
+    <text x="90" y="514" fill="#c5bad7" font-size="22">Permissions still limit actions.</text>
+  </g>
+</svg>

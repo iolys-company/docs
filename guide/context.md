@@ -39,6 +39,10 @@ For a multi-file task, start with the entry point and the relevant tests. Let th
 
 Paste or attach an image when you want to discuss a screenshot, UI layout, or diagram. Select a model with image support; the model picker uses a **Vision** indicator where that capability is available.
 
+![An image attachment chip above a prepared prompt in the iolys composer.](../assets/docs/provider/openrouter/img/image-support-draft.png)
+
+*Illustrative draft with a removable image attachment. The displayed model is an example, and the message has not been sent.*
+
 ```text
 Compare this screenshot with the current settings page. Identify the layout
 differences, then propose the smallest changes needed to match it.

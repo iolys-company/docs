@@ -9,6 +9,8 @@ The permission selector controls how much an agent can do automatically. Start w
 
 ![The permission selector offers Interactive, Auto, and Full Access](../assets/docs/screenshots/permission-mode-picker.png)
 
+*Choose an approval mode from the chat toolbar. Tool-specific blocks and mandatory confirmations still apply.*
+
 ## Choose a permission mode
 
 Open the permission selector in the chat toolbar. A selection before a conversation sets the default for new sessions; changing it in an active conversation applies to that session.

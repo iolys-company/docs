@@ -46,6 +46,10 @@ Enable **Enable web search** in **Advanced settings** and apply it to request na
 
 This is a provider setting, rather than a Model Tools checkbox. Disabling local tools or choosing a restrictive custom agent does not turn this search setting off. Disable it explicitly when search should not be requested.
 
+![Databricks Advanced settings with Enable web search and Apply settings controls](../assets/docs/provider/databricks/img/advanced-settings-databricks.png)
+
+*Expand Advanced settings to change web search, then apply the change. Endpoint names, token indicator, and settings are demonstration data.*
+
 ## Costs and troubleshooting
 
 Conversation dollar values are approximate estimates from reported token usage and built-in price data. iolys does not provide a Databricks balance, DBU, quota, or billing dashboard.

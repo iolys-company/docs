@@ -40,6 +40,10 @@ The iolys `read_image` tool is hidden for Kiro because this integration does not
 
 Kiro exposes five native tools: **Knowledge**, **Subagent**, **Use AWS**, **Fetch URL**, and **Web Search**. They cannot be disabled individually in the session picker. AWS operations still depend on your AWS configuration and permissions.
 
+![Kiro's Model Tools section listing Knowledge, Subagent, Use AWS, Fetch URL, and Web Search without checkboxes](../assets/docs/provider/kiro/img/conversation-native-tools.png)
+
+*Kiro's five native tools are listed without individual switches. The surrounding conversation is a demonstration.*
+
 Shared [iolys tools](../customization/tools.md) follow your selected agent, mode, and [permissions](../customization/permissions.md). Native Kiro permission requests are a separate path and appear in the permission UI. **Plan mode restricts iolys tools but does not guarantee that every native Kiro action is read-only.** Review native requests accordingly.
 
 Project [skills](../customization/skills.md) use the shared `.agents/skills` directory through a Kiro compatibility link. A real directory already occupying `.kiro/skills` is preserved and can prevent that link from being created.
@@ -47,6 +51,10 @@ Project [skills](../customization/skills.md) use the shared `.agents/skills` dir
 ## Usage and maintenance
 
 Open **Usage** for the account's credit consumption, limit, plan, and reset label when reported. Completed turns can also show provider-reported credits. Credits are not dollars, and missing metering does not mean a free request. See [usage and context](../guide/usage.md).
+
+![Kiro Usage showing consumed credits, the plan limit, and the reset label](../assets/docs/provider/kiro/img/usage-kiro.png)
+
+*Compare consumed credits with the plan limit. This example uses a fictional plan and credit values.*
 
 Update or reinstall from the managed version controls. Uninstalling this managed CLI does not sign out the normal Kiro profile or remove a separate system installation.
 

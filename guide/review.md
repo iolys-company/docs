@@ -7,6 +7,10 @@ description: Inspect file differences, retain useful changes, and undo tracked e
 
 After an agent edits your workspace, review the code and the evidence that it works. iolys shows tracked file changes in the **Changes** panel, with added and removed line counts and actions for opening a diff or undoing an available change.
 
+![Workflow from agent changes to diff and test review, then keeping or undoing the changes; Git commit remains separate.](../assets/diagrams/review-workflow.svg)
+
+*Workflow overview. Keep dismisses the reviewed list; use Git separately to commit the files.*
+
 ## Inspect the result
 
 1. Wait for the agent to finish, or use **Stop generating** if you need it to stop.

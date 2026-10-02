@@ -46,6 +46,10 @@ Choose one route:
 
 Follow the matching [provider guide](../providers/index.md), then return to Chat and select a model. The available models and controls depend on the provider and your account.
 
+![Manage Providers with configured connections on the left, an Add Provider button, and the selected provider's model catalog on the right.](../assets/screenshots/theme/models-dark.png)
+
+*Manage Providers keeps your connections together. This OpenRouter example uses demonstration model names and prices; each provider has its own setup controls.*
+
 ## Verify the installation
 
 Select **Plan** and send a small request such as:

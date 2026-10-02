@@ -7,11 +7,13 @@ description: Manage tasks, queue follow-ups, read long responses, and move usefu
 
 An iolys conversation keeps your requests, replies, and tool activity together for a task. Conversations are associated with the solution and preserved across Visual Studio restarts.
 
-![An iolys conversation with an implementation result, tool activity, and model controls.](../assets/screenshots/theme/conversation-dark.png)
-
 ## Start and resume tasks
 
 Select **View > Iolys Chat** to open Chat. Use **New Thread** to start a separate task and **History** to reopen earlier conversations. The task title can be renamed, and tasks you no longer need can be deleted.
+
+![Visual Studio chat with the History sidebar open beside the selected conversation.](../assets/docs/screenshots/wide-chat-history.png)
+
+*History keeps earlier tasks beside the active conversation. Task names and conversation content are examples.*
 
 Choose the provider and model from the composer. Select **Agent** for implementation or **Plan** for investigation and planning. Plan restricts ordinary editing tools; builds, tests, and provider-native tools have additional rules described in [Permissions](../customization/permissions.md#keep-mode-and-permissions-separate). A [custom agent](../customization/agents.md) can provide a reusable role and tool selection.
 
@@ -38,6 +40,14 @@ Select **Read in document area** in the toolbar to give Chat the same space as a
 Hold **Ctrl** while scrolling over the conversation to zoom from 75% to 200%. With keyboard focus in the conversation, use **Ctrl+Plus**, **Ctrl+Minus**, and **Ctrl+0** to adjust or reset zoom. Zoom preferences are saved locally.
 
 Scrolling up pauses automatic following so you can read earlier messages. Returning to the bottom or sending a message resumes following new content. The chevron beside **Changes** collapses its file list without dismissing the changes.
+
+## Copy a message
+
+Select **Copy message** beside a reply or your own message to copy its text. The latest message keeps its copy button visible; hover over an earlier message to reveal its time and copy action.
+
+![Copy icons beside an earlier user message and the latest iolys response.](../assets/docs/screenshots/message-hover-copy.png)
+
+*The copy action belongs to the individual message. This example shows the earlier message while hovered.*
 
 ## Continue with a handoff
 

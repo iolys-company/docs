@@ -14,6 +14,10 @@ The model picker can expose extra controls for reasoning effort and speed. These
 3. If a reasoning-effort row appears, select one of its available levels.
 4. Send your next message with that configuration.
 
+![OpenCode Go model picker with the Effort dropdown open](../assets/docs/provider/opencode_go/img/reasoning-level.png)
+
+*Example effort selector for an OpenCode Go model. Demonstration choices illustrate the control; other models can offer different levels.*
+
 Use the provider's default while learning how a model behaves. A higher effort can help with a difficult investigation, but may increase response time and token use. Effort names are provider settings, not a comparable measure of quality across different models.
 
 The selection belongs to the conversation. When switching to a model without effort options, iolys clears or ignores an incompatible previous selection instead of sending an unsupported value.
@@ -39,6 +43,10 @@ The generic OpenAI-compatible integration, Google, Groq, NVIDIA NIM, and Ollama 
 When a provider advertises accelerated service tiers, the composer offers a speed choice. Codex reads these choices from its CLI model catalog.
 
 New conversations start on standard service. An accelerated tier is an explicit session choice; it does not become the default for all provider connections. Availability, usage rules, and billing depend on your provider account.
+
+![Codex model options showing separate Model, Effort, and Fast controls](../assets/website/codex-fast-mode.png)
+
+*Codex Fast selected independently of reasoning effort. This release screenshot illustrates the controls, not current model availability.*
 
 If the provider rejects the requested tier, the turn fails and iolys resets the next turn to standard. It does not automatically replay a turn that might already have performed actions. Read the error, review any completed work, and retry deliberately.
 

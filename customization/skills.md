@@ -7,6 +7,10 @@ description: Package reusable workflows and project knowledge for your iolys age
 
 A skill packages instructions for a repeatable task, together with any reference files, scripts, or assets it needs. Use skills for workflows such as reviewing a migration, writing release notes, or applying your team's testing conventions. Skills can travel with your repository and work across [providers](../providers/index.md).
 
+![Skill workflow: discover a skill, load its instructions, and use it within tool permissions](../assets/diagrams/skills-workflow.svg)
+
+*Skills provide reusable instructions when needed. Loading a skill does not grant permission to run its tools or scripts.*
+
 ## Create or import a skill
 
 1. Open **Tools and Skills** in the chat toolbar and select **Skills**.

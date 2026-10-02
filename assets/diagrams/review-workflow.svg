@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="548" viewBox="0 0 480 548" role="img" aria-labelledby="title description">
+  <title id="title">Review an agent's changes</title>
+  <desc id="description">After the agent changes files, review the diff and tests. Keep the files or undo and verify restored files. Keep dismisses the change list; commit separately in Git.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0L8 4L0 8Z" fill="#d8a85d"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="478" height="546" rx="16" fill="#100d1c" stroke="#47367e"/>
+  <g fill="#1b172a" stroke="#47367e" stroke-width="2">
+    <rect x="90" y="24" width="300" height="96" rx="10"/>
+    <rect x="60" y="168" width="360" height="112" rx="10"/>
+    <rect x="18" y="364" width="212" height="98" rx="10"/>
+    <rect x="250" y="364" width="212" height="98" rx="10"/>
+  </g>
+  <g fill="none" stroke="#d8a85d" stroke-width="2.5" marker-end="url(#arrow)">
+    <path d="M240 120V154"/>
+    <path d="M240 280V320H124V350"/>
+    <path d="M240 320H356V350"/>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <g fill="#f5efff" font-size="22" font-weight="600">
+      <text x="240" y="62">Agent changes</text>
+      <text x="240" y="211">Review diff + tests</text>
+      <text x="124" y="402">Keep files</text>
+      <text x="356" y="402">Undo / roll back</text>
+    </g>
+    <g fill="#c5bad7" font-size="20">
+      <text x="240" y="93">Complete the task</text>
+      <text x="240" y="245">Check every affected file</text>
+      <text x="124" y="435">Dismiss the list</text>
+      <text x="356" y="435">Verify restored files</text>
+      <text x="240" y="503">Keep does not create a commit.</text>
+      <text x="240" y="532">Commit separately in Git.</text>
+    </g>
+  </g>
+</svg>
