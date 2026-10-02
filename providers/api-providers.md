@@ -42,17 +42,23 @@ These providers have preset endpoints. Select the corresponding provider, enter 
 
 Use capability badges rather than assuming every model offers function tools, vision, or configurable reasoning. These hosted presets do not configure a separately deployed private model server.
 
+## OpenRouter
+
+Connect several model vendors through one OpenRouter API key. Its dedicated panel includes model search, capability and price filters, pinned selections, and account/key usage.
+
+Follow the [OpenRouter guide](openrouter.md) for setup, credit eligibility, reasoning, native tools, images, and reported costs.
+
 ## DeepSeek
 
-Choose **DeepSeek**, enter your key, and test the connection. iolys presets `https://api.deepseek.com` and can display the account's reported balance in **Usage**.
+Use the dedicated DeepSeek provider to connect with an API key, select a model, configure native **Web Search**, and read the account's reported balance.
 
-**Web Search** is DeepSeek's native model tool. Enable or disable it in the tool picker; the selection also remains subject to custom-agent restrictions. Support is checked when a real search-enabled request is sent. If the model explicitly rejects this tool, iolys disables search for that model and retries without it. Other API errors are not treated as evidence that search is unsupported.
+Follow the [DeepSeek guide](deepseek.md) for setup, reasoning, image support, search controls, and troubleshooting.
 
 ## OpenCode Go
 
-Choose **OpenCode Go**, enter your OpenCode key, and test the connection. The endpoint is preset to `https://opencode.ai/zen/go/v1`. This connection targets the Go subscription service; it does not configure the separate Zen pay-as-you-go service.
+Use the dedicated OpenCode Go provider for the Go subscription's model catalog, model-specific reasoning controls, and account usage windows. Go and Zen pay-as-you-go are separate services.
 
-iolys selects the appropriate API route for each supported model. Choose the model and its available reasoning effort in Chat. The catalog supplies context and capability information when available. Open **Usage** for reported 5-hour, weekly, and monthly consumption and resets. These values cover account activity, including other clients; they do not provide a monetary balance.
+Follow the [OpenCode Go guide](opencode-go.md) for setup, model selection, context limits, tools, images, and quota troubleshooting.
 
 ## Compatible endpoints
 

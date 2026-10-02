@@ -15,8 +15,10 @@ iolys brings your models and coding agents into one Visual Studio workflow. Add 
 | Codex from Visual Studio | [Codex](codex.md) | Interactive sign-in in the managed CLI |
 | A Kimi Code account | [Kimi](kimi.md) | Browser or device authorization |
 | A Kiro account | [Kiro](kiro.md) | Sign in with the managed Kiro executable |
-| OpenAI, Anthropic, Gemini, Groq, NVIDIA NIM, DeepSeek, or OpenCode Go | [API providers](api-providers.md) | Provider API key |
+| OpenAI, Anthropic, Gemini, Groq, or NVIDIA NIM | [API providers](api-providers.md) | Provider API key |
 | Several model vendors through one API | [OpenRouter](openrouter.md) | OpenRouter API key |
+| DeepSeek models and native Web Search | [DeepSeek](deepseek.md) | DeepSeek API key |
+| Models included in an OpenCode Go subscription | [OpenCode Go](opencode-go.md) | OpenCode API key |
 | Local models or your own Ollama server | [Ollama](ollama.md) | Server URL |
 | Your organization's Databricks Model Serving endpoints | [Databricks](databricks.md) | Workspace URL and token |
 | A compatible proxy or self-hosted gateway | [Compatible endpoints](api-providers.md#compatible-endpoints) | Gateway URL and its required credentials |

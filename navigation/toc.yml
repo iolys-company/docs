@@ -43,6 +43,10 @@
       href: ../providers/api-providers.md
     - name: OpenRouter
       href: ../providers/openrouter.md
+    - name: DeepSeek
+      href: ../providers/deepseek.md
+    - name: OpenCode Go
+      href: ../providers/opencode-go.md
     - name: Databricks
       href: ../providers/databricks.md
     - name: Ollama

@@ -27,9 +27,9 @@ The selection belongs to the conversation. When switching to a model without eff
 | [Kimi](kimi.md) | Uses the model catalog and the CLI's current configuration options. An on/off thinking control is different from graded effort. |
 | [Kiro](kiro.md) | Discovers the model's effort options through the CLI. Discovery can finish after the model list first appears. |
 | Anthropic API | Sends effort only when supported by the selected model. |
-| DeepSeek | Offers the effort choices supported by the current integration's catalog. |
+| [DeepSeek](deepseek.md) | Offers the effort choices supported by the current integration's catalog. |
 | [OpenRouter](openrouter.md) | Uses reasoning metadata from its model catalog; not all models offer a selector. |
-| OpenCode Go | Uses model-specific effort options. |
+| [OpenCode Go](opencode-go.md) | Uses model-specific effort options. |
 | [Databricks](databricks.md) | Depends on the endpoint's model profile and transport. |
 
 The generic OpenAI-compatible integration, Google, Groq, NVIDIA NIM, and Ollama do not expose this shared effort control in the current implementation. Reasoning text may still be displayed where a provider supplies it; that does not imply a configurable effort level.
