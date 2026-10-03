@@ -67,7 +67,7 @@ a { text-underline-offset: .22em; }
 .skip-link { position: fixed; z-index: 1100; top: -5rem; left: 1rem; padding: .8rem 1.2rem; background: var(--iolys-gold); color: var(--iolys-canvas); border-radius: 6px; }
 .skip-link:focus { top: 1rem; }
 .container-xxl { max-width: 1480px; }
-body > header { background: var(--iolys-canvas) !important; border-color: var(--iolys-border) !important; }
+body > header { height: auto; background: var(--iolys-canvas) !important; border-color: var(--iolys-border) !important; }
 .navbar { min-height: 76px; padding-block: .8rem; }
 .navbar-brand { display: inline-flex; align-items: center; flex: 0 0 auto; margin-right: 2rem; color: var(--iolys-text); font-family: "Cascadia Mono", Consolas, monospace; font-size: 1.65rem; font-weight: 750; letter-spacing: -.055em; line-height: 1; text-shadow: 3px 3px 0 var(--iolys-border); }
 .navbar-brand:hover, .navbar-brand:focus { color: var(--iolys-text); }
@@ -136,7 +136,8 @@ article .doc-lead { max-width: 620px; font-size: 1.1rem; line-height: 1.75; }
 .intro-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.4rem; margin-top: 1.6rem; }
 .doc-button { display: inline-flex; align-items: center; gap: 1.4rem; padding: .55rem 1.05rem; border: 1px solid var(--iolys-gold); border-radius: 6px; background: var(--iolys-gold); color: var(--iolys-canvas); font-size: .87rem; font-weight: 700; text-decoration: none; }
 .doc-button:hover { color: var(--iolys-canvas); background: var(--iolys-cyan); border-color: var(--iolys-cyan); }
-.navbar-install { flex-shrink: 0; margin-left: 1rem; white-space: nowrap; }
+.navbar-install { flex-shrink: 0; justify-content: center; height: 38px; margin-left: 1rem; padding: 0 .9rem; border-color: color-mix(in srgb, var(--iolys-gold) 45%, transparent); background: color-mix(in srgb, var(--iolys-gold) 10%, var(--iolys-canvas)); color: var(--iolys-gold); font-size: .83rem; font-weight: 650; line-height: 1; white-space: nowrap; }
+.navbar-install:hover { border-color: var(--iolys-gold); background: var(--iolys-gold); color: var(--iolys-canvas); }
 .text-action { font-size: .86rem; color: var(--iolys-text); font-weight: 600; text-decoration: none; }
 .text-action span { margin-left: .5rem; color: var(--iolys-gold); }
 .doc-meta { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; color: var(--iolys-muted); font-size: .7rem; }
