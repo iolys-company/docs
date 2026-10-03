@@ -43,7 +43,7 @@ DocFX copies `llm.txt`, `llms.txt`, and `robots.txt` into the generated site. Th
 | `customization/` | Permissions, tools, skills, agents, and MCP |
 | `reference/` | Tool catalog, shortcuts, and data handling |
 | `navigation/toc.yml` | Article hierarchy and previous/next order |
-| `templates/iolys/layout/_master.tmpl` | DocFX modern layout with a canonical URL for each page |
+| `templates/iolys/layout/_master.tmpl` | DocFX modern layout with canonical URLs and the shared Marketplace button |
 | `templates/iolys/public/main.css` | Brand colors and responsive layout |
 | `templates/iolys/public/main.js` | Theme defaults, search shortcut, and screenshot links |
 | `assets/` | Local brand assets, product screenshots, and explanatory diagrams |
@@ -52,7 +52,7 @@ Add a Markdown page, include it in `navigation/toc.yml`, and link to its `.md` p
 
 Place screenshots beside the steps they illustrate and follow each with a short italic caption. Name the provider when showing provider-specific controls, and identify illustrative models or account values. Reuse existing assets rather than duplicating them. Keep explanatory diagrams in `assets/diagrams/` and give each SVG an accessible title and description. Record new image sources in `SOURCES.md`.
 
-The theme extends DocFX's `default` and `modern` templates. Its master layout copies the pinned modern template with one addition: the canonical link. Recheck that override when upgrading DocFX. Search, mobile navigation, theme switching, code copying, the page outline, and article navigation remain DocFX features. Press **Ctrl+K** (or **Command+K**) to focus search; clicking an image opens a large preview over the article. Close it with **Escape**, the close button, or a click outside the image.
+The theme extends DocFX's `default` and `modern` templates. Its master layout copies the pinned modern template with a canonical link and a **Get iolys** button linking to the Visual Studio Marketplace. The button stays visible outside the collapsed mobile menu; the self-contained 404 page also includes that link. Recheck the layout override when upgrading DocFX. Search, mobile navigation, theme switching, code copying, the page outline, and article navigation remain DocFX features. Press **Ctrl+K** (or **Command+K**) to focus search; clicking an image opens a large preview over the article. Close it with **Escape**, the close button, or a click outside the image.
 
 ## Content provenance and maintenance
 

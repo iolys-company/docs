@@ -136,6 +136,7 @@ article .doc-lead { max-width: 620px; font-size: 1.1rem; line-height: 1.75; }
 .intro-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.4rem; margin-top: 1.6rem; }
 .doc-button { display: inline-flex; align-items: center; gap: 1.4rem; padding: .55rem 1.05rem; border: 1px solid var(--iolys-gold); border-radius: 6px; background: var(--iolys-gold); color: var(--iolys-canvas); font-size: .87rem; font-weight: 700; text-decoration: none; }
 .doc-button:hover { color: var(--iolys-canvas); background: var(--iolys-cyan); border-color: var(--iolys-cyan); }
+.navbar-install { flex-shrink: 0; margin-left: 1rem; white-space: nowrap; }
 .text-action { font-size: .86rem; color: var(--iolys-text); font-weight: 600; text-decoration: none; }
 .text-action span { margin-left: .5rem; color: var(--iolys-gold); }
 .doc-meta { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; color: var(--iolys-muted); font-size: .7rem; }
@@ -174,6 +175,8 @@ footer .flex-fill { display: flex; justify-content: space-between; flex-wrap: wr
 @media (max-width: 767.98px) {
   .navbar { min-height: 64px; }
   .navbar .container-xxl { flex-wrap: wrap !important; }
+  .navbar-brand { margin-right: .75rem; }
+  .navbar-install { margin-left: auto; }
   .navbar #navbar form.search { width: 100%; margin: .5rem 0; }
   .content { padding-inline: .75rem; }
   article { font-size: .94rem; }
