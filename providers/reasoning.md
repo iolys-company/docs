@@ -35,8 +35,9 @@ The selection belongs to the conversation. When switching to a model without eff
 | [OpenRouter](openrouter.md) | Uses reasoning metadata from its model catalog; not all models offer a selector. |
 | [OpenCode Go](opencode-go.md) | Uses model-specific effort options. |
 | [Databricks](databricks.md) | Depends on the endpoint's model profile and transport. |
+| [Ollama](ollama.md#set-reasoning-effort) | Uses named levels reported by the model. Thinking-capable GPT-OSS models also offer low, medium, and high on older Ollama versions without level metadata. |
 
-The generic OpenAI-compatible integration, Google, Groq, NVIDIA NIM, and Ollama do not expose this shared effort control in the current implementation. Reasoning text may still be displayed where a provider supplies it; that does not imply a configurable effort level.
+The generic OpenAI-compatible integration, Google, Groq, and NVIDIA NIM do not expose this shared effort control in the current implementation. Reasoning text may still be displayed where a provider supplies it; that does not imply a configurable effort level. For Ollama, a Thinking badge without named reasoning levels does not provide an Effort selector.
 
 ## Select a speed tier
 
@@ -59,3 +60,7 @@ If the provider rejects the requested tier, the turn fails and iolys resets the 
 - **An accelerated tier is rejected:** check the provider's account eligibility and use standard service for the next attempt.
 
 See [Usage and costs](../guide/usage.md) to interpret the resulting token, quota, and cost information.
+
+## OpenCode Zen
+
+[Zen](opencode-zen.md) shows reasoning effort only for verified model profiles. Options can differ from the same model on Go because its API route differs. Leave effort unset to keep the provider default. Gemini uses native thinking configuration; adaptive Claude uses its supported effort options.

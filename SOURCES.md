@@ -22,3 +22,16 @@ The brand palette and logo come from `Iolys.PublicWebSite/src/Iolys.PublicWebsit
 The visual walkthroughs reuse inspected screenshots from `vs_assistant/docs/images/`, `docs/screenshots/`, `docs/provider/`, and `screenshots/`. The Codex speed selector at `assets/website/codex-fast-mode.png` comes from `Iolys.PublicWebSite/src/Iolys.PublicWebsite/Content/Posts/2026/iolys-september-update-1-agents-codex-speed-mode/images/codex-fast-mode.png`. Images are copied unchanged; captions identify demonstration data and provider-specific examples. The SVGs in `assets/diagrams/` are explanatory diagrams authored for these guides, based on the workflows described in the source map above; they are not interface screenshots.
 
 The GIF at `assets/diagrams/agent-creator-workflow.gif` is an illustrated example authored for the custom-agents guide, based on `vs_assistant/src/Iolys.VisualStudio.Server/BuiltInSkills/agent-creator/SKILL.md` and the verified skill-picker workflow. It shows the request, scope and tool choices, a sample generated definition, and selection for a new conversation. It is explicitly labeled as an illustration, not a screen recording. Regenerate it with `scripts/render-agent-creator-demo.py` using Python, Pillow, and the Windows Segoe UI and Consolas fonts. The same GIF is copied to `vs_assistant/docs/marketing/marketplace-images/agent-creator-workflow.gif` for the source documentation.
+
+## OpenCode Zen (October 4, 2026)
+
+- Extension: `src/Iolys.Core/Providers/OpenCode/OpenCodeProvider.cs`, `OpenCodeZenModels.cs`, `OpenCodeZenPricing.cs`, `OpenCodeGoogleApiClient.cs`; `docs/provider/opencode_zen/README.md` and its demonstration captures.
+- [Official Zen documentation](https://opencode.ai/docs/zen/) and [models.dev API](https://models.dev/api.json), provider `opencode`.
+- [OpenCode source revision 907b3bc](https://github.com/anomalyco/opencode/tree/907b3bc518fa48e90e8ec24dd327d13eee71c36c).
+
+## Ollama (October 5, 2026)
+
+- User workflows and capabilities: `docs/provider/ollama/README.md`, `docs/ollama_provider.md`, and `screenshots/ollama-model-memory/README.md`.
+- Connection labels checked against `src/Iolys.VisualStudio/Chat/ManageModels/ManageModelsWindow.xaml` and `src/Iolys.VisualStudio/Providers/Ollama/ManageModels/OllamaModelsPanel.xaml`.
+- Dark-only screenshots copied unchanged from `docs/provider/ollama/img/` to `assets/docs/provider/ollama/img/`: connection, download progress, model picker, custom context, reasoning levels, memory tools, vision chat, performance tooltip, and installation error.
+- Memory popup copied unchanged from `screenshots/ollama-model-memory/Dark-600-popup.png` to `assets/screenshots/ollama-model-memory/`. All captures render production WPF controls with offline demonstration data; captions do not present them as live model results or performance benchmarks.

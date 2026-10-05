@@ -63,3 +63,5 @@ Compatibility depends on the routes and features your gateway implements. Succes
 | A limit or payment error occurs | Check provider Usage where available and the account dashboard. |
 
 Continue with [tool selection](../customization/tools.md), [MCP servers](../customization/mcp.md), and [usage and context](../guide/usage.md).
+
+Use the dedicated [OpenCode Zen](opencode-zen.md) entry for Zen keys. It chooses each verified model protocol and supplies conditional Zen cost estimates. A generic OpenAI-compatible connection does not provide this routing.

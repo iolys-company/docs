@@ -41,6 +41,8 @@
       href: ../providers/openrouter.md
     - name: DeepSeek
       href: ../providers/deepseek.md
+    - name: OpenCode Zen
+      href: ../providers/opencode-zen.md
     - name: OpenCode Go
       href: ../providers/opencode-go.md
     - name: Databricks

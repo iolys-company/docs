@@ -18,6 +18,7 @@ iolys brings your models and coding agents into one Visual Studio workflow. Add 
 | OpenAI, Anthropic, Gemini, Groq, or NVIDIA NIM | [API providers](api-providers.md) | Provider API key |
 | Several model vendors through one API | [OpenRouter](openrouter.md) | OpenRouter API key |
 | DeepSeek models and native Web Search | [DeepSeek](deepseek.md) | DeepSeek API key |
+| Curated pay-as-you-go coding models | [OpenCode Zen](opencode-zen.md) | OpenCode Zen API key |
 | Models included in an OpenCode Go subscription | [OpenCode Go](opencode-go.md) | OpenCode API key |
 | Local models or your own Ollama server | [Ollama](ollama.md) | Server URL |
 | Your organization's Databricks Model Serving endpoints | [Databricks](databricks.md) | Workspace URL and token |
