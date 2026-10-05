@@ -14,7 +14,7 @@ description: Learn how to install iolys, connect your AI providers, and build wi
 <a class="text-action" href="guide/quickstart.md">Run your first task <span aria-hidden="true">↗</span></a>
 </div>
 
-<div class="doc-meta"><span class="status-dot"></span> For Visual Studio on Windows <span class="meta-separator">/</span> Currently in beta</div>
+<div class="doc-meta"><span class="status-dot"></span> For Visual Studio on Windows</div>
 
 <figure class="product-figure">
 <img src="assets/docs/screenshots/wide-chat-history.png" alt="iolys inside Visual Studio with task history beside an API-client conversation and its model controls." width="1628" height="966">
