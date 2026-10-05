@@ -66,3 +66,7 @@ Review **Included files and coverage** before sending. The archive contains the 
 Only a confirmed submission shows **Sent** and a copyable support code. If offered, **Retry / check submission** checks or retries the same report. **Cancel** cannot retract data already accepted by support, and **Dismiss** only closes the card.
 
 Share the support code and a short description through the [iolys Discord community](https://discord.com/invite/NMnFZmPsc5). Include the provider, model, observed error, and the steps that reproduce it.
+
+## OpenCode Zen catalog loads but requests fail
+
+The catalog is public: **Configured** means discovery succeeded with a stored key, not that the key, credits, or model access were validated. Read the request error and check your OpenCode account; HTTP 401 can also describe billing restrictions. Refresh missing models and choose a supported model explicitly. Missing estimates indicate unavailable usage or Zen prices. See [OpenCode Zen](../providers/opencode-zen.md).

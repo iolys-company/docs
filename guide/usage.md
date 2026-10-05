@@ -61,3 +61,7 @@ The window also provides the session ID and **Send diagnostics** for support. Se
 Model prices shown in the picker are list prices where available. Estimates depend on the usage and pricing information returned by the provider and may not reflect every discount, cache policy, subscription rule, or later billing adjustment. Use the provider's account dashboard for its billing record.
 
 Reasoning effort and optional speed tiers can change resource use. Choose these controls for the task at hand and inspect the provider's own notices; see [Settings and model controls](settings.md).
+
+## OpenCode Zen
+
+[Zen](../providers/opencode-zen.md) collects the token usage returned by each call. Where exact Zen prices and the necessary token buckets are known, the turn and session indicators show the sum of available cost estimates. Missing usage or required rates exclude that call from the monetary amount; an absent amount is not evidence of a free request. Context uses the last input count. The public account API does not provide an integrated Zen balance/quota view; check the OpenCode Console for charges and credit.

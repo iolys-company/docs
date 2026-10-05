@@ -67,3 +67,5 @@ These counters cover the account, including requests from other clients. Missing
 | Images or tools fail | Check model capability badges, tool enablement, and agent restrictions. |
 | A request reaches a limit | Open Usage and inspect the affected quota window and reset date. |
 | Context details are unavailable | The model may have no known context limit or no reported input-token count yet. |
+
+For metered requests, use the separate [OpenCode Zen provider](opencode-zen.md). Zen estimates costs from returned tokens when its prices are known; Go reports subscription allowances.
