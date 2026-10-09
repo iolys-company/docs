@@ -25,16 +25,16 @@ Available models, tools, authentication, and usage reporting depend on the provi
 ## Providers and models
 
 - [Choose a provider](https://raw.githubusercontent.com/iolys-company/docs/main/providers/index.md): Compare connection routes and authentication requirements.
-- [Claude Code](https://raw.githubusercontent.com/iolys-company/docs/main/providers/claude-code.md): Managed CLI installation, sign-in, tools, and usage.
-- [Codex](https://raw.githubusercontent.com/iolys-company/docs/main/providers/codex.md): Managed CLI setup, models, reasoning controls, and account usage.
-- [Kimi](https://raw.githubusercontent.com/iolys-company/docs/main/providers/kimi.md): Kimi Code connection, models, tools, and subscription usage.
-- [Kiro](https://raw.githubusercontent.com/iolys-company/docs/main/providers/kiro.md): Managed CLI installation, authentication, and supported features.
+- [Claude Code](https://raw.githubusercontent.com/iolys-company/docs/main/providers/claude-code-visual-studio-2026.md): Managed CLI installation, sign-in, tools, and usage.
+- [Codex](https://raw.githubusercontent.com/iolys-company/docs/main/providers/codex-visual-studio-2026.md): Managed CLI setup, models, reasoning controls, and account usage.
+- [Kimi](https://raw.githubusercontent.com/iolys-company/docs/main/providers/kimi-visual-studio-2026.md): Kimi Code connection, models, tools, and subscription usage.
+- [Kiro](https://raw.githubusercontent.com/iolys-company/docs/main/providers/kiro-visual-studio-2026.md): Managed CLI installation, authentication, and supported features.
 - [API providers](https://raw.githubusercontent.com/iolys-company/docs/main/providers/api-providers.md): Provider API keys and compatible endpoints.
-- [OpenRouter](https://raw.githubusercontent.com/iolys-company/docs/main/providers/openrouter.md): Models, native tools, reasoning, and account credit.
-- [DeepSeek](https://raw.githubusercontent.com/iolys-company/docs/main/providers/deepseek.md): API connection, reasoning, Web Search, and account balance.
-- [OpenCode Go](https://raw.githubusercontent.com/iolys-company/docs/main/providers/opencode-go.md): Subscription connection, models, context, and usage.
-- [Databricks](https://raw.githubusercontent.com/iolys-company/docs/main/providers/databricks.md): Model Serving endpoints and model capabilities.
-- [Ollama](https://raw.githubusercontent.com/iolys-company/docs/main/providers/ollama.md): Local or remote servers, model installation, context and reasoning, RAM / VRAM controls, and generation performance.
+- [OpenRouter](https://raw.githubusercontent.com/iolys-company/docs/main/providers/openrouter-visual-studio-2026.md): Models, native tools, reasoning, and account credit.
+- [DeepSeek](https://raw.githubusercontent.com/iolys-company/docs/main/providers/deepseek-visual-studio-2026.md): API connection, reasoning, Web Search, and account balance.
+- [OpenCode Go](https://raw.githubusercontent.com/iolys-company/docs/main/providers/opencode-go-visual-studio-2026.md): Subscription connection, models, context, and usage.
+- [Databricks](https://raw.githubusercontent.com/iolys-company/docs/main/providers/databricks-visual-studio-2026.md): Model Serving endpoints and model capabilities.
+- [Ollama](https://raw.githubusercontent.com/iolys-company/docs/main/providers/ollama-visual-studio-2026.md): Local or remote servers, model installation, context and reasoning, RAM / VRAM controls, and generation performance.
 - [Reasoning and speed](https://raw.githubusercontent.com/iolys-company/docs/main/providers/reasoning.md): Reasoning effort and supported service tiers.
 
 ## Customize your workflow
@@ -58,4 +58,4 @@ Available models, tools, authentication, and usage reporting depend on the provi
 - [Install from Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=iolys.iolys-visual-studio): Extension listing.
 - [Community](https://discord.com/invite/NMnFZmPsc5): Questions and feedback.
 
-- [OpenCode Zen](https://raw.githubusercontent.com/iolys-company/docs/main/providers/opencode-zen.md): Pay-as-you-go connection, supported models, returned tokens, and conditional cost estimates.
+- [OpenCode Zen](https://raw.githubusercontent.com/iolys-company/docs/main/providers/opencode-zen-visual-studio-2026.md): Pay-as-you-go connection, supported models, returned tokens, and conditional cost estimates.

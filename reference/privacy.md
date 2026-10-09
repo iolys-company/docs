@@ -55,4 +55,4 @@ There is no automatic session-diagnostics submission. **Sent** confirms remote r
 
 Use [permissions](../customization/permissions.md) and [tool selection](../customization/tools.md) to control future agent actions. These controls do not change the retention policies of external services or revoke data already sent.
 
-[OpenCode Zen](../providers/opencode-zen.md) sends conversation and permitted tool context to the Zen gateway. Retention and processing follow the selected model and [OpenCode terms](https://opencode.ai/docs/zen/#privacy). Public models.dev requests contain no key or conversation identifier; model cost estimates are calculated locally from returned usage.
+[OpenCode Zen](../providers/opencode-zen-visual-studio-2026.md) sends conversation and permitted tool context to the Zen gateway. Retention and processing follow the selected model and [OpenCode terms](https://opencode.ai/docs/zen/#privacy). Public models.dev requests contain no key or conversation identifier; model cost estimates are calculated locally from returned usage.

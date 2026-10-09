@@ -69,4 +69,4 @@ Share the support code and a short description through the [iolys Discord commun
 
 ## OpenCode Zen catalog loads but requests fail
 
-The catalog is public: **Configured** means discovery succeeded with a stored key, not that the key, credits, or model access were validated. Read the request error and check your OpenCode account; HTTP 401 can also describe billing restrictions. Refresh missing models and choose a supported model explicitly. Missing estimates indicate unavailable usage or Zen prices. See [OpenCode Zen](../providers/opencode-zen.md).
+The catalog is public: **Configured** means discovery succeeded with a stored key, not that the key, credits, or model access were validated. Read the request error and check your OpenCode account; HTTP 401 can also describe billing restrictions. Refresh missing models and choose a supported model explicitly. Missing estimates indicate unavailable usage or Zen prices. See [OpenCode Zen](../providers/opencode-zen-visual-studio-2026.md).

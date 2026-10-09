@@ -26,16 +26,16 @@ The selection belongs to the conversation. When switching to a model without eff
 
 | Provider | How effort is offered |
 | --- | --- |
-| [Claude Code](claude-code.md) | Available controls depend on the managed CLI and selected model. |
-| [Codex](codex.md) | The CLI advertises supported effort levels for each model. |
-| [Kimi](kimi.md) | Uses the model catalog and the CLI's current configuration options. An on/off thinking control is different from graded effort. |
-| [Kiro](kiro.md) | Discovers the model's effort options through the CLI. Discovery can finish after the model list first appears. |
+| [Claude Code](claude-code-visual-studio-2026.md) | Available controls depend on the managed CLI and selected model. |
+| [Codex](codex-visual-studio-2026.md) | The CLI advertises supported effort levels for each model. |
+| [Kimi](kimi-visual-studio-2026.md) | Uses the model catalog and the CLI's current configuration options. An on/off thinking control is different from graded effort. |
+| [Kiro](kiro-visual-studio-2026.md) | Discovers the model's effort options through the CLI. Discovery can finish after the model list first appears. |
 | Anthropic API | Sends effort only when supported by the selected model. |
-| [DeepSeek](deepseek.md) | Offers the effort choices supported by the current integration's catalog. |
-| [OpenRouter](openrouter.md) | Uses reasoning metadata from its model catalog; not all models offer a selector. |
-| [OpenCode Go](opencode-go.md) | Uses model-specific effort options. |
-| [Databricks](databricks.md) | Depends on the endpoint's model profile and transport. |
-| [Ollama](ollama.md#set-reasoning-effort) | Uses named levels reported by the model. Thinking-capable GPT-OSS models also offer low, medium, and high on older Ollama versions without level metadata. |
+| [DeepSeek](deepseek-visual-studio-2026.md) | Offers the effort choices supported by the current integration's catalog. |
+| [OpenRouter](openrouter-visual-studio-2026.md) | Uses reasoning metadata from its model catalog; not all models offer a selector. |
+| [OpenCode Go](opencode-go-visual-studio-2026.md) | Uses model-specific effort options. |
+| [Databricks](databricks-visual-studio-2026.md) | Depends on the endpoint's model profile and transport. |
+| [Ollama](ollama-visual-studio-2026.md#set-reasoning-effort) | Uses named levels reported by the model. Thinking-capable GPT-OSS models also offer low, medium, and high on older Ollama versions without level metadata. |
 
 The generic OpenAI-compatible integration, Google, Groq, and NVIDIA NIM do not expose this shared effort control in the current implementation. Reasoning text may still be displayed where a provider supplies it; that does not imply a configurable effort level. For Ollama, a Thinking badge without named reasoning levels does not provide an Effort selector.
 
@@ -63,4 +63,4 @@ See [Usage and costs](../guide/usage.md) to interpret the resulting token, quota
 
 ## OpenCode Zen
 
-[Zen](opencode-zen.md) shows reasoning effort only for verified model profiles. Options can differ from the same model on Go because its API route differs. Leave effort unset to keep the provider default. Gemini uses native thinking configuration; adaptive Claude uses its supported effort options.
+[Zen](opencode-zen-visual-studio-2026.md) shows reasoning effort only for verified model profiles. Options can differ from the same model on Go because its API route differs. Leave effort unset to keep the provider default. Gemini uses native thinking configuration; adaptive Claude uses its supported effort options.

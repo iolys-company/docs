@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page moved | iolys documentation</title>
+    <link rel="canonical" href="{{_siteUrl}}providers/{{redirect_url}}">
+    <meta name="searchOption" content="noindex">
+    <meta http-equiv="refresh" content="0;URL='{{redirect_url}}'">
+    <script>
+      // Keep saved section links and campaign parameters when following the move.
+      const destination = new URL('{{redirect_url}}', window.location.href);
+      destination.search = window.location.search;
+      destination.hash = window.location.hash;
+      window.location.replace(destination.href);
+    </script>
+  </head>
+  <body>
+    <p>This page has moved. <a href="{{redirect_url}}">Continue to the updated guide</a>.</p>
+  </body>
+</html>

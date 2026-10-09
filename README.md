@@ -27,6 +27,14 @@ The workflow restores the pinned tool, builds with warnings treated as errors, v
 
 The canonical domain is `https://docs.getiolys.com/`. The theme emits an absolute `rel="canonical"` link for each documentation page using `build.globalMetadata._siteUrl` and its generated HTML path, including `index.html`, matching the sitemap. The 404 page remains `noindex`. Content, assets, navigation, and search use relative links so local previews and project subpaths still work. The error page is self-contained so it also works for missing nested URLs.
 
+## Provider URLs and redirects
+
+Individual provider guides use `providers/<provider>-visual-studio-2026.html`. Keep the original `providers/<provider>.md` files: their `redirect_url` metadata preserves saved URLs through DocFX's redirect support. Internal links, navigation, the sitemap, search, and both LLM files point directly to the renamed guides. Legacy title anchors such as `#codex` remain available on the destination pages.
+
+`templates/iolys/Redirection.html.primary.tmpl` renders these sibling-page redirects in `providers/`. It provides an instant HTML refresh, a canonical URL pointing to the destination, and a manual fallback link. A small script uses `location.replace` to retain query parameters and fragments, including under a local preview or project subpath. Without JavaScript, the instant HTML refresh still navigates to the new guide.
+
+These redirects are **not HTTP 301 responses**. GitHub Pages serves the generated static HTML; custom server-side status codes would need a proxy or another hosting configuration. Google [interprets instant HTML refresh redirects as permanent](https://developers.google.com/search/docs/crawling-indexing/301-redirects#metarefresh), while recommending server-side redirects where possible. Do not describe the migration as deployed until the Pages deployment has succeeded.
+
 ## Crawler and AI discovery files
 
 DocFX copies `llm.txt`, `llms.txt`, and `robots.txt` into the generated site. The two LLM files contain the same overview and links to the documentation's Markdown sources on GitHub; keep them identical when updating the guides. `llms.txt` is the conventional filename for AI discovery, while `llm.txt` provides an alternate URL. The site check requires all three files and the sitemap.
