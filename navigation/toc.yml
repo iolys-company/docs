@@ -30,25 +30,25 @@
     - name: Choose a provider
       href: ../providers/index.md
     - name: Claude Code
-      href: ../providers/claude-code.md
+      href: ../providers/claude-code-visual-studio-2026.md
     - name: Codex
-      href: ../providers/codex.md
+      href: ../providers/codex-visual-studio-2026.md
     - name: Kimi
-      href: ../providers/kimi.md
+      href: ../providers/kimi-visual-studio-2026.md
     - name: Kiro
-      href: ../providers/kiro.md
+      href: ../providers/kiro-visual-studio-2026.md
     - name: OpenRouter
-      href: ../providers/openrouter.md
+      href: ../providers/openrouter-visual-studio-2026.md
     - name: DeepSeek
-      href: ../providers/deepseek.md
+      href: ../providers/deepseek-visual-studio-2026.md
     - name: OpenCode Zen
-      href: ../providers/opencode-zen.md
+      href: ../providers/opencode-zen-visual-studio-2026.md
     - name: OpenCode Go
-      href: ../providers/opencode-go.md
+      href: ../providers/opencode-go-visual-studio-2026.md
     - name: Databricks
-      href: ../providers/databricks.md
+      href: ../providers/databricks-visual-studio-2026.md
     - name: Ollama
-      href: ../providers/ollama.md
+      href: ../providers/ollama-visual-studio-2026.md
     - name: API providers
       href: ../providers/api-providers.md
     - name: Reasoning & speed

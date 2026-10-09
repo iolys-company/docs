@@ -64,4 +64,4 @@ Reasoning effort and optional speed tiers can change resource use. Choose these 
 
 ## OpenCode Zen
 
-[Zen](../providers/opencode-zen.md) collects the token usage returned by each call. Where exact Zen prices and the necessary token buckets are known, the turn and session indicators show the sum of available cost estimates. Missing usage or required rates exclude that call from the monetary amount; an absent amount is not evidence of a free request. Context uses the last input count. The public account API does not provide an integrated Zen balance/quota view; check the OpenCode Console for charges and credit.
+[Zen](../providers/opencode-zen-visual-studio-2026.md) collects the token usage returned by each call. Where exact Zen prices and the necessary token buckets are known, the turn and session indicators show the sum of available cost estimates. Missing usage or required rates exclude that call from the monetary amount; an absent amount is not evidence of a free request. Context uses the last input count. The public account API does not provide an integrated Zen balance/quota view; check the OpenCode Console for charges and credit.

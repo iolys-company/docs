@@ -11,17 +11,17 @@ iolys brings your models and coding agents into one Visual Studio workflow. Add 
 
 | You want to use… | Start here | Authentication |
 | --- | --- | --- |
-| A Claude subscription through Claude Code | [Claude Code](claude-code.md) | Browser sign-in in the managed CLI |
-| Codex from Visual Studio | [Codex](codex.md) | Interactive sign-in in the managed CLI |
-| A Kimi Code account | [Kimi](kimi.md) | Browser or device authorization |
-| A Kiro account | [Kiro](kiro.md) | Sign in with the managed Kiro executable |
+| A Claude subscription through Claude Code | [Claude Code](claude-code-visual-studio-2026.md) | Browser sign-in in the managed CLI |
+| Codex from Visual Studio | [Codex](codex-visual-studio-2026.md) | Interactive sign-in in the managed CLI |
+| A Kimi Code account | [Kimi](kimi-visual-studio-2026.md) | Browser or device authorization |
+| A Kiro account | [Kiro](kiro-visual-studio-2026.md) | Sign in with the managed Kiro executable |
 | OpenAI, Anthropic, Gemini, Groq, or NVIDIA NIM | [API providers](api-providers.md) | Provider API key |
-| Several model vendors through one API | [OpenRouter](openrouter.md) | OpenRouter API key |
-| DeepSeek models and native Web Search | [DeepSeek](deepseek.md) | DeepSeek API key |
-| Curated pay-as-you-go coding models | [OpenCode Zen](opencode-zen.md) | OpenCode Zen API key |
-| Models included in an OpenCode Go subscription | [OpenCode Go](opencode-go.md) | OpenCode API key |
-| Local models or your own Ollama server | [Ollama](ollama.md) | Server URL |
-| Your organization's Databricks Model Serving endpoints | [Databricks](databricks.md) | Workspace URL and token |
+| Several model vendors through one API | [OpenRouter](openrouter-visual-studio-2026.md) | OpenRouter API key |
+| DeepSeek models and native Web Search | [DeepSeek](deepseek-visual-studio-2026.md) | DeepSeek API key |
+| Curated pay-as-you-go coding models | [OpenCode Zen](opencode-zen-visual-studio-2026.md) | OpenCode Zen API key |
+| Models included in an OpenCode Go subscription | [OpenCode Go](opencode-go-visual-studio-2026.md) | OpenCode API key |
+| Local models or your own Ollama server | [Ollama](ollama-visual-studio-2026.md) | Server URL |
+| Your organization's Databricks Model Serving endpoints | [Databricks](databricks-visual-studio-2026.md) | Workspace URL and token |
 | A compatible proxy or self-hosted gateway | [Compatible endpoints](api-providers.md#compatible-endpoints) | Gateway URL and its required credentials |
 
 ## Add your first provider

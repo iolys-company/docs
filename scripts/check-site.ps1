@@ -76,8 +76,36 @@ foreach ($entry in $search.Keys) {
 }
 if ($search.Count -lt 20) { $failures.Add('Search index contains fewer than 20 articles.') }
 
+# Saved provider URLs must lead directly to their renamed guides.
+foreach ($provider in @('claude-code', 'codex', 'kimi', 'kiro', 'openrouter', 'deepseek', 'opencode-zen', 'opencode-go', 'databricks', 'ollama')) {
+    $oldPath = "providers/$provider.html"
+    $newPath = "providers/$provider-visual-studio-2026.html"
+    $oldFile = Join-Path $root $oldPath
+    $newFile = Join-Path $root $newPath
+    if (-not (Test-Path -LiteralPath $oldFile -PathType Leaf) -or -not (Test-Path -LiteralPath $newFile -PathType Leaf)) {
+        $failures.Add("Provider migration: missing redirect or destination for '$provider'.")
+        continue
+    }
+    $redirectHtml = Get-Content -LiteralPath $oldFile -Raw
+    $newHtml = Get-Content -LiteralPath $newFile -Raw
+    $newUrl = [Uri]::new($canonicalBase, $newPath).AbsoluteUri
+    $expectedRefresh = "<meta http-equiv=`"refresh`" content=`"0;URL='$provider-visual-studio-2026.html'`">"
+    if (-not $redirectHtml.Contains($expectedRefresh) -or -not $redirectHtml.Contains("href=`"$newUrl`"")) {
+        $failures.Add("${oldPath}: expected an instant redirect and canonical pointing to '$newPath'.")
+    }
+    if (-not $redirectHtml.Contains("<a href=`"$provider-visual-studio-2026.html`"")) {
+        $failures.Add("${oldPath}: missing fallback link to the renamed guide.")
+    }
+    if ($newHtml -match '(?i)http-equiv=["'']refresh' -or -not $newHtml.Contains("id=`"$provider`"")) {
+        $failures.Add("${newPath}: redirect chain or missing legacy title anchor.")
+    }
+    if ($search.ContainsKey($oldPath) -or $sitemapUrls -ccontains [Uri]::new($canonicalBase, $oldPath).AbsoluteUri) {
+        $failures.Add("${oldPath}: redirect must not appear in search or the sitemap.")
+    }
+}
+
 if ($failures.Count) {
     $failures | ForEach-Object { Write-Output $_ }
     throw "$($failures.Count) site validation error(s)."
 }
-Write-Output "Checked $($htmlFiles.Count) HTML files and $($search.Count) search entries: local links, anchors, assets, canonical URLs, and sitemap references are valid."
+Write-Output "Checked $($htmlFiles.Count) HTML files and $($search.Count) search entries: local links, anchors, assets, canonical URLs, sitemap references, and provider redirects are valid."

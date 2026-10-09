@@ -44,7 +44,7 @@ An agent can inspect project files, explain code, propose a plan, make changes, 
 | --- | --- |
 | Use Claude Code, Codex, Kimi, or Kiro | [Managed CLI providers](providers/index.md#choose-a-connection) |
 | Connect hosted models or your own endpoint | [API providers](providers/api-providers.md) |
-| Use local or remote Ollama models | [Ollama](providers/ollama.md) |
+| Use local or remote Ollama models | [Ollama](providers/ollama-visual-studio-2026.md) |
 | Ask about a file, selection, or screenshot | [Files, images, and context](guide/context.md) |
 | Work on several tasks independently | [Parallel workspaces](guide/parallel-workspaces.md) |
 | Review an agent's edits | [Review and undo changes](guide/review.md) |

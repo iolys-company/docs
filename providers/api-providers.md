@@ -5,7 +5,7 @@ description: Configure OpenAI, Anthropic, Gemini, Groq, NVIDIA NIM, and compatib
 
 # API providers
 
-Connect hosted models with an API key or use your own compatible endpoint. API credentials are separate from the subscriptions connected through [Claude Code](claude-code.md), [Codex](codex.md), [Kimi](kimi.md), and [Kiro](kiro.md).
+Connect hosted models with an API key or use your own compatible endpoint. API credentials are separate from the subscriptions connected through [Claude Code](claude-code-visual-studio-2026.md), [Codex](codex-visual-studio-2026.md), [Kimi](kimi-visual-studio-2026.md), and [Kiro](kiro-visual-studio-2026.md).
 
 ## Common setup
 
@@ -28,7 +28,7 @@ The same provider type also accepts OpenAI-compatible services. Its default loca
 
 Choose **Anthropic** and enter your Anthropic API key. The official endpoint is preset. Use **Test Connection**, select a discovered model, and review **Advanced settings** when you need to configure thinking or output limits. Apply settings after changing them.
 
-This is the API-key connection. To use an eligible Claude subscription through the managed CLI, follow [Claude Code](claude-code.md).
+This is the API-key connection. To use an eligible Claude subscription through the managed CLI, follow [Claude Code](claude-code-visual-studio-2026.md).
 
 ## Google Gemini, Groq, and NVIDIA NIM
 
@@ -47,7 +47,7 @@ Use capability badges rather than assuming every model offers function tools, vi
 For a local gateway, organizational proxy, or self-hosted API, choose the protocol your endpoint implements:
 
 - **OpenAI** accepts a custom base URL. The current add-provider form requires a nonempty API token even for a local gateway; use a credential accepted by your gateway. An unauthenticated endpoint cannot be added with an empty token through this form. Use the gateway's documented API root, not its web dashboard.
-- **Anthropic-compatible** is available in builds that expose this provider. Supply its base URL, model ID, and required authentication, then verify that connection and model listing work in your installed version. For Databricks, prefer the dedicated [Databricks provider](databricks.md).
+- **Anthropic-compatible** is available in builds that expose this provider. Supply its base URL, model ID, and required authentication, then verify that connection and model listing work in your installed version. For Databricks, prefer the dedicated [Databricks provider](databricks-visual-studio-2026.md).
 
 Compatibility depends on the routes and features your gateway implements. Successful model discovery is not proof that streaming, tool calls, images, or every reasoning option will work. Test a small conversation before a larger task.
 
@@ -64,4 +64,4 @@ Compatibility depends on the routes and features your gateway implements. Succes
 
 Continue with [tool selection](../customization/tools.md), [MCP servers](../customization/mcp.md), and [usage and context](../guide/usage.md).
 
-Use the dedicated [OpenCode Zen](opencode-zen.md) entry for Zen keys. It chooses each verified model protocol and supplies conditional Zen cost estimates. A generic OpenAI-compatible connection does not provide this routing.
+Use the dedicated [OpenCode Zen](opencode-zen-visual-studio-2026.md) entry for Zen keys. It chooses each verified model protocol and supplies conditional Zen cost estimates. A generic OpenAI-compatible connection does not provide this routing.
