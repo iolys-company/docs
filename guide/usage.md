@@ -62,6 +62,8 @@ Model prices shown in the picker are list prices where available. Estimates depe
 
 Reasoning effort and optional speed tiers can change resource use. Choose these controls for the task at hand and inspect the provider's own notices; see [Settings and model controls](settings.md).
 
+Some tools contribute a separate request fee to turn and conversation estimates. [DeepSeek Search and Fetch](../providers/deepseek-visual-studio-2026.md#check-balance-and-costs) add an estimate for successful non-empty responses alongside available model token costs, without adding tokens or model calls. Check the provider's billing record for actual charges and promotions.
+
 ## OpenCode Zen
 
 [Zen](../providers/opencode-zen-visual-studio-2026.md) collects the token usage returned by each call. Where exact Zen prices and the necessary token buckets are known, the turn and session indicators show the sum of available cost estimates. Missing usage or required rates exclude that call from the monetary amount; an absent amount is not evidence of a free request. Context uses the last input count. The public account API does not provide an integrated Zen balance/quota view; check the OpenCode Console for charges and credit.

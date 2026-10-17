@@ -31,6 +31,8 @@ For a code explanation, reading and search tools are usually enough. Implementin
 
 The [tool reference](../reference/tools.md) lists built-in identifiers. Providers expose different native tools, and some native entries are informational: **This tool cannot be disabled during the session** means the integration does not support an individual toggle.
 
+Some providers also add function tools to their own group. With DeepSeek selected, expand **DeepSeek Web Tools** to enable `deepseek_search` and `deepseek_fetch`. These work on Flash and Pro in Agent and Plan, separately from native model tools. See [DeepSeek web access](../providers/deepseek-visual-studio-2026.md#search-the-web-and-read-pages).
+
 ## Work with command integrations
 
 **Run CLI commands** executes supported programs through managed integrations. Expand **Integrations** to check availability and configure read/write access. Available integrations include Git, GitHub, text utilities, and supported .NET operations; the picker shows **Setup required** when a dependency is missing.
@@ -45,6 +47,21 @@ Do not edit or commit files.
 The agent can use recognized Git reads through `run_cli`. Integration controls distinguish inspection from repository changes. A custom agent with selected tools needs both the command tool and the appropriate integration rights.
 
 `shell_command` handles ordinary PowerShell scripts. Its script path uses Windows PowerShell 5.1, so PowerShell 7 syntax such as general `&&`/`||` chaining is not supported. Recognized managed commands receive their integration-specific handling; arbitrary scripts follow the separate shell approval flow.
+
+### Run commands in another folder
+
+Ask the agent to use `run_cli` with a `workdir` pointing to an existing folder, such as another worktree or a sibling repository:
+
+```text
+Use run_cli in C:\work\api-review to inspect that worktree's Git status and diff.
+Do not edit or commit files.
+```
+
+Replace the example path with your target folder. For a folder outside the current workspace, the path prompt offers **Approve once**, **Approve for session**, or **Reject**. A one-time approval covers the current batch; a session approval covers that directory for `run_cli` in the current conversation.
+
+The approved folder becomes the command batch's path boundary and Git repository context. It must exist and have no symlinks or junctions in its path. Command integration rights, Plan restrictions, repository-write approvals, and sensitive-operation confirmations still apply: approving a folder does not grant permission to write to its repository. Captured output logs remain in the original workspace.
+
+Managed commands through `shell_command` keep their workspace boundary; use `run_cli` for this workflow.
 
 ## Why a tool may be unavailable
 

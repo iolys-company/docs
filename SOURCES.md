@@ -35,3 +35,11 @@ The GIF at `assets/diagrams/agent-creator-workflow.gif` is an illustrated exampl
 - Connection labels checked against `src/Iolys.VisualStudio/Chat/ManageModels/ManageModelsWindow.xaml` and `src/Iolys.VisualStudio/Providers/Ollama/ManageModels/OllamaModelsPanel.xaml`.
 - Dark-only screenshots copied unchanged from `docs/provider/ollama/img/` to `assets/docs/provider/ollama/img/`: connection, download progress, model picker, custom context, reasoning levels, memory tools, vision chat, performance tooltip, and installation error.
 - Memory popup copied unchanged from `screenshots/ollama-model-memory/Dark-600-popup.png` to `assets/screenshots/ollama-model-memory/`. All captures render production WPF controls with offline demonstration data; captions do not present them as live model results or performance benchmarks.
+
+## Workflow additions (October 17, 2026)
+
+- DeepSeek standalone tools and the estimate applied by iolys: [PR #284](https://github.com/iolys-company/iolys/pull/284), `docs/tools/deepseek_web_search.md`, and `src/Iolys.Core/Providers/DeepSeek/DeepSeekModelPricing.cs` at revision `3348268aad8eb9f2d562120e96fc789da9547bc8`. The per-request amount is described as an iolys estimate; promotional API billing remains subject to the provider's account record.
+- Title bar Chat entry point: [PR #272](https://github.com/iolys-company/iolys/pull/272).
+- External `run_cli` working directories and approval scope: [PR #270](https://github.com/iolys-company/iolys/pull/270).
+- Managed commit amendment and remote branch deletion: [PR #273](https://github.com/iolys-company/iolys/pull/273) and [PR #268](https://github.com/iolys-company/iolys/pull/268).
+- Compact tool-call hover previews: the separate tooltip change in [PR #278](https://github.com/iolys-company/iolys/pull/278).

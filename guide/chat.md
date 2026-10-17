@@ -9,7 +9,7 @@ An iolys conversation keeps your requests, replies, and tool activity together f
 
 ## Start and resume tasks
 
-Select **View > Iolys Chat** to open Chat. Use **New Thread** to start a separate task and **History** to reopen earlier conversations. The task title can be renamed, and tasks you no longer need can be deleted.
+Click the **iolys button in the Visual Studio title bar**, beside Copilot, or select **View > Iolys Chat** to open Chat. Use **New Thread** to start a separate task and **History** to reopen earlier conversations. The task title can be renamed, and tasks you no longer need can be deleted.
 
 ![Visual Studio chat with the History sidebar open beside the selected conversation.](../assets/docs/screenshots/wide-chat-history.png)
 
@@ -18,6 +18,10 @@ Select **View > Iolys Chat** to open Chat. Use **New Thread** to start a separat
 Choose the provider and model from the composer. Select **Agent** for implementation or **Plan** for investigation and planning. Plan restricts ordinary editing tools; builds, tests, and provider-native tools have additional rules described in [Permissions](../customization/permissions.md#keep-mode-and-permissions-separate). A [custom agent](../customization/agents.md) can provide a reusable role and tool selection.
 
 Press **Enter** to send a message and **Shift+Enter** to insert a line break. Use **Stop generating** to cancel the active response. Cancellation does not undo changes already applied; use the [review controls](review.md) to inspect them.
+
+## Inspect tool activity
+
+Hover over a tool call in the conversation to see a compact preview of its name, summary, and duration. Long summaries are shortened to keep the preview readable. Use this overview to follow the agent's work, then inspect the relevant tool output and [file changes](review.md) when reviewing the result.
 
 ## Send follow-ups while the agent works
 

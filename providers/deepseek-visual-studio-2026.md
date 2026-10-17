@@ -1,13 +1,13 @@
 ---
 title: Connect DeepSeek to Visual Studio 2026 for C#
-description: Connect DeepSeek for C# development in Visual Studio 2026 with iolys. Add your API key, choose reasoning effort, use Web Search, and check your balance.
+description: Connect DeepSeek for C# development in Visual Studio 2026 with iolys. Add your API key, choose reasoning effort, use Search and Fetch tools, and check your balance.
 ---
 
 <a id="deepseek"></a>
 
 # Connect DeepSeek to Visual Studio 2026 for C#
 
-Connect the DeepSeek API to Visual Studio 2026 with iolys for help with your C# projects, workspace tools, and native Web Search. This connection uses an API key and your DeepSeek account balance. It does not install a CLI or connect a consumer chat subscription.
+Connect the DeepSeek API to Visual Studio 2026 with iolys for help with your C# projects, workspace tools, and web search and page reading. This connection uses an API key and your DeepSeek account balance. It does not install a CLI or connect a consumer chat subscription.
 
 <p><a class="doc-button" href="https://marketplace.visualstudio.com/items?itemName=iolys.iolys-visual-studio">Install iolys for Visual Studio <span aria-hidden="true">→</span></a></p>
 
@@ -45,7 +45,30 @@ Select an effort from the conversation's model controls. The current iolys DeepS
 
 Reasoning settings are validated against the integration's advertised choices before requests are built. Reported thinking can appear separately from the answer. A Thinking badge does not promise a visible thinking block on every response. See [reasoning and model capabilities](reasoning.md) for the shared controls.
 
-## Enable native Web Search
+## Search the web and read pages
+
+DeepSeek provides standalone Search and Fetch tools on Flash and Pro. Both work in **Agent** and **Plan** and use the API key from your DeepSeek connection.
+
+1. Select a DeepSeek model in the composer.
+2. Open **Tools and Skills > Tools** and expand **DeepSeek Web Tools**.
+3. Enable `deepseek_search` to search the web and `deepseek_fetch` to read a page by URL.
+4. Ask for the information you need, for example:
+
+```text
+Find the official documentation for cancellation in HttpClient.
+Read the relevant pages and explain how it applies to this API client.
+Include links to your sources.
+```
+
+These tools are available only with the DeepSeek provider. Their toggles and custom-agent tool selections still apply. An agent with an explicit tool list needs `deepseek_search` and `deepseek_fetch` to use both capabilities; listing `web_search` alone does not enable them.
+
+Search accepts a query of 1–128 characters and up to 50 results. Fetch accepts an HTTP(S) URL without embedded credentials and returns Markdown, with a default limit of 12,000 characters and a maximum of 20,000. Tool results indicate when content has been truncated. See the [tool reference](../reference/tools.md#deepseek-web-tools) for the identifiers and arguments.
+
+<a id="enable-native-web-search"></a>
+
+### Native Web Search
+
+Pro can also expose native **Web Search**, separately from the standalone tools. Flash uses `deepseek_search` and `deepseek_fetch` for web access.
 
 Open **Tools and Skills > Tools** and find **Model · your selected model**. Enable or disable **Web Search** there. It searches the web and reads pages through DeepSeek; there is no separate native Fetch URL checkbox.
 
@@ -70,6 +93,10 @@ Select a model marked **Vision**, then paste an image or use **+ > Add file...**
 Open **Show usage** for the account's reported available balance and currency. DeepSeek's Usage view is a balance display, not a subscription quota percentage or reset schedule.
 
 Conversation costs, when available, are estimates based on reported token use and iolys's packaged pricing data, including cache information when reported. They can differ from final billing. Use your DeepSeek account for its billing record; see [Usage](../guide/usage.md).
+
+Standalone Search and Fetch also contribute a per-request estimate: iolys adds **$0.00075** for each successful response containing results or page content. This is equivalent to $0.75 per 1,000 such responses and is added to the turn and conversation costs without adding tokens or model calls. Empty responses and failed requests add no tool fee. Truncating a result does not reduce its estimated fee.
+
+This is the estimate applied by iolys. Check your account and the [DeepSeek Search & Fetch guide](https://api-docs.deepseek.com/guides/search/) for actual billing and any promotional free period.
 
 ## Troubleshooting
 

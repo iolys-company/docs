@@ -11,7 +11,7 @@ First, [install iolys](installation.md) and connect a [provider](../providers/in
 
 ## 1. Open the conversation
 
-Open your solution and select **View > Iolys Chat**. In the composer, select the provider and model you want to use. If the selected model offers reasoning effort, choose one of its available levels.
+Open your solution and click the **iolys button in the Visual Studio title bar**, beside Copilot, or select **View > Iolys Chat**. In the composer, select the provider and model you want to use. If the selected model offers reasoning effort, choose one of its available levels.
 
 Use **New Thread** when you want a separate task. Give each task one clear objective so its conversation and changes are easier to review later.
 

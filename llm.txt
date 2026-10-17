@@ -31,7 +31,7 @@ Available models, tools, authentication, and usage reporting depend on the provi
 - [Kiro](https://raw.githubusercontent.com/iolys-company/docs/main/providers/kiro-visual-studio-2026.md): Managed CLI installation, authentication, and supported features.
 - [API providers](https://raw.githubusercontent.com/iolys-company/docs/main/providers/api-providers.md): Provider API keys and compatible endpoints.
 - [OpenRouter](https://raw.githubusercontent.com/iolys-company/docs/main/providers/openrouter-visual-studio-2026.md): Models, native tools, reasoning, and account credit.
-- [DeepSeek](https://raw.githubusercontent.com/iolys-company/docs/main/providers/deepseek-visual-studio-2026.md): API connection, reasoning, Web Search, and account balance.
+- [DeepSeek](https://raw.githubusercontent.com/iolys-company/docs/main/providers/deepseek-visual-studio-2026.md): API connection, reasoning, Search and Fetch tools, estimated tool fees, native Web Search, and account balance.
 - [OpenCode Go](https://raw.githubusercontent.com/iolys-company/docs/main/providers/opencode-go-visual-studio-2026.md): Subscription connection, models, context, and usage.
 - [Databricks](https://raw.githubusercontent.com/iolys-company/docs/main/providers/databricks-visual-studio-2026.md): Model Serving endpoints and model capabilities.
 - [Ollama](https://raw.githubusercontent.com/iolys-company/docs/main/providers/ollama-visual-studio-2026.md): Local or remote servers, model installation, context and reasoning, RAM / VRAM controls, and generation performance.

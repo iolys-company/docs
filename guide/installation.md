@@ -26,7 +26,7 @@ Read [Data and privacy](../reference/privacy.md) for how provider requests, loca
 2. Download the extension and follow the VSIX installer's prompts for your Visual Studio installation.
 3. Close Visual Studio if the installer requests it, complete installation, and restart Visual Studio.
 4. Open a solution.
-5. Select **View > Iolys Chat**.
+5. Click the **iolys button in the Visual Studio title bar**, beside Copilot, to open Chat. You can also select **View > Iolys Chat**.
 
 On first launch, a welcome page opens in the Visual Studio document area. It introduces the workspace and links to provider setup and Chat. You can close it and continue working; it is separate from the chat toolbar tour.
 

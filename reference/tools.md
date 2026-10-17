@@ -36,12 +36,14 @@ Inspection tools work in Agent and Plan when dependencies are available. IDE res
 | `remove_file` | Delete one workspace file and update supported loaded project membership. Agent mode. |
 | `run_build` | Build the solution or supported target; available in Agent and Plan. |
 | `run_tests` | Run tests with supported selection/filtering; available in Agent and Plan. |
-| `run_cli` | Execute managed CLI requests and bounded batches. Plan accepts recognized reads only. |
+| `run_cli` | Execute managed CLI requests and bounded batches, including in an external `workdir` after path approval. Plan accepts recognized reads only. |
 | `shell_command` | Execute Windows PowerShell 5.1 scripts or recognized managed commands. Plan accepts recognized managed reads, not ordinary scripts. |
 
 `remove_file` does not delete directories or stage Git changes. It rejects unsupported project items and requires unsaved documents/projects to be saved first. Recorded workspace changes support review and undo, subject to conflict checks. Build and test execution can create artifacts even in Plan.
 
 Managed command integrations classify supported Git, GitHub, text, and .NET operations. Configure their rights under **Run CLI commands > Integrations**. Historical identifiers `git_read`, `git_write`, `github_read`, and `github_write` are internal compatibility/permission categories, not tools to select for a new agent. Use `run_cli` with explicit integration rights.
+
+For commands targeting another worktree or repository, see [Run commands in another folder](../customization/tools.md#run-commands-in-another-folder). Folder approval and repository-write approval are separate.
 
 ## Plan, clarify, and customize
 
@@ -55,6 +57,17 @@ Managed command integrations classify supported Git, GitHub, text, and .NET oper
 | `create_agent_profile` | Create a validated workspace or global `.agent.md` definition; Agent mode. |
 | `ollama_load_model` | Load a model into an Ollama server's memory; Ollama only. |
 | `ollama_unload_model` | Unload a model from an Ollama server's memory; Ollama only. |
+
+## DeepSeek web tools
+
+The [DeepSeek provider](../providers/deepseek-visual-studio-2026.md#search-the-web-and-read-pages) adds these tools under **DeepSeek Web Tools** on Flash and Pro. Both are available in Agent and Plan, subject to their toggles and the active agent's tool selection. Other providers do not receive them.
+
+| Tool | Purpose and arguments |
+| --- | --- |
+| `deepseek_search` | Search the web with `query` (1–128 characters), `count` (1–50, default 10), and `need_content` (default false). Optional `ori_question` and IP `localization` provide additional search context. |
+| `deepseek_fetch` | Read a page as Markdown using an HTTP(S) `url` without credentials. `maxChars` limits the returned text to 1–20,000 characters, default 12,000. |
+
+Results flag truncated content. For a custom agent with selected tools, include each required identifier in its `tools` list. These are function tools, separate from the model's native `web_search`. Successful non-empty responses contribute to [DeepSeek's estimated conversation costs](../providers/deepseek-visual-studio-2026.md#check-balance-and-costs).
 
 ## Provider-native and MCP tools
 

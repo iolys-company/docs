@@ -17,7 +17,7 @@ iolys brings your models and coding agents into one Visual Studio workflow. Add 
 | A Kiro account | [Kiro](kiro-visual-studio-2026.md) | Sign in with the managed Kiro executable |
 | OpenAI, Anthropic, Gemini, Groq, or NVIDIA NIM | [API providers](api-providers.md) | Provider API key |
 | Several model vendors through one API | [OpenRouter](openrouter-visual-studio-2026.md) | OpenRouter API key |
-| DeepSeek models and native Web Search | [DeepSeek](deepseek-visual-studio-2026.md) | DeepSeek API key |
+| DeepSeek models, Search and Fetch tools, and native Web Search where supported | [DeepSeek](deepseek-visual-studio-2026.md) | DeepSeek API key |
 | Curated pay-as-you-go coding models | [OpenCode Zen](opencode-zen-visual-studio-2026.md) | OpenCode Zen API key |
 | Models included in an OpenCode Go subscription | [OpenCode Go](opencode-go-visual-studio-2026.md) | OpenCode API key |
 | Local models or your own Ollama server | [Ollama](ollama-visual-studio-2026.md) | Server URL |

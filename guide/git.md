@@ -49,6 +49,29 @@ Creating a pull request does not itself push the branch. Specify both actions wh
 
 Ordinary Git and GitHub writes share a repository-scoped grant. Prompts can offer **Approve once**, **Allow repository writes for this session**, or **Reject**. Review the scope before granting continuing access. Merging a pull request requires a separate confirmation of its exact head, even when ordinary writes have been approved.
 
+## Amend the last commit
+
+In Agent mode, ask to amend the last commit after reviewing the staged changes. For example:
+
+```text
+Amend the last commit's message to "Handle cancellation in the API client".
+Keep its files unchanged and do not push.
+```
+
+The managed `git commit --amend -m ...` operation can reuse the repository-write session grant. A message-only amendment does not require staged changes; when changes are staged, an amendment includes them. The approval prompt identifies the HEAD being amended. Additional options such as `--reset-author` require exact approval.
+
+## Delete a remote branch
+
+Name the remote and branch explicitly when asking for deletion:
+
+```text
+Delete the remote branch feature/csv-export from origin.
+```
+
+Managed Git supports `git push origin --delete feature/csv-export`, the `-d` form, and the `:branch` deletion refspec. Each invocation requires exact approval, even with a repository-write session grant or Full Access. Use Agent mode for this operation.
+
+Force pushes, forced deletions, prune pushes, and mirror pushes remain refused by the managed integration.
+
 ## Handle command failures
 
 Git hooks and configured commit signing remain enabled. If a commit fails, read the reported cause and correct it before retrying. An unrecognized command option can require exact approval instead of inheriting the permission for a simpler command.
