@@ -43,3 +43,11 @@ The GIF at `assets/diagrams/agent-creator-workflow.gif` is an illustrated exampl
 - External `run_cli` working directories and approval scope: [PR #270](https://github.com/iolys-company/iolys/pull/270).
 - Managed commit amendment and remote branch deletion: [PR #273](https://github.com/iolys-company/iolys/pull/273) and [PR #268](https://github.com/iolys-company/iolys/pull/268).
 - Compact tool-call hover previews: the separate tooltip change in [PR #278](https://github.com/iolys-company/iolys/pull/278).
+
+## OpenCode reasoning, usage, and tools (October 21, 2026)
+
+- Effort choices and defaults checked against `src/Iolys.Core/Providers/OpenCode/OpenCodeModels.cs` and `OpenCodeZenModels.cs` in `vs_assistant`. The guides show examples of integration profiles, not a permanent available-model catalog.
+- Account counters, context, tool forwarding, and conditional costs checked against `OpenCodeProvider.cs`, `OpenCodeOpenAiProvider.cs`, `OpenCodeZenPricing.cs`, and `docs/provider/{opencode_go,opencode_zen}/README.md`.
+- Go's `conversation-tools.png` and `usage-limit.png` are unchanged copies of the extension's WPF demonstration captures. Existing `reasoning-level.png` is now displayed in the Go guide alongside context and usage captures.
+- Zen's updated `reasoning-level.png` comes from `Iolys.PublicWebSite/src/Iolys.PublicWebsite/wwwroot/img/providers/opencode-zen/`. It was rendered from real WPF controls using the website's `tools/opencode-zen/render-reasoning.ps1`, with the six GPT-6 Luna choices verified against the implementation. The existing Zen context capture is now displayed in the guide. All captures use demonstration data and make no live account, provider, or billing claim.
+- Native-tool boundaries checked against the extension integration and the official [OpenCode built-in tools](https://opencode.ai/docs/tools/) and [hosted web search](https://opencode.ai/v2/docs/console/websearch/) documentation. These upstream services are not enabled by the iolys Go/Zen API-key connections.

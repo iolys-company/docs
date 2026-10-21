@@ -33,7 +33,8 @@ The selection belongs to the conversation. When switching to a model without eff
 | Anthropic API | Sends effort only when supported by the selected model. |
 | [DeepSeek](deepseek-visual-studio-2026.md) | Offers the effort choices supported by the current integration's catalog. |
 | [OpenRouter](openrouter-visual-studio-2026.md) | Uses reasoning metadata from its model catalog; not all models offer a selector. |
-| [OpenCode Go](opencode-go-visual-studio-2026.md) | Uses model-specific effort options. |
+| [OpenCode Go](opencode-go-visual-studio-2026.md#set-the-reasoning-level) | Model-specific choices; GPT Luna, DeepSeek V4, GLM-5.2, and MiniMax M3 have different menus. |
+| [OpenCode Zen](opencode-zen-visual-studio-2026.md#choose-a-reasoning-level) | Verified model profiles expose their supported levels. Choices can differ from Go; leaving effort unset keeps the provider default. |
 | [Databricks](databricks-visual-studio-2026.md) | Depends on the endpoint's model profile and transport. |
 | [Ollama](ollama-visual-studio-2026.md#set-reasoning-effort) | Uses named levels reported by the model. Thinking-capable GPT-OSS models also offer low, medium, and high on older Ollama versions without level metadata. |
 
@@ -63,4 +64,4 @@ See [Usage and costs](../guide/usage.md) to interpret the resulting token, quota
 
 ## OpenCode Zen
 
-[Zen](opencode-zen-visual-studio-2026.md) shows reasoning effort only for verified model profiles. Options can differ from the same model on Go because its API route differs. Leave effort unset to keep the provider default. Gemini uses native thinking configuration; adaptive Claude uses its supported effort options.
+[Zen](opencode-zen-visual-studio-2026.md#choose-a-reasoning-level) includes an illustrated selector and example effort lists. For example, GPT-6 Luna offers Max on Zen, while Go stops at Xhigh. Gemini uses native thinking configuration; adaptive Claude uses its supported effort options. Use the selected connection's current menu.

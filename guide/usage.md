@@ -64,6 +64,16 @@ Reasoning effort and optional speed tiers can change resource use. Choose these 
 
 Some tools contribute a separate request fee to turn and conversation estimates. [DeepSeek Search and Fetch](../providers/deepseek-visual-studio-2026.md#check-balance-and-costs) add an estimate for successful non-empty responses alongside available model token costs, without adding tokens or model calls. Check the provider's billing record for actual charges and promotions.
 
+## OpenCode Go and Zen at a glance
+
+| Information | OpenCode Go | OpenCode Zen |
+| --- | --- | --- |
+| Account Usage window | Reported five-hour, weekly, and monthly consumption, remaining percentages, reset dates, and reached limits. Includes other clients using the account. | No integrated account balance or quota window. Check the OpenCode Console. |
+| Turn and session dollar estimates | No Go per-turn dollar estimate. | Sums of available estimates from returned tokens and exact Zen prices; calls without sufficient data are excluded. |
+| Context window | Latest reported input-token total when available, otherwise an estimate; category breakdown estimated locally. | Latest reported input-token total when available, otherwise an estimate; category breakdown estimated locally. |
+
+See the illustrated [Go usage window and limit warning](../providers/opencode-go-visual-studio-2026.md#check-account-usage) and [Zen token and cost guide](../providers/opencode-zen-visual-studio-2026.md#token-usage-and-estimated-costs). Unknown values stay unavailable; a missing estimate does not mean a request was free.
+
 ## OpenCode Zen
 
 [Zen](../providers/opencode-zen-visual-studio-2026.md) collects the token usage returned by each call. Where exact Zen prices and the necessary token buckets are known, the turn and session indicators show the sum of available cost estimates. Missing usage or required rates exclude that call from the monetary amount; an absent amount is not evidence of a free request. Context uses the last input count. The public account API does not provide an integrated Zen balance/quota view; check the OpenCode Console for charges and credit.

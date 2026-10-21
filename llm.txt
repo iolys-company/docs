@@ -32,7 +32,8 @@ Available models, tools, authentication, and usage reporting depend on the provi
 - [API providers](https://raw.githubusercontent.com/iolys-company/docs/main/providers/api-providers.md): Provider API keys and compatible endpoints.
 - [OpenRouter](https://raw.githubusercontent.com/iolys-company/docs/main/providers/openrouter-visual-studio-2026.md): Models, native tools, reasoning, and account credit.
 - [DeepSeek](https://raw.githubusercontent.com/iolys-company/docs/main/providers/deepseek-visual-studio-2026.md): API connection, reasoning, Search and Fetch tools, estimated tool fees, native Web Search, and account balance.
-- [OpenCode Go](https://raw.githubusercontent.com/iolys-company/docs/main/providers/opencode-go-visual-studio-2026.md): Subscription connection, models, context, and usage.
+- [OpenCode Go](https://raw.githubusercontent.com/iolys-company/docs/main/providers/opencode-go-visual-studio-2026.md): Subscription setup, reasoning levels, iolys and MCP tools, context, account usage, and reset warnings.
+- [OpenCode Zen](https://raw.githubusercontent.com/iolys-company/docs/main/providers/opencode-zen-visual-studio-2026.md): Pay-as-you-go setup, reasoning levels, iolys and MCP tools, context, and conditional cost estimates.
 - [Databricks](https://raw.githubusercontent.com/iolys-company/docs/main/providers/databricks-visual-studio-2026.md): Model Serving endpoints and model capabilities.
 - [Ollama](https://raw.githubusercontent.com/iolys-company/docs/main/providers/ollama-visual-studio-2026.md): Local or remote servers, model installation, context and reasoning, RAM / VRAM controls, and generation performance.
 - [Reasoning and speed](https://raw.githubusercontent.com/iolys-company/docs/main/providers/reasoning.md): Reasoning effort and supported service tiers.
@@ -57,5 +58,3 @@ Available models, tools, authentication, and usage reporting depend on the provi
 - [Product website](https://getiolys.com/): Product news and release articles.
 - [Install from Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=iolys.iolys-visual-studio): Extension listing.
 - [Community](https://discord.com/invite/NMnFZmPsc5): Questions and feedback.
-
-- [OpenCode Zen](https://raw.githubusercontent.com/iolys-company/docs/main/providers/opencode-zen-visual-studio-2026.md): Pay-as-you-go connection, supported models, returned tokens, and conditional cost estimates.

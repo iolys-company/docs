@@ -33,6 +33,14 @@ The [tool reference](../reference/tools.md) lists built-in identifiers. Provider
 
 Some providers also add function tools to their own group. With DeepSeek selected, expand **DeepSeek Web Tools** to enable `deepseek_search` and `deepseek_fetch`. These work on Flash and Pro in Agent and Plan, separately from native model tools. See [DeepSeek web access](../providers/deepseek-visual-studio-2026.md#search-the-web-and-read-pages).
 
+## OpenCode Go and Zen
+
+Both connections use **iolys tools and the MCP servers you configure**, when the selected model supports tool calling. Enable the needed tools under **Tools and Skills**, then choose your agent and permission mode. You can inspect the solution, change files, build, and run tests through the same iolys workflow.
+
+An OpenCode API key does not import the OpenCode CLI's built-in shell, file tools, plugins, or permission configuration. The iolys connections do not enable OpenCode-hosted web search or provider-native code execution. OpenCode's [hosted web search](https://opencode.ai/v2/docs/console/websearch/) is a separate service for its connected client.
+
+For captures and practical examples, see [Go tools](../providers/opencode-go-visual-studio-2026.md#use-tools-with-your-solution) and [Zen tools](../providers/opencode-zen-visual-studio-2026.md#use-tools-with-your-solution). Model reasoning support and tool calling are separate capabilities; a Thinking badge does not itself enable tools.
+
 ## Work with command integrations
 
 **Run CLI commands** executes supported programs through managed integrations. Expand **Integrations** to check availability and configure read/write access. Available integrations include Git, GitHub, text utilities, and supported .NET operations; the picker shows **Setup required** when a dependency is missing.

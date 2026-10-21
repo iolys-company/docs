@@ -1,6 +1,6 @@
 ---
 title: C# development with OpenCode Go in Visual Studio 2026
-description: Bring your OpenCode Go subscription to C# development in Visual Studio 2026 with iolys. Connect an API key, choose models, and inspect account usage.
+description: Use OpenCode Go in Visual Studio 2026 with iolys. Set model-specific reasoning levels, use iolys and MCP tools, and inspect subscription usage and resets.
 ---
 
 <a id="opencode-go"></a>
@@ -34,21 +34,65 @@ The provider panel lists discovered models, their known context windows, and cap
 
 ![OpenCode Go model catalog with model selection and capability badges](../assets/docs/provider/opencode_go/img/manage-models.png)
 
+*Example model shortlist and capability badges. Refresh the catalog for your account's current choices.*
+
 Use **Tools** for models that can perform development actions and **Vision** for image input. **Thinking** describes reasoning support; it does not necessarily provide an adjustable effort selector.
 
 Go's model endpoint takes priority for reported limits and capabilities. iolys supplements it with public models.dev metadata and bundled fallbacks. The public metadata request carries neither your Go key nor the conversation ID. A temporary metadata failure does not by itself prevent connecting to Go. Consult the refreshed catalog instead of treating an illustrated model list as permanent.
 
-## Set reasoning and use tools
+<a id="set-reasoning-and-use-tools"></a>
 
-Select reasoning effort in the **chat model picker**, rather than the connection panel. Options depend on the chosen model: some expose several effort levels, some offer `none` and `thinking`, and others have no selector. Use the values shown for that model. Where `none` is supported, it explicitly disables thinking; a missing selector leaves the model's server-side reasoning behavior in place.
+## Set the reasoning level
 
-Tool-capable models can use shared [iolys tools](../customization/tools.md), [MCP servers](../customization/mcp.md), and [skills](../customization/skills.md). Their availability still depends on the selected agent, mode, and [permissions](../customization/permissions.md). Attach images only to a model reporting Vision support. See [Files, images, and context](../guide/context.md) for the attachment workflow.
+1. Open the **chat model picker** beside your prompt.
+2. Choose an OpenCode Go model.
+3. Open **Effort** and select one of that model's available levels.
+4. Send your next message.
+
+Use a lower level for a focused change or a higher one for a deeper investigation. Higher effort can increase response time and token use. Model selection and effort belong in the chat picker; the connection panel manages your key and model shortlist.
+
+![OpenCode Go chat model picker with GPT-6 Luna and the None, Low, Medium, High, and Xhigh effort options](../assets/docs/provider/opencode_go/img/reasoning-level.png)
+
+*Go reasoning selector rendered from the product controls with demonstration data. Available choices follow the selected model.*
+
+These integration profiles were checked on **October 21, 2026**. They describe effort choices, not a promise that every model is available on your account.
+
+| Go model | Effort choices | Initial selection |
+| --- | --- | --- |
+| GPT-6 Luna, GPT-5.6 Luna | None, Low, Medium, High, Xhigh | High |
+| DeepSeek V4 | Low, Medium, High, Max | High |
+| GLM-5.2 | High, Max | High |
+| MiniMax M3 | None, Thinking | Thinking |
+
+Where **None** is supported, it explicitly disables thinking. Models without a selector keep their server-side reasoning behavior. A Thinking badge alone does not guarantee adjustable effort. Go and Zen can expose different choices for the same model; use the selected connection's menu. See [Reasoning and speed](reasoning.md).
+
+## Use tools with your solution
+
+Choose a model reporting **Tools** support, then open **Tools and Skills** to enable the capabilities your task needs. Tool-capable Go models can use:
+
+- **iolys tools** to read and search files, inspect IDE diagnostics, edit code, build, and run selected tests.
+- **MCP tools** from the servers you have connected and enabled.
+- **Custom agents and skills** to reuse your instructions and workflows.
+
+For example, ask: “Inspect this API client, add cancellation support, and run the relevant tests.” Review the tool activity and resulting changes in the conversation. Availability depends on the selected model, agent, mode, and [permissions](../customization/permissions.md); you can cancel active work from Chat.
+
+![OpenCode Go conversation showing completed file-read and edit tools and a C# CancellationToken change](../assets/docs/provider/opencode_go/img/conversation-tools.png)
+
+*Demonstration of iolys tool activity with Go. This capture made no provider request and changed no files.*
+
+### What about native OpenCode tools?
+
+This API-key connection uses **iolys and configured MCP tools**. It does not import the OpenCode CLI's built-in shell, file tools, plugins, or permission settings. OpenCode's separately documented [hosted web search](https://opencode.ai/v2/docs/console/websearch/) is not enabled by connecting your Go key in iolys.
+
+See [Tools and integrations](../customization/tools.md#opencode-go-and-zen), [MCP servers](../customization/mcp.md), and [skills](../customization/skills.md) for configuration. Attach images only to a model reporting Vision support; follow [Files, images, and context](../guide/context.md).
 
 ## Read context and output limits
 
 **Context window usage** uses the input-token count reported by the last model call when available, with a locally estimated breakdown. Otherwise, it estimates the active conversation. Unknown model context limits remain unavailable rather than receiving a default size. OpenAI-protocol estimates exclude image and encrypted-reasoning tokens.
 
 ![OpenCode Go context window with an estimated category breakdown](../assets/docs/provider/opencode_go/img/context-window.png)
+
+*Example input-token total and locally estimated breakdown into messages, tools, IDE state, and files.*
 
 Each model call has an automatic output ceiling: the smaller of the model's models.dev output limit and **32,000 tokens**. Missing or invalid output limits fall back to 32,000. This ceiling is independent of reasoning effort and applies to each model call, not the whole conversation.
 
@@ -57,6 +101,14 @@ Each model call has an automatic output ceiling: the smaller of the model's mode
 Open **Usage** in Chat to see reported **5-hour**, **weekly**, and **monthly** consumption, remaining percentages, reset dates, and reached-limit warnings.
 
 ![OpenCode Go account usage showing five-hour, weekly, and monthly windows](../assets/docs/provider/opencode_go/img/usage.png)
+
+*Example account consumption, remaining percentages, and reset dates. These values are demonstration data.*
+
+When a limit is reached, the warning identifies the affected window. Read that row's reset date to see which allowance needs to renew.
+
+![OpenCode Go Usage warning that the five-hour allowance is fully used, with weekly and monthly counters below](../assets/docs/provider/opencode_go/img/usage-limit.png)
+
+*Illustrative reached five-hour limit. Weekly and monthly counters remain visible; this is not a live account.*
 
 These counters cover the account, including requests from other clients. Missing counters mean unavailable data, not zero usage. The endpoint does not identify the Go/Go Plus plan or return a monetary balance, and iolys does not provide a Go per-turn dollar estimate. Context capacity and subscription quota measure different things; see [Usage and session statistics](../guide/usage.md).
 
