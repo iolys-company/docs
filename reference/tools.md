@@ -71,7 +71,7 @@ Results flag truncated content. For a custom agent with selected tools, include 
 
 ## Provider-native and MCP tools
 
-Provider-native capabilities are separate from this catalog. Examples include Claude Code's `WebSearch`/`WebFetch`, Codex's `web.run` and image generation, Kimi's search/fetch/skill tools, and Kiro's retained native tools. OpenRouter and DeepSeek can expose native web capabilities; Databricks search is controlled by its provider setting.
+Provider-native capabilities are separate from this catalog. Examples include Claude Code's `WebSearch`/`WebFetch`, Codex's `web.run` and image generation, Kimi's search/fetch/skill tools, Grok's web search and fetch tools, and Kiro's retained native tools. OpenRouter and DeepSeek can expose native web capabilities; Databricks search is controlled by its provider setting.
 
 These capabilities depend on the model, endpoint, account, and installed CLI. Some cannot be individually disabled. See [Providers](../providers/index.md) and [tool selection](../customization/tools.md).
 
