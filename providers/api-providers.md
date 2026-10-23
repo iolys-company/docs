@@ -5,7 +5,7 @@ description: Configure OpenAI, Anthropic, Gemini, Groq, NVIDIA NIM, and compatib
 
 # API providers
 
-Connect hosted models with an API key or use your own compatible endpoint. API credentials are separate from the subscriptions connected through [Claude Code](claude-code-visual-studio-2026.md), [Codex](codex-visual-studio-2026.md), [Kimi](kimi-visual-studio-2026.md), and [Kiro](kiro-visual-studio-2026.md).
+Connect hosted models with an API key or use your own compatible endpoint. API credentials are separate from the subscriptions connected through [Claude Code](claude-code-visual-studio-2026.md), [Codex](codex-visual-studio-2026.md), [Kimi](kimi-visual-studio-2026.md), [Kiro](kiro-visual-studio-2026.md), and [Grok](grok-visual-studio-2026.md).
 
 ## Common setup
 
