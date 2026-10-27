@@ -14,6 +14,7 @@ iolys brings your models and coding agents into one Visual Studio workflow. Add 
 | A Claude subscription through Claude Code | [Claude Code](claude-code-visual-studio-2026.md) | Browser sign-in in the managed CLI |
 | Codex from Visual Studio | [Codex](codex-visual-studio-2026.md) | Interactive sign-in in the managed CLI |
 | A Kimi Code account | [Kimi](kimi-visual-studio-2026.md) | Browser or device authorization |
+| A Grok account through Grok Build | [Grok](grok-visual-studio-2026.md) | Browser sign-in in the managed CLI |
 | A Kiro account | [Kiro](kiro-visual-studio-2026.md) | Sign in with the managed Kiro executable |
 | OpenAI, Anthropic, Gemini, Groq, or NVIDIA NIM | [API providers](api-providers.md) | Provider API key |
 | Several model vendors through one API | [OpenRouter](openrouter-visual-studio-2026.md) | OpenRouter API key |
@@ -32,7 +33,7 @@ iolys brings your models and coding agents into one Visual Studio workflow. Add 
 4. Wait for its model catalog to load. API providers usually offer **Test Connection**; CLI providers offer **Connect**.
 5. Return to Chat, select a model, and follow the [quickstart](../guide/quickstart.md).
 
-For managed coding agents, iolys provides installation, version selection, updates, and removal. An existing CLI on your system does not replace the iolys-managed executable. Claude Code, Codex, and Kimi also use their own managed profiles, so sign in from iolys even if another application is already connected.
+For managed coding agents, iolys provides installation, version selection, updates, and removal. An existing CLI on your system does not replace the iolys-managed executable. Claude Code, Codex, Kimi, and Grok also use their own managed profiles, so sign in from iolys even if another application is already connected.
 
 ![Manage Providers showing OpenRouter, Codex, and Claude Code connections beside a searchable model catalog.](../assets/screenshots/theme/models-dark.png)
 

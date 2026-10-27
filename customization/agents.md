@@ -78,4 +78,4 @@ Edit file-backed definitions at their workspace or global location. The selector
 
 The conversation captures an agent snapshot when it starts. Editing or deleting the reusable definition does not silently rewrite existing conversations; start a new conversation to use the updated definition.
 
-Agent selections cannot increase [permission](permissions.md) access or bypass disabled tools. Some provider-native tools, notably those retained by Codex, Kimi, and Kiro, cannot be individually disabled by iolys. An explicit workspace-tool list is therefore not a complete restriction on every capability of those providers.
+Agent selections cannot increase [permission](permissions.md) access or bypass disabled tools. Some provider-native tools, notably those retained by Codex, Kimi, Kiro, and Grok, cannot be individually disabled by iolys. An explicit workspace-tool list is therefore not a complete restriction on every capability of those providers.

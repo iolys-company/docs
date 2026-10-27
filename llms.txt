@@ -28,6 +28,7 @@ Available models, tools, authentication, and usage reporting depend on the provi
 - [Claude Code](https://raw.githubusercontent.com/iolys-company/docs/main/providers/claude-code-visual-studio-2026.md): Managed CLI installation, sign-in, tools, and usage.
 - [Codex](https://raw.githubusercontent.com/iolys-company/docs/main/providers/codex-visual-studio-2026.md): Managed CLI setup, models, reasoning controls, and account usage.
 - [Kimi](https://raw.githubusercontent.com/iolys-company/docs/main/providers/kimi-visual-studio-2026.md): Kimi Code connection, models, tools, and subscription usage.
+- [Grok](https://raw.githubusercontent.com/iolys-company/docs/main/providers/grok-visual-studio-2026.md): Grok Build connection, models, reasoning effort, tools, and reported costs.
 - [Kiro](https://raw.githubusercontent.com/iolys-company/docs/main/providers/kiro-visual-studio-2026.md): Managed CLI installation, authentication, and supported features.
 - [API providers](https://raw.githubusercontent.com/iolys-company/docs/main/providers/api-providers.md): Provider API keys and compatible endpoints.
 - [OpenRouter](https://raw.githubusercontent.com/iolys-company/docs/main/providers/openrouter-visual-studio-2026.md): Models, native tools, reasoning, and account credit.

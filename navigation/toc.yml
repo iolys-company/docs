@@ -35,6 +35,8 @@
       href: ../providers/codex-visual-studio-2026.md
     - name: Kimi
       href: ../providers/kimi-visual-studio-2026.md
+    - name: Grok
+      href: ../providers/grok-visual-studio-2026.md
     - name: Kiro
       href: ../providers/kiro-visual-studio-2026.md
     - name: OpenRouter

@@ -29,6 +29,7 @@ The selection belongs to the conversation. When switching to a model without eff
 | [Claude Code](claude-code-visual-studio-2026.md) | Available controls depend on the managed CLI and selected model. |
 | [Codex](codex-visual-studio-2026.md) | The CLI advertises supported effort levels for each model. |
 | [Kimi](kimi-visual-studio-2026.md) | Uses the model catalog and the CLI's current configuration options. An on/off thinking control is different from graded effort. |
+| [Grok](grok-visual-studio-2026.md) | Uses the effort choices of each model in your account's catalog; Grok confirms the model and effort before the prompt is sent. |
 | [Kiro](kiro-visual-studio-2026.md) | Discovers the model's effort options through the CLI. Discovery can finish after the model list first appears. |
 | Anthropic API | Sends effort only when supported by the selected model. |
 | [DeepSeek](deepseek-visual-studio-2026.md) | Offers the effort choices supported by the current integration's catalog. |
@@ -57,6 +58,7 @@ If the provider rejects the requested tier, the turn fails and iolys resets the 
 - **No effort selector:** choose a model that reports effort support. Do not assume support from its name alone.
 - **Kiro options appear late:** reopen the composer configuration after model discovery finishes.
 - **Kimi reports incompatible levels:** update the managed CLI and refresh the model catalog.
+- **Grok rejects a model or effort:** refresh the catalog and choose a currently advertised value; iolys does not substitute another one.
 - **An old conversation rejects a choice:** select a currently advertised value, or return to the default.
 - **An accelerated tier is rejected:** check the provider's account eligibility and use standard service for the next attempt.
 

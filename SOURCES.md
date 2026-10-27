@@ -7,9 +7,9 @@ Initial source review: 2 October 2026. Paths below refer to the local `vs_assist
 | Introduction, installation, quickstart | `docs/marketing/Product Features.md`, `docs/marketing/visual-studio-marketplace.md`, `docs/brand.md` |
 | Conversations, context, review, settings | `docs/chat_reading.md`, `docs/session_persistence.md`, `docs/review-prompt.md`, `docs/marketing/Product Features.md` |
 | Parallel workspaces | `docs/marketing/Product Features.md`, `docs/visual_studio_instance_notifications.md` |
-| Provider guides | `docs/provider/{claude_code,codex,kimi,kiro,openrouter,opencode_go,databricks}/README.md`, `docs/ollama_provider.md` |
+| Provider guides | `docs/provider/{claude_code,codex,kimi,kiro,grok,openrouter,opencode_go,databricks}/README.md`, `docs/ollama_provider.md` |
 | Reasoning, speed, usage | `docs/provider/reasoning_effort.md`, `docs/provider_service_tiers.md`, `docs/provider_model_capabilities.md`, provider guides |
-| Native tools and provider differences | `docs/tools/native_tools_by_provider.md`, `docs/tools/{claude,codex,kimi,kiro}_tools.md`, `docs/tools/deepseek_web_search.md`, `docs/tools/databricks_web_search.md` |
+| Native tools and provider differences | `docs/tools/native_tools_by_provider.md`, `docs/tools/{claude,codex,kimi,kiro,grok}_tools.md`, `docs/tools/deepseek_web_search.md`, `docs/tools/databricks_web_search.md` |
 | Tool catalog and permissions | `docs/tools/iolys_tools.md`, `docs/tools/git_command_classification.md`, `docs/tools/github_command_classification.md`, current tool registration and UI |
 | Skills and custom agents | `docs/SHARED_SKILLS_SPEC.md` checked against shipped parsers/UI, `docs/marketing/Product Features.md`, current agent-profile parser and creator skill |
 | MCP | `docs/tools/mcp_servers.md`, current configuration dialog and execution-policy code |

@@ -77,7 +77,7 @@ foreach ($entry in $search.Keys) {
 if ($search.Count -lt 20) { $failures.Add('Search index contains fewer than 20 articles.') }
 
 # Saved provider URLs must lead directly to their renamed guides.
-foreach ($provider in @('claude-code', 'codex', 'kimi', 'kiro', 'openrouter', 'deepseek', 'opencode-zen', 'opencode-go', 'databricks', 'ollama')) {
+foreach ($provider in @('claude-code', 'codex', 'kimi', 'grok', 'kiro', 'openrouter', 'deepseek', 'opencode-zen', 'opencode-go', 'databricks', 'ollama')) {
     $oldPath = "providers/$provider.html"
     $newPath = "providers/$provider-visual-studio-2026.html"
     $oldFile = Join-Path $root $oldPath
