@@ -72,10 +72,12 @@ The filename supplies the logical key. Frontmatter supplies the display name, de
 
 Use identifiers from the [tool catalog](../reference/tools.md) or the connected [MCP server](mcp.md). An explicit agent using `run_cli` also needs `integrations` rights: omitted rights are false. `run_cli` confines execution to managed integrations; `shell_command` additionally allows ordinary scripts through its separate approval flow.
 
+For an agent with selected tools, `write: true` allows an integration's writes under the normal approval policy. To preapprove recognized repository writes, add `grants: [repository_write]` to the relevant `git` or `github` entry alongside `write: true`. Each grant applies only to that integration while the agent is selected, including in later conversations; all-tools access alone does not imply a grant. Explicit **Always ask** and **Block** controls, Plan restrictions, path checks, and mandatory confirmations still apply.
+
 ## Edit and select deliberately
 
 Edit file-backed definitions at their workspace or global location. The selector supports searching and deleting custom agents and reports tools that are missing, disabled, or unavailable.
 
 The conversation captures an agent snapshot when it starts. Editing or deleting the reusable definition does not silently rewrite existing conversations; start a new conversation to use the updated definition.
 
-Agent selections cannot increase [permission](permissions.md) access or bypass disabled tools. Some provider-native tools, notably those retained by Codex, Kimi, Kiro, and Grok, cannot be individually disabled by iolys. An explicit workspace-tool list is therefore not a complete restriction on every capability of those providers.
+Agent selections remain subject to [permission](permissions.md) controls and disabled tools, including when the definition contains an explicit integration grant. Some provider-native tools, notably those retained by Codex, Kimi, Kiro, and Grok, cannot be individually disabled by iolys. An explicit workspace-tool list is therefore not a complete restriction on every capability of those providers.

@@ -37,7 +37,7 @@ Inspection tools work in Agent and Plan when dependencies are available. IDE res
 | `run_build` | Build the solution or supported target; available in Agent and Plan. |
 | `run_tests` | Run tests with supported selection/filtering; available in Agent and Plan. |
 | `run_cli` | Execute managed CLI requests and bounded batches, including in an external `workdir` after path approval. Plan accepts recognized reads only. |
-| `shell_command` | Execute Windows PowerShell 5.1 scripts or recognized managed commands. Plan accepts recognized managed reads, not ordinary scripts. |
+| `shell_command` | Execute scripts with iolys-managed PowerShell 7 or recognized managed commands. The first script needs internet access to prepare the runtime. Plan accepts recognized managed reads, not ordinary scripts. |
 
 `remove_file` does not delete directories or stage Git changes. It rejects unsupported project items and requires unsaved documents/projects to be saved first. Recorded workspace changes support review and undo, subject to conflict checks. Build and test execution can create artifacts even in Plan.
 

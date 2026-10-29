@@ -15,18 +15,11 @@ Work on your C# projects in Visual Studio 2026 with your Kiro account and iolys.
 
 1. Open **Manage Models**, select **Add Provider**, and choose **Kiro**.
 2. Install Kiro CLI using the provider's version controls.
-3. Sign in with the managed executable in PowerShell:
-
-   ```powershell
-   $kiroCli = Join-Path $env:LOCALAPPDATA 'Iolys\Providers\KiroCli\Cli\LocalApp\Kiro-Cli\kiro-cli.exe'
-   & $kiroCli login
-   & $kiroCli whoami
-   ```
-
-4. Complete Kiro's sign-in instructions, then return to iolys and select **Connect**.
+3. Select **Connect**. iolys checks the managed CLI's authentication and opens an interactive sign-in window if needed. Follow Kiro's sign-in instructions.
+4. After sign-in, iolys verifies authentication, reconnects, and refreshes the model catalog.
 5. Select a discovered model in Chat and send a message.
 
-**Connect does not launch Kiro login.** It reconnects using existing CLI credentials. If the path above is absent, check the managed `Iolys\Providers\KiroCli\Cli` directory: older installations can place the executable directly there. A system CLI on PATH does not replace the managed executable.
+Existing CLI authentication is reused without opening a sign-in window. Signing in to Kiro IDE alone does not verify the managed CLI's authentication. A system CLI on PATH does not replace the executable managed by iolys.
 
 ![Kiro installation and model selection](../assets/docs/provider/kiro/img/models-kiro.png)
 
@@ -66,8 +59,22 @@ Update or reinstall from the managed version controls. Uninstalling this managed
 
 | Problem | Action |
 | --- | --- |
-| Connect does not open a browser | Run the managed executable's `login`, verify `whoami`, then Connect. |
+| Connect does not open sign-in | Existing CLI authentication skips sign-in. If connection still fails, check the managed executable's `whoami` result using the steps below. |
+| Sign-in does not complete | Select **Connect** again and complete the interactive CLI prompts. Check the managed installation and network connection if it fails. |
 | No models appear | Verify sign-in, managed version, and connectivity; refresh the catalog. |
 | Image tool is missing | Attach the image directly; `read_image` is intentionally unavailable. |
 | Native tool checkbox cannot be changed | Those five tools have fixed inclusion in this integration. |
 | Project skills are missing | Check for a conflicting `.kiro/skills` directory. |
+
+### Check authentication manually
+
+If the normal **Connect** flow fails, you can check the managed CLI in PowerShell:
+
+```powershell
+$kiroCli = Join-Path $env:LOCALAPPDATA 'Iolys\Providers\KiroCli\Cli\LocalApp\Kiro-Cli\kiro-cli.exe'
+& $kiroCli whoami
+```
+
+If it reports that you are not signed in, run `& $kiroCli login`, complete the sign-in instructions, and check `whoami` again. Return to iolys and select **Connect**.
+
+If that path is absent, check the managed `Iolys\Providers\KiroCli\Cli` directory: older installations can place the executable directly there. Use that managed executable for both commands.

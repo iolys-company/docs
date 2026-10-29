@@ -36,7 +36,7 @@ Where supported, the picker also offers **Speed** or **Fast mode**. Accelerated 
 | [Permissions](../customization/permissions.md) | When operations require approval and the access available to the task. |
 | [Tool picker](../customization/tools.md) | The enabled built-in, native, skill, and external MCP capabilities. |
 
-These controls work together. Selecting a custom agent or enabling a tool does not bypass a permission request or a Plan-mode restriction.
+These controls work together. Enabling a tool makes it available under the selected permissions. A custom agent can define [explicit integration grants](../customization/agents.md#understand-tool-selections) for supported operations; Plan restrictions, explicit **Always ask** or **Block** controls, and mandatory confirmations still apply.
 
 ![The permission picker displaying Interactive, Auto, and Full Access with their descriptions.](../assets/docs/screenshots/permission-mode-picker.png)
 

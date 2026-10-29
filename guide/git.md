@@ -31,7 +31,7 @@ Review the current branch's pull request and its checks. Explain any failing
 checks and identify the files involved.
 ```
 
-GitHub operations are scoped to the workspace's configured repository. An explicit repository or pull request URL must match that repository; cross-repository commands do not inherit ordinary read access.
+GitHub operations are scoped to the command's repository context. By default, this is the workspace's configured repository. To work in another repository, use `run_cli` with its folder as `workdir` and approve access when prompted; see [Run commands in another folder](../customization/tools.md#run-commands-in-another-folder). An explicit repository or pull request URL must match that target repository. Folder approval does not grant repository-write permission.
 
 ## Commit and publish deliberately
 

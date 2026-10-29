@@ -54,7 +54,11 @@ Do not edit or commit files.
 
 The agent can use recognized Git reads through `run_cli`. Integration controls distinguish inspection from repository changes. A custom agent with selected tools needs both the command tool and the appropriate integration rights.
 
-`shell_command` handles ordinary PowerShell scripts. Its script path uses Windows PowerShell 5.1, so PowerShell 7 syntax such as general `&&`/`||` chaining is not supported. Recognized managed commands receive their integration-specific handling; arbitrary scripts follow the separate shell approval flow.
+`shell_command` runs ordinary scripts with **PowerShell 7 managed by iolys**, with UTF-8 output and support for `&&` and `||`. Recognized managed commands receive their integration-specific handling; arbitrary scripts follow the separate shell approval flow.
+
+The first authorized command that needs a shell downloads and prepares the private runtime, so it requires internet access. Later commands reuse that installation; you do not need to install PowerShell 7 separately. Managed commands routed through `run_cli` do not trigger this download. If preparation fails or is cancelled, the script is not executed; resolve the reported problem and retry.
+
+Each script runs in a fresh process without loading a PowerShell profile. For a script that specifically requires legacy Windows PowerShell 5.1 modules, invoke `powershell.exe` explicitly. See [shell troubleshooting](../guide/troubleshooting.md#a-shell-command-cannot-start).
 
 ### Run commands in another folder
 

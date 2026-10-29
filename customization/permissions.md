@@ -48,6 +48,8 @@ The controls apply to managed direct invocations through `run_cli` and recognize
 
 Approval prompts can offer one-time or session permissions according to the action. Review the scope before choosing. The permission selector shows session grants and lets you revoke them for that conversation. Revoking a grant affects future operations; it does not cancel an operation already running.
 
+[Custom agents](agents.md#understand-tool-selections) can also declare explicit integration grants for recognized repository writes. These belong to the selected agent definition, rather than the conversation's saved grants. To end that preapproval, select another agent or remove the grant and start a conversation with the updated definition. **Always ask**, **Block**, Plan restrictions, and mandatory confirmations remain effective.
+
 [MCP servers](mcp.md) have separate per-server execution policies, including a session-only automatic option. Enabling a server or a tool is separate from approving its execution.
 
-Use the visible tool calls and [change review](../guide/chat.md) to inspect results. Cancellation stops active work where supported; it does not automatically undo completed changes or retract external actions.
+Use the visible tool calls and [change review](../guide/review.md) to inspect results. Cancellation stops active work where supported; it does not automatically undo completed changes or retract external actions.

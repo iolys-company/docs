@@ -15,7 +15,7 @@ iolys brings your models and coding agents into one Visual Studio workflow. Add 
 | Codex from Visual Studio | [Codex](codex-visual-studio-2026.md) | Interactive sign-in in the managed CLI |
 | A Kimi Code account | [Kimi](kimi-visual-studio-2026.md) | Browser or device authorization |
 | A Grok account through Grok Build | [Grok](grok-visual-studio-2026.md) | Browser sign-in in the managed CLI |
-| A Kiro account | [Kiro](kiro-visual-studio-2026.md) | Sign in with the managed Kiro executable |
+| A Kiro account | [Kiro](kiro-visual-studio-2026.md) | Connect reuses CLI authentication or opens sign-in |
 | OpenAI, Anthropic, Gemini, Groq, or NVIDIA NIM | [API providers](api-providers.md) | Provider API key |
 | Several model vendors through one API | [OpenRouter](openrouter-visual-studio-2026.md) | OpenRouter API key |
 | DeepSeek models, Search and Fetch tools, and native Web Search where supported | [DeepSeek](deepseek-visual-studio-2026.md) | DeepSeek API key |

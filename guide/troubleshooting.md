@@ -41,6 +41,14 @@ If the agent can inspect files but cannot edit, check **Plan** mode and [permiss
 
 For a rejected image, choose a model with image support and check the [context guide](context.md). If **Selection** is unavailable, select code in an editor; **Active document** requires an open code document.
 
+## A shell command cannot start
+
+The first authorized shell script prepares an iolys-managed PowerShell 7 runtime. Allow that download to finish and check the command terminal for setup progress. If preparation fails, check internet access and the reported download or installation error, then retry. The script does not run when runtime preparation fails or is cancelled.
+
+Installing PowerShell separately or changing your system PATH does not replace the private runtime. Once installed, the runtime is reused without another download. Scripts run without a PowerShell profile; commands that depend on profile-defined functions must load or define them explicitly. For legacy Windows PowerShell 5.1 modules, invoke `powershell.exe` explicitly.
+
+See [command integrations](../customization/tools.md#work-with-command-integrations) for the distinction between managed CLI commands and ordinary shell scripts.
+
 ## A parallel workspace cannot be created or removed
 
 Confirm that Git is available and the solution is in a repository. A branch name must be valid and cannot already be checked out in another worktree.
