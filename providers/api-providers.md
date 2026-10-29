@@ -42,6 +42,8 @@ These providers have preset endpoints. Select the corresponding provider, enter 
 
 Use capability badges rather than assuming every model offers function tools, vision, or configurable reasoning. These hosted presets do not configure a separately deployed private model server.
 
+Google Gemini uses a **Google AI Studio API key**, not Gemini CLI or browser sign-in. A consumer Gemini subscription does not replace this credential or cover API billing.
+
 ## Compatible endpoints
 
 For a local gateway, organizational proxy, or self-hosted API, choose the protocol your endpoint implements:

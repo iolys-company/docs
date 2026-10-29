@@ -28,6 +28,10 @@ Use the HTTPS workspace root, for example `https://example-workspace.azuredatabr
 
 Existing developer environment variables or a Databricks configuration profile can prefill the form. Check that the token belongs to the displayed workspace. This provider uses the supplied token; it does not acquire or refresh OAuth credentials automatically.
 
+## Where inference runs
+
+A Databricks workspace governs endpoint access, but does not guarantee that every model runs on your organization's own infrastructure. Model Serving can use [external models](https://docs.databricks.com/aws/en/machine-learning/foundation-models/external-models) hosted outside Databricks, including upstream providers such as OpenAI and Anthropic. Check each endpoint's configuration and your organization's data policies before sending code or other context.
+
 ## Select an endpoint
 
 The catalog lists eligible chat endpoints and their available capability metadata. Use the **serving-endpoint name**, rather than an arbitrary underlying model ID. Visible endpoints can still reject requests if their readiness or permissions have changed.

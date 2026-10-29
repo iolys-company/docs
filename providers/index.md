@@ -21,7 +21,7 @@ iolys brings your models and coding agents into one Visual Studio workflow. Add 
 | DeepSeek models, Search and Fetch tools, and native Web Search where supported | [DeepSeek](deepseek-visual-studio-2026.md) | DeepSeek API key |
 | Curated pay-as-you-go coding models | [OpenCode Zen](opencode-zen-visual-studio-2026.md) | OpenCode Zen API key |
 | Models included in an OpenCode Go subscription | [OpenCode Go](opencode-go-visual-studio-2026.md) | OpenCode API key |
-| Local models or your own Ollama server | [Ollama](ollama-visual-studio-2026.md) | Server URL |
+| Local or cloud models through an Ollama server | [Ollama](ollama-visual-studio-2026.md) | Server URL; cloud sign-in is managed on the Ollama server |
 | Your organization's Databricks Model Serving endpoints | [Databricks](databricks-visual-studio-2026.md) | Workspace URL and token |
 | A compatible proxy or self-hosted gateway | [Compatible endpoints](api-providers.md#compatible-endpoints) | Gateway URL and its required credentials |
 

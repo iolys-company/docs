@@ -26,6 +26,12 @@ If the selected provider panel still shows a connection form, enter its **Server
 
 For a remote server, use an address reachable from the machine running the iolys server. The provider connects to an existing Ollama service; adding it does not install or start a remote service for you.
 
+## Local and cloud models
+
+The connected Ollama server can expose local models, cloud models, and remote aliases. For cloud models, enable cloud access and sign in on that server using the [Ollama cloud setup](https://docs.ollama.com/cloud), then select a model exposed by its catalog. iolys sends chat requests through that server; the provider form does not offer a separate direct Ollama cloud sign-in or API-key connection.
+
+Local models run on the configured machine without a cloud inference bill. Cloud models send prompts to remote inference services and use the signed-in account's allowance and limits. A local server URL does not by itself mean inference stays local. Local context, load, and unload controls do not apply to cloud models.
+
 ## Install and choose models
 
 Enter an exact model name and tag under **Add model**, or choose a suggested model button. Select **Add model** to download it on the connected server.

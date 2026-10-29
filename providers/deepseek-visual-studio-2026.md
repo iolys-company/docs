@@ -72,7 +72,7 @@ Pro can also expose native **Web Search**, separately from the standalone tools.
 
 Open **Tools and Skills > Tools** and find **Model · your selected model**. Enable or disable **Web Search** there. It searches the web and reads pages through DeepSeek; there is no separate native Fetch URL checkbox.
 
-![Web Search enabled in the DeepSeek model section of the tool picker.](../assets/docs/provider/deepseek/img/web-search-native.png)
+Flash does not expose the native Web Search checkbox. Use the standalone Search and Fetch tools with Flash; with Pro, these tools and native Web Search have separate controls.
 
 Search progress appears in the conversation. Plan permits search, while disabled-tool settings and custom-agent restrictions still apply. An agent with an explicit tool list needs `web_search` in that list to use this native capability.
 
