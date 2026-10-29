@@ -9,9 +9,9 @@ A custom agent combines a reusable role, instructions, and a tool selection. Cre
 
 Agents appear beside **Agent** and **Plan** in the chat's agent selector. An agent definition describes a role; [parallel workspaces](../guide/parallel-workspaces.md) provide separate checkouts for tasks that need file isolation.
 
-![Custom agent workflow: define a role, capture it when a conversation starts, and keep that snapshot under existing permissions](../assets/diagrams/agent-snapshot.svg)
+![Custom agent workflow: define a role, select it for a new or idle conversation, and use its snapshot under existing permissions](../assets/diagrams/agent-snapshot.svg)
 
-*Each new conversation captures the selected agent definition. Later edits do not rewrite that conversation's role or tool selection.*
+*A conversation keeps the selected agent's definition until you explicitly choose a different agent. Editing the definition file does not automatically change the selected role or tool selection.*
 
 ## Create an agent from chat
 
@@ -21,7 +21,7 @@ The recommended way to create an agent is to use the built-in **agent-creator** 
 2. Find **agent-creator** in **Built-in** and choose **Use skill** to insert its invocation into the chat.
 3. Describe the agent's mission and send the message. In the guided conversation, choose **workspace** or **global**, and choose all tools, selected tools, or no tools.
 4. For selected tools, identify the capabilities the agent needs. If it needs managed command execution, specify the integration read/write rights too.
-5. Review the generated `.agent.md` file and select the new agent for a new conversation.
+5. Review the generated `.agent.md` file and select the agent for a new conversation or an existing idle conversation.
 
 ![Animated example of agent-creator: describe a code reviewer, choose workspace scope and selected tools, generate the agent definition, then select it for a new conversation](../assets/diagrams/agent-creator-workflow.gif)
 
@@ -78,6 +78,12 @@ For an agent with selected tools, `write: true` allows an integration's writes u
 
 Edit file-backed definitions at their workspace or global location. The selector supports searching and deleting custom agents and reports tools that are missing, disabled, or unavailable.
 
-The conversation captures an agent snapshot when it starts. Editing or deleting the reusable definition does not silently rewrite existing conversations; start a new conversation to use the updated definition.
+You can change agents in an existing conversation without starting a new task:
+
+1. Wait for the active turn to finish and resolve any pending input request. The selector is also unavailable while a model change is pending.
+2. Open the agent selector and choose **Agent**, **Plan**, or a different custom agent.
+3. Send your next message. The selected role and tool settings apply to subsequent turns, while the conversation history is retained.
+
+The conversation stores a snapshot of its selected agent. Editing or deleting the definition file does not silently replace that snapshot, and selecting the same profile again keeps it. Selecting a different agent explicitly captures that agent's definition. To start directly with an edited definition, select it in a new conversation.
 
 Agent selections remain subject to [permission](permissions.md) controls and disabled tools, including when the definition contains an explicit integration grant. Some provider-native tools, notably those retained by Codex, Kimi, Kiro, and Grok, cannot be individually disabled by iolys. An explicit workspace-tool list is therefore not a complete restriction on every capability of those providers.

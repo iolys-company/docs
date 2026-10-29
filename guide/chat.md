@@ -41,7 +41,7 @@ Use a follow-up for the next task step. Use steering for a correction that matte
 
 Select **Read in document area** in the toolbar to give Chat the same space as a code editor. The composer, attachments, model picker, and tools remain usable. Press **Escape** or select **Exit reading mode** to restore the previous panel placement.
 
-Hold **Ctrl** while scrolling over the conversation to zoom from 75% to 200%. With keyboard focus in the conversation, use **Ctrl+Plus**, **Ctrl+Minus**, and **Ctrl+0** to adjust or reset zoom. Zoom preferences are saved locally.
+Hold **Ctrl** while scrolling over Chat to zoom from 60% to 240%. With keyboard focus in Chat, use **Ctrl+Plus**, **Ctrl+Minus**, and **Ctrl+0** to adjust or reset zoom. Zoom scales the whole chat pane, including the toolbar and composer. The local iolys server saves the preference and restores it when Chat connects.
 
 Scrolling up pauses automatic following so you can read earlier messages. Returning to the bottom or sending a message resumes following new content. The chevron beside **Changes** collapses its file list without dismissing the changes.
 

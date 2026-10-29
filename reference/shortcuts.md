@@ -30,11 +30,11 @@ Accepting a suggestion inserts its text; complete and send the message separatel
 | Key or gesture | Action |
 | --- | --- |
 | **Ctrl + mouse wheel** over chat | Adjust chat zoom in 5% steps. |
-| **Ctrl + Plus / Minus**, with focus in the transcript | Increase or decrease zoom. |
-| **Ctrl + 0**, with focus in the transcript | Reset zoom to 100%. |
+| **Ctrl + Plus / Minus**, with focus in Chat | Increase or decrease zoom. |
+| **Ctrl + 0**, with focus in Chat | Reset zoom to 100%. |
 | **Escape**, while reading in the document area | Exit reading mode and restore the previous frame mode. |
 
-Zoom is limited to 75–200% and is saved in the local Visual Studio user settings. Enter reading mode with **Read in document area** in the toolbar. The same conversation remains available, including the composer and attachments.
+Zoom is limited to 60–240% and scales the whole chat pane, including the toolbar and composer. The local iolys server saves the preference and restores it when Chat connects. Enter reading mode with **Read in document area** in the toolbar. The same conversation remains available, including the composer and attachments.
 
 Scrolling away from the bottom pauses automatic following of new content. Scrolling back to the bottom, or sending a message, resumes it.
 
