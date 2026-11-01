@@ -1,11 +1,14 @@
 ---
-title: Introduction
-description: Learn how to install iolys, connect your AI providers, and build with agents inside Visual Studio 2022 or 2026.
+title: iolys Documentation | AI Agents for Visual Studio 2022 & 2026
+_appTitle: ""
+description: Learn how to install and configure iolys, connect AI coding agents like Claude and Codex, and build C# and .NET projects in Visual Studio 2022 and 2026.
 ---
 
 <div class="doc-eyebrow">THE IOLYS DOCUMENTATION</div>
 
-# Your AI workspace.<br>Inside Visual Studio.
+<a id="your-ai-workspaceinside-visual-studio"></a>
+
+# AI Agents for Visual Studio — iolys Documentation
 
 <p class="doc-lead">Connect your preferred models, give them the right context, and move from a question to a reviewed change. One familiar workflow, across AI providers.</p>
 
