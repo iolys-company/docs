@@ -58,6 +58,25 @@ For commands targeting another worktree or repository, see [Run commands in anot
 | `ollama_load_model` | Load a model into an Ollama server's memory; Ollama only. |
 | `ollama_unload_model` | Unload a model from an Ollama server's memory; Ollama only. |
 
+## Delegate and coordinate
+
+These tools are exposed to models when [subagents](../guide/subagents.md) are enabled, subject to the selected agent's tool access and provider compatibility. Children inherit their coordinator's restrictions in Agent and Plan.
+
+| Tool | Purpose |
+| --- | --- |
+| `list_agent_profiles` | Discover the built-in standard agent, read-only Explorer, and custom roles. |
+| `list_agent_models` | Discover compatible configured models, reasoning efforts, and speed tiers. |
+| `spawn_agent` | Start a child with a focused task; a custom profile is optional. |
+| `list_agents` | Inspect visible agents and workspace capacity, including occupied coordinator slots. |
+| `send_message` | Deliver information without starting a turn. |
+| `followup_task` | Assign more work to an existing child, preserving its conversation; active children queue the assignment. |
+| `wait_agent` | Wait for messages, results, status, or permission requests, for up to 60 seconds per call. |
+| `report_agent_status` | Report progress or a blocker to the parent. |
+| `interrupt_agent` | Cancel a descendant and its active children while retaining history. |
+| `resolve_agent_permission` | Let the root coordinator deny, escalate, or approve within previously delegated authority. |
+
+Ending a coordinator turn cancels outstanding descendant work, so required results must be collected before the final response. Collaboration tools cannot change the global concurrency limit. Use **Settings > Subagent settings** for that control.
+
 ## DeepSeek web tools
 
 The [DeepSeek provider](../providers/deepseek-visual-studio-2026.md#search-the-web-and-read-pages) adds these tools under **DeepSeek Web Tools** on Flash and Pro. Both are available in Agent and Plan, subject to their toggles and the active agent's tool selection. Other providers do not receive them.

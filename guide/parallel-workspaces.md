@@ -9,6 +9,8 @@ iolys can create a separate workspace and Git branch for an independent task, th
 
 This uses **Git worktrees**. You need Git and an open solution in a Git repository.
 
+To have one coordinator delegate parts of its task within the same checkout, use [subagents](subagents.md). Subagents have separate conversations but share workspace files; worktrees provide file isolation for independent tasks.
+
 ## Create an isolated task
 
 1. In Chat, select **Create a Git worktree** from the worktree control.

@@ -20,6 +20,8 @@
       href: ../guide/git.md
     - name: Parallel workspaces
       href: ../guide/parallel-workspaces.md
+    - name: Subagents
+      href: ../guide/subagents.md
     - name: Usage & costs
       href: ../guide/usage.md
     - name: Settings

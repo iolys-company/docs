@@ -9,6 +9,8 @@ A custom agent combines a reusable role, instructions, and a tool selection. Cre
 
 Agents appear beside **Agent** and **Plan** in the chat's agent selector. An agent definition describes a role; [parallel workspaces](../guide/parallel-workspaces.md) provide separate checkouts for tasks that need file isolation.
 
+For delegating work within a conversation, see [Subagents](../guide/subagents.md). Delegation includes built-in standard and read-only Explorer agents, so a custom definition is optional. A custom role used by a child remains subject to the coordinator's restrictions.
+
 ![Custom agent workflow: define a role, select it for a new or idle conversation, and use its snapshot under existing permissions](../assets/diagrams/agent-snapshot.svg)
 
 *A conversation keeps the selected agent's definition until you explicitly choose a different agent. Editing the definition file does not automatically change the selected role or tool selection.*

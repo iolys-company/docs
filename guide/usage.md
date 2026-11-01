@@ -56,6 +56,25 @@ Session duration and processing time measure different parts of the workflow. A 
 
 The window also provides the session ID and **Send diagnostics** for support. See [Troubleshooting](troubleshooting.md#send-a-diagnostic-report) before submitting a report.
 
+## Inspect delegated work
+
+For a task using [subagents](subagents.md), open **Session statistics** in the coordinator conversation. The view defaults to **All agents**; select an individual agent to inspect its activity and available usage. Human prompts and delegated tasks are counted separately. Modified-file totals count distinct files across the selected tree. Missing measurements remain unknown, partial coverage is identified, and credits are separated by provider.
+
+![Session Statistics with All agents selected, cumulative timing, delegated tasks, and per-agent activity.](../assets/screenshots/subagents/session-statistics-dark.png)
+
+*Demonstration values from the subagent feature. Model names, usage, and durations are illustrative; the time estimate is not a performance benchmark.*
+
+For trees with delegated work, the timing summary shows:
+
+| Value | Meaning |
+| --- | --- |
+| **Coordinator time** | Sum of the coordinator's turn durations, including waits for children. |
+| **All agents · cumulative time** | Sum of coordinator and child turn durations, including simultaneous work and waits. |
+| **Estimated time saved** | Cumulative time minus coordinator time. Its percentage divides that difference by cumulative time. |
+| **Selected scope time** | Summed turn durations for the scope selected in the dropdown. |
+
+Turn durations exclude pauses between turns. Cumulative time can exceed elapsed session duration because agents can run together. The time-saved estimate does not measure how long the task would have taken without delegation: it also counts child work performed sequentially and can overstate the gain. The estimate is unavailable if an agent session is missing. Opening statistics in a child provides **Open coordinator for tree totals**.
+
 ## Interpret estimates carefully
 
 Model prices shown in the picker are list prices where available. Estimates depend on the usage and pricing information returned by the provider and may not reflect every discount, cache policy, subscription rule, or later billing adjustment. Use the provider's account dashboard for its billing record.

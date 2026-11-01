@@ -44,6 +44,12 @@ These controls work together. Enabling a tool makes it available under the selec
 
 For credential storage and automatic iolys backend reporting, see [Data and privacy](../reference/privacy.md). Chat permissions govern agent actions; they do not configure analytics or external services' retention policies.
 
+## Configure subagents
+
+Subagents are enabled by default. Open **Settings > Subagent settings** to enable or disable delegation and set **Maximum concurrent agents per workspace** (**1–10**, including coordinators). Select **Save global settings** to apply the changes to all workspaces on this installation. No additional provider/model allowlist is needed.
+
+The toolbar's **Agents** window shows activity, conversations, and workspace occupancy, with a link to the same settings. See [Subagents](subagents.md) for build availability, compatible models, permissions, and a complete walkthrough.
+
 ## Connect GitHub
 
 Open **Settings > GitHub** under **Integrations**. Choose the host, install the managed CLI if prompted, and select **Connect an account in the browser**. Complete the CLI prompts and the browser approval, then check the active account shown in the window.

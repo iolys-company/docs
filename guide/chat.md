@@ -21,6 +21,8 @@ Press **Enter** to send a message and **Shift+Enter** to insert a line break. Us
 
 ## Inspect tool activity
 
+For tasks using [subagents](subagents.md), select **Agents** in the toolbar to inspect progress and open child conversations. History groups children under their parent. Assignments, messages, and named child replies also appear in the coordinator chat; send follow-up requests there because child conversations are read-only for direct submissions.
+
 Hover over a tool call in the conversation to see a compact preview of its name, summary, and duration. Long summaries are shortened to keep the preview readable. Use this overview to follow the agent's work, then inspect the relevant tool output and [file changes](review.md) when reviewing the result.
 
 ## Send follow-ups while the agent works

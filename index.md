@@ -50,6 +50,7 @@ An agent can inspect project files, explain code, propose a plan, make changes, 
 | Use local or remote Ollama models | [Ollama](providers/ollama-visual-studio-2026.md) |
 | Ask about a file, selection, or screenshot | [Files, images, and context](guide/context.md) |
 | Work on several tasks independently | [Parallel workspaces](guide/parallel-workspaces.md) |
+| Delegate parts of one task to child agents | [Subagents](guide/subagents.md) |
 | Review an agent's edits | [Review and undo changes](guide/review.md) |
 | Understand usage, quotas, and estimates | [Usage and costs](guide/usage.md) |
 
