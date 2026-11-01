@@ -84,9 +84,25 @@ The coordinator can deny or escalate a permission request. Automatic approval re
 
 Disabling subagents cancels child work and queued assignments while leaving the coordinator active. History and statistics are retained. Re-enabling subagents does not resume cancelled work automatically. Tightening the coordinator's permissions or revoking grants also cancels descendant work; ask the coordinator for an explicit follow-up under the current restrictions.
 
-## Check usage and handle blocked work
+<a id="check-usage-and-handle-blocked-work"></a>
 
-Open **Session statistics** in the coordinator conversation to inspect **All agents** or an individual agent. Delegated tasks, turns, tools, and available usage estimates are attributed to the agent doing the work. See [delegated-work statistics](usage.md#inspect-delegated-work) for cumulative timing and the limitations of **Estimated time saved**.
+## Inspect agent statistics
+
+Open **Session statistics** in the coordinator conversation to see how work is distributed across the agent tree. The view starts with **All agents**; select an individual agent to inspect its contribution.
+
+![Session Statistics showing estimated time saved, coordinator and cumulative time, the All agents selector, and individual agent activity.](../assets/screenshots/subagents/session-statistics-dark.png)
+
+*Illustrative session with three agents and two delegated tasks. Durations, token counts, and model names are demonstration data.*
+
+- Compare **Coordinator time** with **All agents · cumulative time** to understand the total time recorded across agent turns, including simultaneous work and waits.
+- Inspect delegated tasks, agent turns, tool calls, and modified files. Individual agent entries identify the model, reasoning effort, and service tier.
+- Check token usage and available cost or credit estimates for the selected scope. Missing measurements remain unknown; use the coverage indicator to identify incomplete totals.
+
+**Estimated time saved** subtracts coordinator time from cumulative time. In the example, **21min 05s − 12min 30s = 8min 35s**, or **40.7%** of cumulative time. This is an estimate of delegated effort, not a measured speedup: sequential child work also contributes, and the calculation does not establish how long the task would have taken without delegation.
+
+See [delegated-work statistics](usage.md#inspect-delegated-work) for timing definitions, scope totals, and estimate limitations.
+
+## Troubleshoot delegation
 
 If delegation cannot start:
 
