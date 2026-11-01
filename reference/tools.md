@@ -1,6 +1,6 @@
 ---
 title: Tool reference
-description: Built-in iolys tools and the conditions under which agents can use them.
+description: Built-in iolys tools, subagent collaboration parameters, provider tools, and the conditions under which agents can use them.
 ---
 
 # Tool reference
@@ -60,7 +60,7 @@ For commands targeting another worktree or repository, see [Run commands in anot
 
 ## Delegate and coordinate
 
-These tools are exposed to models when [subagents](../guide/subagents.md) are enabled, subject to the selected agent's tool access and provider compatibility. Children inherit their coordinator's restrictions in Agent and Plan.
+The **Collaboration** group lets a coordinator delegate parts of a task and collect the results. [Subagents](../guide/subagents.md) are enabled by default; use **Settings > Subagent settings** to enable or disable them and set workspace capacity. These tools require a build containing the subagent feature, a compatible provider/model, and access through the selected agent's tool selection.
 
 | Tool | Purpose |
 | --- | --- |
@@ -75,7 +75,56 @@ These tools are exposed to models when [subagents](../guide/subagents.md) are en
 | `interrupt_agent` | Cancel a descendant and its active children while retaining history. |
 | `resolve_agent_permission` | Let the root coordinator deny, escalate, or approve within previously delegated authority. |
 
-Ending a coordinator turn cancels outstanding descendant work, so required results must be collected before the final response. Collaboration tools cannot change the global concurrency limit. Use **Settings > Subagent settings** for that control.
+### Discover agents and models
+
+`list_agent_profiles`, `list_agent_models`, and `list_agents` take optional `offset` (default **0**) and `maxResults` (default **20**, maximum **50**). Continue from the returned `nextCursor` while `hasMore` is true. `list_agent_models` also accepts an optional `providerName` filter.
+
+Use `list_agents` to check `workspaceCapacity` and `occupiedSlots` before spawning work. The workspace limit includes running coordinators and children, including turns waiting for messages or permission. Other conversations in the same workspace can occupy slots too. Collaboration tools cannot change this global limit.
+
+### Start a child with spawn_agent
+
+| Argument | Required | Meaning |
+| --- | --- | --- |
+| `name` | Yes | Task label, unique among siblings; up to 80 characters. |
+| `task` | Yes | Focused assignment; up to 16,000 characters. |
+| `requestId` | Yes | Stable key for this operation; see retry rules below. |
+| `agentProfileId` | No | Omit or use `builtin:agent` for a standard agent. Use `builtin:explorer` for read-only investigation under Plan restrictions, or an ID returned by `list_agent_profiles` for a custom role. |
+| `providerName`, `model` | No | Compatible configured provider and model. When omitted, use a configured default or inherit the coordinator's selection. |
+| `reasoningEffort`, `serviceTier` | No | Supported reasoning and speed settings. Same-model children inherit the coordinator's requested values unless overridden. |
+| `contextSummary` | No | Additional task context; up to 16,000 characters. |
+
+For example, the coordinator can call `spawn_agent` with these arguments to investigate code using Explorer:
+
+```json
+{
+  "name": "Trace data loading",
+  "task": "Trace how the results grid loads data. Return relevant files, symbols, and possible empty-result paths.",
+  "agentProfileId": "builtin:explorer",
+  "requestId": "trace-data-loading-1"
+}
+```
+
+Children have separate conversations and share workspace files. Standard and custom agents inherit the coordinator's mode; Explorer uses Plan restrictions even when the coordinator is in Agent mode. All children inherit the coordinator's tool and permission restrictions. A provider whose non-disableable native tools conflict with those restrictions cannot run that child. Spawning does not create a worktree, install a CLI, or sign in to a provider.
+
+### Send messages and follow-up work
+
+| Tool | Required arguments and behavior |
+| --- | --- |
+| `send_message` | `targetAgentId`, `message`, `requestId`. The message can contain up to 8,000 characters; it delivers information without starting another turn. |
+| `followup_task` | `targetAgentId`, `task`, `requestId`. The task can contain up to 16,000 characters; it reuses the child's conversation and queues the assignment if the child is active. Workspace capacity still applies. |
+| `report_agent_status` | `status`, `summary`, `requestId`. Status is `working` or `blocked`; the summary can contain up to 1,000 characters. |
+| `interrupt_agent` | `targetAgentId`, `requestId`. Cancels the descendant and its active children; retains their conversations and does not undo file changes. |
+| `resolve_agent_permission` | `permissionRequestId`, `decision`, `requestId`. Root coordinator only; decision is `approve`, `deny`, or `escalate`. Approval requires previously delegated authority and an eligible one-time approval option. Other requests must be escalated to the user. |
+
+Use the agent's session ID as `targetAgentId`. The root coordinator can address its descendants; children can exchange notes with their parent and descendants. Siblings and unrelated agent trees are outside that scope. Only descendants can receive follow-up assignments or interruptions. Messages never grant permissions.
+
+Every operation in this table, and `spawn_agent`, requires a `requestId`. Reuse it only for an identical retry by the same caller. Reusing it with different arguments fails. If an operation was interrupted, inspect the agent history before assigning new work.
+
+### Wait for results
+
+`wait_agent` takes no required arguments. Optional `agentIds` filters visible agents, and `timeoutMs` controls the wait: **30,000** by default, at most **60,000**, or **0** for an immediate check. Without an explicit `afterSequence`, it resumes from the saved inbox position; unfiltered reads advance that position. Set `afterSequence: 0` to replay available events, or use the returned `nextCursor` to continue reading explicitly. Check `hasMore` for additional events.
+
+Ending a coordinator turn cancels outstanding descendant work, so required results must be collected before the final response. For progress, conversation links, permission prompts, and statistics, see the [subagent workflow](../guide/subagents.md#follow-progress-and-open-conversations).
 
 ## DeepSeek web tools
 
