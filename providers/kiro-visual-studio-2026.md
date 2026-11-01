@@ -1,13 +1,15 @@
 ---
-title: Develop C# projects with Kiro in Visual Studio 2026
-description: Work on C# projects with Kiro in Visual Studio 2026 using iolys. Connect your account, use workspace tools and images, and track reported credits.
+title: Develop C# projects with Kiro in Visual Studio 2022 and 2026
+description: Work on C# projects with Kiro in Visual Studio 2022 and 2026 using iolys. Connect your account, use workspace tools and images, and track reported credits.
 ---
 
 <a id="kiro"></a>
 
-# Develop C# projects with Kiro in Visual Studio 2026
+<a id="develop-c-projects-with-kiro-in-visual-studio-2026"></a>
 
-Work on your C# projects in Visual Studio 2026 with your Kiro account and iolys. The managed Kiro CLI connects you to shared workspace tools, image attachments, and reported credits.
+# Develop C# projects with Kiro in Visual Studio 2022 and 2026
+
+Work on your C# projects in Visual Studio 2022 and 2026 with your Kiro account and iolys. The managed Kiro CLI connects you to shared workspace tools, image attachments, and reported credits.
 
 <p><a class="doc-button" href="https://marketplace.visualstudio.com/items?itemName=iolys.iolys-visual-studio">Install iolys for Visual Studio <span aria-hidden="true">→</span></a></p>
 

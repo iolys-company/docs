@@ -1,13 +1,15 @@
 ---
-title: Set up Grok for C# in Visual Studio 2026
-description: Set up Grok Build for C# development in Visual Studio 2026 with iolys. Connect your Grok account, choose reasoning effort, use tools, and follow reported costs.
+title: Set up Grok for C# in Visual Studio 2022 and 2026
+description: Set up Grok Build for C# development in Visual Studio 2022 and 2026 with iolys. Connect your Grok account, choose reasoning effort, use tools, and follow reported costs.
 ---
 
 <a id="grok"></a>
 
-# Set up Grok for C# in Visual Studio 2026
+<a id="set-up-grok-for-c-in-visual-studio-2026"></a>
 
-Connect your Grok account to Visual Studio 2026 through iolys's managed Grok Build CLI to work on C# projects. You can use streaming conversations, model-specific reasoning effort, shared development tools, Grok's native web tools, saved sessions, and the cost Grok reports for each turn.
+# Set up Grok for C# in Visual Studio 2022 and 2026
+
+Connect your Grok account to Visual Studio 2022 and 2026 through iolys's managed Grok Build CLI to work on C# projects. You can use streaming conversations, model-specific reasoning effort, shared development tools, Grok's native web tools, saved sessions, and the cost Grok reports for each turn.
 
 Grok Build is separate from the [Groq](api-providers.md) API provider. A Grok model selected through [OpenRouter](openrouter-visual-studio-2026.md) uses that provider's separate credentials and billing.
 

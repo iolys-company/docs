@@ -29,7 +29,7 @@ The canonical domain is `https://docs.getiolys.com/`. The theme emits an absolut
 
 ## Provider URLs and redirects
 
-Individual provider guides use `providers/<provider>-visual-studio-2026.html`. Keep the original `providers/<provider>.md` files: their `redirect_url` metadata preserves saved URLs through DocFX's redirect support. Internal links, navigation, the sitemap, search, and both LLM files point directly to the renamed guides. Legacy title anchors such as `#codex` remain available on the destination pages.
+Individual provider guides use `providers/<provider>-visual-studio-2026.html`. Keep the original `providers/<provider>.md` files: their `redirect_url` metadata preserves saved URLs through DocFX's redirect support. Internal links, navigation, the sitemap, search, and both LLM files point directly to the renamed guides. The guides cover Visual Studio 2022 and 2026; the existing URL suffix is retained to preserve published links. Legacy title anchors such as `#codex` and the previous 2026 heading anchors remain available on the destination pages.
 
 `templates/iolys/Redirection.html.primary.tmpl` renders these sibling-page redirects in `providers/`. It provides an instant HTML refresh, a canonical URL pointing to the destination, and a manual fallback link. A small script uses `location.replace` to retain query parameters and fragments, including under a local preview or project subpath. Without JavaScript, the instant HTML refresh still navigates to the new guide.
 

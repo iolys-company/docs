@@ -1,13 +1,15 @@
 ---
-title: Build C# projects with Claude Code in Visual Studio 2026
-description: Develop C# projects with Claude Code in Visual Studio 2026 using iolys. Connect your Claude subscription, use development tools, and track account usage.
+title: Build C# projects with Claude Code in Visual Studio 2022 and 2026
+description: Develop C# projects with Claude Code in Visual Studio 2022 and 2026 using iolys. Connect your Claude subscription, use development tools, and track account usage.
 ---
 
 <a id="claude-code"></a>
 
-# Build C# projects with Claude Code in Visual Studio 2026
+<a id="build-c-projects-with-claude-code-in-visual-studio-2026"></a>
 
-Bring your Claude subscription into Visual Studio 2026 to develop C# projects with iolys and **Claude Code (CLI)**. The managed CLI handles Claude authentication and conversation state; iolys supplies the Visual Studio interface and development tools. For an Anthropic API key, use the separate [Anthropic API connection](api-providers.md#anthropic).
+# Build C# projects with Claude Code in Visual Studio 2022 and 2026
+
+Bring your Claude subscription into Visual Studio 2022 and 2026 to develop C# projects with iolys and **Claude Code (CLI)**. The managed CLI handles Claude authentication and conversation state; iolys supplies the Visual Studio interface and development tools. For an Anthropic API key, use the separate [Anthropic API connection](api-providers.md#anthropic).
 
 <p><a class="doc-button" href="https://marketplace.visualstudio.com/items?itemName=iolys.iolys-visual-studio">Install iolys for Visual Studio <span aria-hidden="true">→</span></a></p>
 

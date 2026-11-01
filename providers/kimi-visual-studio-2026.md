@@ -1,13 +1,15 @@
 ---
-title: Set up Kimi Code for C# in Visual Studio 2026
-description: Set up Kimi Code for C# development in Visual Studio 2026 with iolys. Connect your account, inspect images, use tools, and track subscription usage.
+title: Set up Kimi Code for C# in Visual Studio 2022 and 2026
+description: Set up Kimi Code for C# development in Visual Studio 2022 and 2026 with iolys. Connect your account, inspect images, use tools, and track subscription usage.
 ---
 
 <a id="kimi"></a>
 
-# Set up Kimi Code for C# in Visual Studio 2026
+<a id="set-up-kimi-code-for-c-in-visual-studio-2026"></a>
 
-Connect your Kimi Code account to Visual Studio 2026 through iolys's managed CLI to work on C# projects. You can use streaming conversations, shared development tools, reported thinking, saved sessions, and subscription usage. A Kimi model selected through [OpenRouter](openrouter-visual-studio-2026.md) uses that provider's separate credentials and billing.
+# Set up Kimi Code for C# in Visual Studio 2022 and 2026
+
+Connect your Kimi Code account to Visual Studio 2022 and 2026 through iolys's managed CLI to work on C# projects. You can use streaming conversations, shared development tools, reported thinking, saved sessions, and subscription usage. A Kimi model selected through [OpenRouter](openrouter-visual-studio-2026.md) uses that provider's separate credentials and billing.
 
 <p><a class="doc-button" href="https://marketplace.visualstudio.com/items?itemName=iolys.iolys-visual-studio">Install iolys for Visual Studio <span aria-hidden="true">→</span></a></p>
 

@@ -1,13 +1,15 @@
 ---
-title: Use OpenAI Codex for C# in Visual Studio 2026
-description: Work on C# projects with OpenAI Codex in Visual Studio 2026 using iolys. Sign in with your Codex account, edit files, and track account usage.
+title: Use OpenAI Codex for C# in Visual Studio 2022 and 2026
+description: Work on C# projects with OpenAI Codex in Visual Studio 2022 and 2026 using iolys. Sign in with your Codex account, edit files, and track account usage.
 ---
 
 <a id="codex"></a>
 
-# Use OpenAI Codex for C# in Visual Studio 2026
+<a id="use-openai-codex-for-c-in-visual-studio-2026"></a>
 
-Work on your C# projects with OpenAI Codex directly inside Visual Studio 2026 using iolys. The Codex provider runs an iolys-managed Codex CLI. You can work with Codex models, workspace tools, images, and saved conversations from the shared iolys interface.
+# Use OpenAI Codex for C# in Visual Studio 2022 and 2026
+
+Work on your C# projects with OpenAI Codex directly inside Visual Studio 2022 and 2026 using iolys. The Codex provider runs an iolys-managed Codex CLI. You can work with Codex models, workspace tools, images, and saved conversations from the shared iolys interface.
 
 <p><a class="doc-button" href="https://marketplace.visualstudio.com/items?itemName=iolys.iolys-visual-studio">Install iolys for Visual Studio <span aria-hidden="true">→</span></a></p>
 

@@ -1,13 +1,15 @@
 ---
-title: Connect DeepSeek to Visual Studio 2026 for C#
-description: Connect DeepSeek for C# development in Visual Studio 2026 with iolys. Add your API key, choose reasoning effort, use Search and Fetch tools, and check your balance.
+title: Connect DeepSeek to Visual Studio 2022 and 2026 for C#
+description: Connect DeepSeek for C# development in Visual Studio 2022 and 2026 with iolys. Add your API key, choose reasoning effort, use Search and Fetch tools, and check your balance.
 ---
 
 <a id="deepseek"></a>
 
-# Connect DeepSeek to Visual Studio 2026 for C#
+<a id="connect-deepseek-to-visual-studio-2026-for-c"></a>
 
-Connect the DeepSeek API to Visual Studio 2026 with iolys for help with your C# projects, workspace tools, and web search and page reading. This connection uses an API key and your DeepSeek account balance. It does not install a CLI or connect a consumer chat subscription.
+# Connect DeepSeek to Visual Studio 2022 and 2026 for C#
+
+Connect the DeepSeek API to Visual Studio 2022 and 2026 with iolys for help with your C# projects, workspace tools, and web search and page reading. This connection uses an API key and your DeepSeek account balance. It does not install a CLI or connect a consumer chat subscription.
 
 <p><a class="doc-button" href="https://marketplace.visualstudio.com/items?itemName=iolys.iolys-visual-studio">Install iolys for Visual Studio <span aria-hidden="true">→</span></a></p>
 

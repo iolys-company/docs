@@ -1,6 +1,6 @@
 ---
 title: Introduction
-description: Learn how to install iolys, connect your AI providers, and build with agents inside Visual Studio.
+description: Learn how to install iolys, connect your AI providers, and build with agents inside Visual Studio 2022 or 2026.
 ---
 
 <div class="doc-eyebrow">THE IOLYS DOCUMENTATION</div>
@@ -14,7 +14,7 @@ description: Learn how to install iolys, connect your AI providers, and build wi
 <a class="text-action" href="guide/quickstart.md">Run your first task <span aria-hidden="true">↗</span></a>
 </div>
 
-<div class="doc-meta"><span class="status-dot"></span> For Visual Studio on Windows</div>
+<div class="doc-meta"><span class="status-dot"></span> For Visual Studio 2022 and 2026 on Windows</div>
 
 <figure class="product-figure">
 <img src="assets/docs/screenshots/wide-chat-history.png" alt="iolys inside Visual Studio with task history beside an API-client conversation and its model controls." width="1628" height="966">
@@ -34,7 +34,7 @@ Choose a starting point. Each guide takes you through the controls you will use 
 
 ## What is iolys?
 
-iolys is an AI development workspace for Visual Studio. It connects your solution, models, conversations, and development tools in one interface. You bring a provider account, API credentials, or a local model; iolys supplies the workflow around it.
+iolys is an AI development workspace for Visual Studio 2022 and 2026. It connects your solution, models, conversations, and development tools in one interface. You bring a provider account, API credentials, or a local model; iolys supplies the workflow around it.
 
 An agent can inspect project files, explain code, propose a plan, make changes, and use Visual Studio's build and test tools. The available actions depend on the model, enabled tools, selected mode, and permissions.
 

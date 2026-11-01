@@ -1,13 +1,15 @@
 ---
-title: OpenCode Zen for C# in Visual Studio 2026
-description: Use OpenCode Zen in Visual Studio 2026 with iolys. Set reasoning levels, use iolys and MCP tools, and inspect context usage and available cost estimates.
+title: OpenCode Zen for C# in Visual Studio 2022 and 2026
+description: Use OpenCode Zen in Visual Studio 2022 and 2026 with iolys. Set reasoning levels, use iolys and MCP tools, and inspect context usage and available cost estimates.
 ---
 
 <a id="opencode-zen"></a>
 
-# OpenCode Zen for C# in Visual Studio 2026
+<a id="opencode-zen-for-c-in-visual-studio-2026"></a>
 
-Choose from OpenCode Zen's curated coding models for your C# projects in Visual Studio 2026 with iolys and your own API key. Zen bills requests through your OpenCode account. [OpenCode Go](opencode-go-visual-studio-2026.md) is a separate subscription connection; each provider has its own settings and model selection.
+# OpenCode Zen for C# in Visual Studio 2022 and 2026
+
+Choose from OpenCode Zen's curated coding models for your C# projects in Visual Studio 2022 and 2026 with iolys and your own API key. Zen bills requests through your OpenCode account. [OpenCode Go](opencode-go-visual-studio-2026.md) is a separate subscription connection; each provider has its own settings and model selection.
 
 <p><a class="doc-button" href="https://marketplace.visualstudio.com/items?itemName=iolys.iolys-visual-studio">Install iolys for Visual Studio <span aria-hidden="true">→</span></a></p>
 

@@ -1,13 +1,15 @@
 ---
-title: Databricks models for C# in Visual Studio 2026
-description: Access Databricks models for C# projects in Visual Studio 2026 with iolys. Connect Model Serving endpoints and configure tools, reasoning, and native search.
+title: Databricks models for C# in Visual Studio 2022 and 2026
+description: Access Databricks models for C# projects in Visual Studio 2022 and 2026 with iolys. Connect Model Serving endpoints and configure tools, reasoning, and native search.
 ---
 
 <a id="databricks"></a>
 
-# Databricks models for C# in Visual Studio 2026
+<a id="databricks-models-for-c-in-visual-studio-2026"></a>
 
-Work on C# projects in Visual Studio 2026 using your organization's Databricks models through iolys. The **Databricks Unity Catalog** provider connects to chat-capable Model Serving endpoints in your Databricks workspace. It supports multiple named instances, each with its own workspace and token. Configuring this provider does not itself grant access to tables or other workspace data.
+# Databricks models for C# in Visual Studio 2022 and 2026
+
+Work on C# projects in Visual Studio 2022 and 2026 using your organization's Databricks models through iolys. The **Databricks Unity Catalog** provider connects to chat-capable Model Serving endpoints in your Databricks workspace. It supports multiple named instances, each with its own workspace and token. Configuring this provider does not itself grant access to tables or other workspace data.
 
 <p><a class="doc-button" href="https://marketplace.visualstudio.com/items?itemName=iolys.iolys-visual-studio">Install iolys for Visual Studio <span aria-hidden="true">→</span></a></p>
 

@@ -15,7 +15,7 @@ Initial source review: 2 October 2026. Paths below refer to the local `vs_assist
 | MCP | `docs/tools/mcp_servers.md`, current configuration dialog and execution-policy code |
 | Privacy and troubleshooting | `docs/backend-enrollment.md`, `docs/backend-snapshots.md`, `docs/send-diagnostics.md`, `docs/session_persistence.md` |
 
-The proposed steering synchronization in `docs/SHARED_STEERING_SPEC.md` is not described as a shipped feature. Product Features' old fixed tool counts are omitted because the current tool catalog has changed. Installation follows the public product documentation's Visual Studio 2026 requirement; the source VSIX manifest accepts a broader version range.
+The proposed steering synchronization in `docs/SHARED_STEERING_SPEC.md` is not described as a shipped feature. Product Features' old fixed tool counts are omitted because the current tool catalog has changed. Installation supports Visual Studio 2022 and 2026 on 64-bit Windows, as confirmed by the product maintainer on 1 November 2026.
 
 The brand palette and logo come from `Iolys.PublicWebSite/src/Iolys.PublicWebsite/wwwroot/css/site.css`, `img/brand-lab/13-code-compass-128.webp`, and `favicon.ico`. The header wordmark follows that website's `Pages/Shared/_Layout.cshtml` and `wwwroot/css/themes/iolite-sun.css`: the compass replaces the "o", with monospace lettering and an offset shadow. Screenshots from `vs_assistant` preserve their source-relative paths beneath `assets/`. The DeepSeek guide also draws on `Iolys.PublicWebSite/docs/deepseek-provider-page.md`; its images are copied from that website's `wwwroot/img/providers/deepseek/` to `assets/docs/provider/deepseek/img/`. Screenshots are illustrative and may show earlier model names or menu arrangements.
 

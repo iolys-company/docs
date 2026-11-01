@@ -1,13 +1,15 @@
 ---
-title: Local AI for C# with Ollama in Visual Studio 2026
-description: Use local AI models for C# in Visual Studio 2026 with Ollama and iolys. Connect a server, install models, adjust context, and manage RAM and VRAM.
+title: Local AI for C# with Ollama in Visual Studio 2022 and 2026
+description: Use local AI models for C# in Visual Studio 2022 and 2026 with Ollama and iolys. Connect a server, install models, adjust context, and manage RAM and VRAM.
 ---
 
 <a id="ollama"></a>
 
-# Local AI for C# with Ollama in Visual Studio 2026
+<a id="local-ai-for-c-with-ollama-in-visual-studio-2026"></a>
 
-Bring local AI models into your C# development workflow in Visual Studio 2026 with Ollama and iolys. Connect to a local or remote Ollama server and install the models you want. You can adjust context and supported reasoning levels, inspect RAM / VRAM, load or unload models, and read generation performance from the chat window. Multiple named instances let you keep separate connections for different servers.
+# Local AI for C# with Ollama in Visual Studio 2022 and 2026
+
+Bring local AI models into your C# development workflow in Visual Studio 2022 and 2026 with Ollama and iolys. Connect to a local or remote Ollama server and install the models you want. You can adjust context and supported reasoning levels, inspect RAM / VRAM, load or unload models, and read generation performance from the chat window. Multiple named instances let you keep separate connections for different servers.
 
 <p><a class="doc-button" href="https://marketplace.visualstudio.com/items?itemName=iolys.iolys-visual-studio">Install iolys for Visual Studio <span aria-hidden="true">→</span></a></p>
 

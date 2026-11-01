@@ -1,6 +1,6 @@
 # iolys documentation
 
-> iolys is an AI development workspace for Visual Studio on Windows. Connect coding-agent providers, hosted APIs, or Ollama models to work with your solution, review changes, and customize agent workflows.
+> iolys is an AI development workspace for Visual Studio 2022 and 2026 on Windows. Connect coding-agent providers, hosted APIs, or Ollama models to work with your solution, review changes, and customize agent workflows.
 
 The published documentation is at https://docs.getiolys.com/.
 The links below point to the Markdown sources of these guides.

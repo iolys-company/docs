@@ -1,13 +1,15 @@
 ---
-title: C# development with OpenCode Go in Visual Studio 2026
-description: Use OpenCode Go in Visual Studio 2026 with iolys. Set model-specific reasoning levels, use iolys and MCP tools, and inspect subscription usage and resets.
+title: C# development with OpenCode Go in Visual Studio 2022 and 2026
+description: Use OpenCode Go in Visual Studio 2022 and 2026 with iolys. Set model-specific reasoning levels, use iolys and MCP tools, and inspect subscription usage and resets.
 ---
 
 <a id="opencode-go"></a>
 
-# C# development with OpenCode Go in Visual Studio 2026
+<a id="c-development-with-opencode-go-in-visual-studio-2026"></a>
 
-Use your OpenCode Go subscription for C# development in Visual Studio 2026 by connecting an OpenCode API key to iolys. The dedicated provider discovers the Go catalog and chooses the appropriate API route for each model, while you keep the same chat, development tools, and review workflow.
+# C# development with OpenCode Go in Visual Studio 2022 and 2026
+
+Use your OpenCode Go subscription for C# development in Visual Studio 2022 and 2026 by connecting an OpenCode API key to iolys. The dedicated provider discovers the Go catalog and chooses the appropriate API route for each model, while you keep the same chat, development tools, and review workflow.
 
 **Go is the subscription service.** OpenCode Zen is a separate pay-as-you-go service. This connection uses Go's catalog and endpoint; it does not configure a Zen pay-as-you-go account.
 

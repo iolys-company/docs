@@ -1,13 +1,15 @@
 ---
-title: OpenRouter models for C# in Visual Studio 2026
-description: Choose OpenRouter models for C# development in Visual Studio 2026 with iolys. Connect one API key, select tools, and track credit and reported costs.
+title: OpenRouter models for C# in Visual Studio 2022 and 2026
+description: Choose OpenRouter models for C# development in Visual Studio 2022 and 2026 with iolys. Connect one API key, select tools, and track credit and reported costs.
 ---
 
 <a id="openrouter"></a>
 
-# OpenRouter models for C# in Visual Studio 2026
+<a id="openrouter-models-for-c-in-visual-studio-2026"></a>
 
-Choose models from multiple vendors for your C# projects in Visual Studio 2026 through iolys and one OpenRouter API key. Your catalog depends on your OpenRouter account. Filter models by price, context size, and capabilities, then pin the ones you use.
+# OpenRouter models for C# in Visual Studio 2022 and 2026
+
+Choose models from multiple vendors for your C# projects in Visual Studio 2022 and 2026 through iolys and one OpenRouter API key. Your catalog depends on your OpenRouter account. Filter models by price, context size, and capabilities, then pin the ones you use.
 
 <p><a class="doc-button" href="https://marketplace.visualstudio.com/items?itemName=iolys.iolys-visual-studio">Install iolys for Visual Studio <span aria-hidden="true">→</span></a></p>
 

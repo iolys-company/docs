@@ -1,6 +1,6 @@
 ---
 title: Install iolys
-description: Install iolys in Visual Studio, connect your first provider, and open Chat.
+description: Install iolys in Visual Studio 2022 or 2026, connect your first provider, and open Chat.
 ---
 
 # Install iolys
@@ -11,7 +11,7 @@ iolys brings AI coding agents, cloud APIs, and local models into Visual Studio. 
 
 You need:
 
-- **Visual Studio 2026 on 64-bit Windows**, the environment described by the current iolys product documentation.
+- **Visual Studio 2022 or Visual Studio 2026 on 64-bit Windows**.
 - An account with a [supported provider](../providers/index.md), API credentials, or an Ollama instance with a model available.
 - Internet access for downloading the extension, managed CLIs, and the private PowerShell 7 runtime prepared on the first shell-script execution, as well as for cloud providers. Later shell scripts reuse the installed runtime. Local model requirements depend on your Ollama setup.
 - Git if you want to create [parallel workspaces](parallel-workspaces.md).
