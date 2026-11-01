@@ -66,7 +66,7 @@ The **Collaboration** group lets a coordinator delegate parts of a task and coll
 | --- | --- |
 | `list_agent_profiles` | Discover the built-in standard agent, read-only Explorer, and custom roles. |
 | `list_agent_models` | Discover compatible configured models, reasoning efforts, and speed tiers. |
-| `spawn_agent` | Start a child with a focused task; a custom profile is optional. |
+| `spawn_agent` | Root coordinator only: start a direct child with a focused task; a custom profile is optional. |
 | `list_agents` | Inspect visible agents and workspace capacity, including occupied coordinator slots. |
 | `send_message` | Deliver information without starting a turn. |
 | `followup_task` | Assign more work to an existing child, preserving its conversation; active children queue the assignment. |
@@ -82,6 +82,8 @@ The **Collaboration** group lets a coordinator delegate parts of a task and coll
 Use `list_agents` to check `workspaceCapacity` and `occupiedSlots` before spawning work. The workspace limit includes running coordinators and children, including turns waiting for messages or permission. Other conversations in the same workspace can occupy slots too. Collaboration tools cannot change this global limit.
 
 ### Start a child with spawn_agent
+
+Delegation has **two levels including the coordinator**. Only the root coordinator is offered `spawn_agent`; child calls are also refused by the server with `depth_limit`, even when a custom role selects this tool. Children can ask their coordinator to create another direct child. This restriction does not reduce how many children can work in parallel within workspace capacity. Older deeper conversations remain readable.
 
 | Argument | Required | Meaning |
 | --- | --- | --- |
@@ -116,7 +118,7 @@ Children have separate conversations and share workspace files. Standard and cus
 | `interrupt_agent` | `targetAgentId`, `requestId`. Cancels the descendant and its active children; retains their conversations and does not undo file changes. |
 | `resolve_agent_permission` | `permissionRequestId`, `decision`, `requestId`. Root coordinator only; decision is `approve`, `deny`, or `escalate`. Approval requires previously delegated authority and an eligible one-time approval option. Other requests must be escalated to the user. |
 
-Use the agent's session ID as `targetAgentId`. The root coordinator can address its descendants; children can exchange notes with their parent and descendants. Siblings and unrelated agent trees are outside that scope. Only descendants can receive follow-up assignments or interruptions. Messages never grant permissions.
+Use the agent's session ID as `targetAgentId`. The coordinator can address its children; children can exchange notes with the coordinator. Siblings and unrelated agent trees are outside that scope. The coordinator assigns follow-up work and interrupts children. Existing deeper histories retain their descendant addressing and cleanup behavior. Messages never grant permissions.
 
 Every operation in this table, and `spawn_agent`, requires a `requestId`. Reuse it only for an identical retry by the same caller. Reusing it with different arguments fails. If an operation was interrupted, inspect the agent history before assigning new work.
 

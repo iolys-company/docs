@@ -7,6 +7,8 @@ description: Delegate focused tasks to subagents, follow their conversations, an
 
 Subagents let the agent handling your conversation delegate focused tasks, collect findings, and combine the results. Your main agent is the **coordinator**; each child agent has its own conversation and assignment. Use delegation for independent investigations, reviews, or changes with clear file boundaries.
 
+There are **two levels in total: coordinator and direct subagents**. Only the coordinator can create agents. Children can work in parallel, report findings, exchange messages with the coordinator, and receive follow-up assignments, but cannot create more agents. A child that needs additional help asks the coordinator to delegate it.
+
 Subagents work in the same workspace. Creating a child does not create a Git branch or a separate checkout. Use [parallel workspaces](parallel-workspaces.md) when independent tasks need isolated files and build state.
 
 ## Configure subagents
@@ -61,9 +63,9 @@ Explorer and Plan delegation require a provider whose tools can enforce those re
 
 Select **Agents** in the chat toolbar. Each row identifies an agent, its status, model, reasoning effort, and fast tier when applicable. Progress or an error appears when available.
 
-![Agents window grouping a coordinator, children, and a nested child with statuses and Open conversation actions.](../assets/screenshots/subagents/agents-window.png)
+![Agents window from an earlier build, showing a coordinator, children, and a legacy nested child.](../assets/screenshots/subagents/agents-window.png)
 
-*Example agent tree with illustrative names, model settings, and workspace occupancy. The layout and available actions depend on the build and agent state.*
+*Earlier-build example with illustrative names, model settings, and workspace occupancy. New delegation is limited to coordinator and direct children. Older nested conversations remain available in history.*
 
 - Use **Refresh** to update activity and occupancy.
 - Use **Open conversation** to inspect an agent's full conversation.
@@ -89,13 +91,13 @@ Open **Session statistics** in the coordinator conversation to see how work is d
 
 ![Session Statistics showing estimated time saved, coordinator and cumulative time, the All agents selector, and individual agent activity.](../assets/screenshots/subagents/session-statistics-dark.png)
 
-*Illustrative session with three agents and two delegated tasks. Durations, token counts, and model names are demonstration data.*
+*Illustrative session with three agents and two delegated tasks. This capture predates the time-saved correction described below; durations, token counts, and model names are demonstration data.*
 
 - Compare **Coordinator time** with **All agents · cumulative time** to understand the total time recorded across agent turns, including simultaneous work and waits.
 - Inspect delegated tasks, agent turns, tool calls, and modified files. Individual agent entries identify the model, reasoning effort, and service tier.
 - Check token usage and available cost or credit estimates for the selected scope. Missing measurements remain unknown; use the coverage indicator to identify incomplete totals.
 
-**Estimated time saved** subtracts coordinator time from cumulative time. In the example, **21min 05s − 12min 30s = 8min 35s**, or **40.7%** of cumulative time. This is an estimate of delegated effort, not a measured speedup: sequential child work also contributes, and the calculation does not establish how long the task would have taken without delegation.
+**Estimated time saved** counts overlapping work on independent branches. Two successive two-minute tasks save **0 minutes**; two fully parallel two-minute tasks save **2 minutes**, or **50%** of their four minutes of estimated work. Parent/child overlap is treated as possible waiting and excluded. This conservative estimate can undercount useful work the coordinator performs while a child runs; it does not establish exactly how long the task would have taken without delegation. Missing agents or timing make the estimate unavailable.
 
 See [delegated-work statistics](usage.md#inspect-delegated-work) for timing definitions, scope totals, and estimate limitations.
 
@@ -108,4 +110,4 @@ If delegation cannot start:
 - Check the coordinator chat for a pending permission request or question.
 - After a server restart, ask for a new follow-up assignment; pending assignments do not restart automatically.
 
-A coordinator run can create at most **16** children across its tree, with at most **two levels** of delegation below the coordinator. Reusing an existing child for follow-up work preserves its conversation and avoids creating another child.
+A coordinator run can create at most **16 direct children**, with **two levels including the coordinator**. Creating an agent from a child is refused even if its custom role includes the spawning tool. Reusing an existing child for follow-up work preserves its conversation and avoids creating another child. Older deeper conversations remain readable, with their statistics and deletion behavior preserved.

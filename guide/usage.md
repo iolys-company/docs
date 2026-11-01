@@ -62,7 +62,7 @@ For a task using [subagents](subagents.md), open **Session statistics** in the c
 
 ![Session Statistics with All agents selected, cumulative timing, delegated tasks, and per-agent activity.](../assets/screenshots/subagents/session-statistics-dark.png)
 
-*Demonstration values from the subagent feature. Model names, usage, and durations are illustrative; the time estimate is not a performance benchmark.*
+*Demonstration values from an earlier build, before the time-saved correction below. Model names, usage, and durations are illustrative; the time estimate is not a performance benchmark.*
 
 For trees with delegated work, the timing summary shows:
 
@@ -70,10 +70,10 @@ For trees with delegated work, the timing summary shows:
 | --- | --- |
 | **Coordinator time** | Sum of the coordinator's turn durations, including waits for children. |
 | **All agents · cumulative time** | Sum of coordinator and child turn durations, including simultaneous work and waits. |
-| **Estimated time saved** | Cumulative time minus coordinator time. Its percentage divides that difference by cumulative time. |
+| **Estimated time saved** | Overlapping work on independent branches, excluding parent/child overlap as possible waiting. Its percentage compares the saved time with cumulative estimated work after excluding those overlaps. |
 | **Selected scope time** | Summed turn durations for the scope selected in the dropdown. |
 
-Turn durations exclude pauses between turns. Cumulative time can exceed elapsed session duration because agents can run together. The time-saved estimate does not measure how long the task would have taken without delegation: it also counts child work performed sequentially and can overstate the gain. The estimate is unavailable if an agent session is missing. Opening statistics in a child provides **Open coordinator for tree totals**.
+Turn durations exclude pauses between turns. Cumulative time can exceed elapsed session duration because agents can run together. Two successive two-minute tasks contribute no time saved; two fully parallel two-minute tasks save two minutes (50% of four minutes of estimated work). Parent/child overlap is excluded even in older nested histories, so waiting is not counted as extra parallel work. This conservative estimate can undercount useful parent work performed alongside a child; it does not measure exactly how long the task would have taken without delegation. The estimate is unavailable if an agent session or its timing is missing. Opening statistics in a child provides **Open coordinator for tree totals**.
 
 ## Interpret estimates carefully
 
