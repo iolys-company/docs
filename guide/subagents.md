@@ -55,7 +55,18 @@ When delegating edits, give each child a distinct area and ask the coordinator t
 | Explorer | Read-only code investigation under Plan restrictions, returning relevant files, symbols, and dependencies. It can investigate while the coordinator stays in Agent mode. |
 | [Custom agent](../customization/agents.md) | A reusable specialist role with its own instructions and tool selection, further limited by the coordinator's restrictions. |
 
-The coordinator can discover compatible configured models and select a provider, model, reasoning effort, and supported speed tier for a child. Without an override or a saved default, children inherit the coordinator's provider and model. Children using the same model also inherit its requested reasoning effort and speed tier. Each child keeps its selected custom-agent definition snapshot; later file edits do not update that conversation.
+By default, the coordinator is instructed to pass its current **provider, model, reasoning effort, and speed tier explicitly** when creating a child. It can inspect its current settings through the agent list. Older hidden default-model settings and selection guidance no longer influence delegation. Existing child conversations keep their selected model, settings, and custom-agent definition snapshot; later definition edits do not update that conversation.
+
+When you ask for task-appropriate choices, the coordinator consults the compatible model catalog and can choose a different provider, model, effort, and supported speed tier for each task. For example:
+
+```text
+Choose the provider, model, and reasoning effort best suited to each delegated
+task. Use Fast when available, while respecting my cost constraints.
+```
+
+It must use advertised values. If no current effort applies, it uses the target model's advertised default effort; models without selectable efforts omit that setting. Fast is a separate speed tier, not a lower reasoning effort. When requested, the coordinator selects an available accelerated tier using its exact catalog ID, which is not necessarily `fast`. If no suitable accelerated tier is available, it keeps the current or standard tier. These instructions guide the coordinator's judgment; iolys validates the chosen settings without automatically ranking models.
+
+For compatibility, an older tool call that omits provider/model still inherits the coordinator's selection. Same-model omissions also inherit effort and speed; a different model uses its default effort and the standard speed tier. Unsupported explicit selections fail before work starts.
 
 Explorer and Plan delegation require a provider whose tools can enforce those restrictions. Providers with native tools that iolys cannot disable are rejected when those tools conflict with the effective mode or agent profile. Choose a compatible provider/model if this happens.
 

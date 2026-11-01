@@ -91,11 +91,13 @@ Delegation has **two levels including the coordinator**. Only the root coordinat
 | `task` | Yes | Focused assignment; up to 16,000 characters. |
 | `requestId` | Yes | Stable key for this operation; see retry rules below. |
 | `agentProfileId` | No | Omit or use `builtin:agent` for a standard agent. Use `builtin:explorer` for read-only investigation under Plan restrictions, or an ID returned by `list_agent_profiles` for a custom role. |
-| `providerName`, `model` | No | Compatible configured provider and model. When omitted, use a configured default or inherit the coordinator's selection. |
-| `reasoningEffort`, `serviceTier` | No | Supported reasoning and speed settings. Same-model children inherit the coordinator's requested values unless overridden. |
+| `providerName`, `model` | No | The coordinator is instructed to pass its current provider/model explicitly by default, or choose advertised alternatives when asked to adapt. Omission remains compatible and inherits the coordinator; an explicit provider change without a model uses that provider's configured model. Hidden legacy defaults are ignored. |
+| `reasoningEffort`, `serviceTier` | No | Pass the coordinator's current values explicitly when supported. For task-appropriate choices, select advertised effort and speed values from `list_agent_models`; when Fast is requested, use a suitable accelerated tier if available. Omit effort if none is selectable. Tier IDs are provider-defined; use `default` for standard speed. |
 | `contextSummary` | No | Additional task context; up to 16,000 characters. |
 
-For example, the coordinator can call `spawn_agent` with these arguments to investigate code using Explorer:
+The coordinator can inspect its current settings with `list_agents`. When asked to choose suitable models/efforts or change configuration, it consults `list_agent_models` and passes the selected provider/model, selectable effort, and speed tier explicitly. If no current effort applies, it uses the target model's advertised default effort. Fast selection respects the user's cost constraints and never invents an unsupported tier. These instructions guide the model; the server does not automatically rank models.
+
+The following minimal schema example investigates code using Explorer. It omits optional model settings to illustrate the supported inheritance fallback; the coordinator is instructed to fill those settings explicitly in normal delegation:
 
 ```json
 {

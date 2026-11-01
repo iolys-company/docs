@@ -64,6 +64,8 @@ The GIF at `assets/diagrams/agent-creator-workflow.gif` is an illustrated exampl
 
 ## Subagents (November 1, 2026)
 
+- Explicit selection and removal of hidden preferences checked against [PR #312](https://github.com/iolys-company/iolys/pull/312) at revision `a8c6ba83`: `ChatPreferencesDataAccess`, `ChatSessionService.Collaboration`, `ChatModePromptHelper`, and `CollaborationTool`. Legacy defaults/guidance are ignored and cleared on settings saves; clients send only visible settings. Coordinator guidance passes its current provider/model/effort/tier explicitly by default, discovers task-appropriate alternatives when asked, and uses advertised accelerated tiers when Fast is requested and compatible with cost constraints. The server validates selections rather than ranking models; unsupported effort/tier IDs are rejected.
+
 - [PR #312](https://github.com/iolys-company/iolys/pull/312), reviewed at head `fbabd40e84bff88545f460370951c0d576e966b5`.
 - Default enablement confirmed by the product maintainer on 1 November 2026: subagents are enabled by default. This supersedes the disabled-by-default behavior described in the reviewed PR revision.
 - Workflow and limits checked against `docs/subagent-orchestration.md`, `src/Iolys.Core/Tools/Collaboration/CollaborationTool.cs`, and `src/Iolys.VisualStudio.Server/Sessions/ChatSessionService.Collaboration.cs`, including standard/Explorer profiles, native-tool compatibility, inherited restrictions, capacity, follow-ups, and cancellation.
