@@ -48,7 +48,7 @@ For credential storage and automatic iolys backend reporting, see [Data and priv
 
 Subagents are enabled by default. Open **Settings > Subagent settings** to enable or disable delegation and set **Maximum concurrent agents per workspace** (**1–10**, including coordinators). Select **Save global settings** to apply the changes to all workspaces on this installation. No additional provider/model allowlist is needed.
 
-The toolbar's **Agents** window shows activity, conversations, and workspace occupancy, with a link to the same settings. See [Subagents](subagents.md) for build availability, compatible models, permissions, and a complete walkthrough.
+The toolbar's **Agents** window shows activity, conversations, and workspace occupancy, with a link to the same settings. See [Subagents](subagents.md) for compatible models, permissions, and a complete walkthrough.
 
 ## Connect GitHub
 

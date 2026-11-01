@@ -60,7 +60,7 @@ For commands targeting another worktree or repository, see [Run commands in anot
 
 ## Delegate and coordinate
 
-The **Collaboration** group lets a coordinator delegate parts of a task and collect the results. [Subagents](../guide/subagents.md) are enabled by default; use **Settings > Subagent settings** to enable or disable them and set workspace capacity. These tools require a build containing the subagent feature, a compatible provider/model, and access through the selected agent's tool selection.
+The **Collaboration** group lets a coordinator delegate parts of a task and collect the results. [Subagents](../guide/subagents.md) are enabled by default; use **Settings > Subagent settings** to enable or disable them and set workspace capacity. These tools require a compatible provider/model and access through the selected agent's tool selection.
 
 | Tool | Purpose |
 | --- | --- |
