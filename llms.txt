@@ -19,7 +19,7 @@ Available models, tools, authentication, and usage reporting depend on the provi
 - [Review and undo changes](https://raw.githubusercontent.com/iolys-company/docs/main/guide/review.md): Inspect differences and undo tracked edits.
 - [Git and GitHub](https://raw.githubusercontent.com/iolys-company/docs/main/guide/git.md): Work with repository changes, commits, and pull requests.
 - [Parallel workspaces](https://raw.githubusercontent.com/iolys-company/docs/main/guide/parallel-workspaces.md): Create, use, and clean up isolated Git worktrees.
-- [Subagents](https://raw.githubusercontent.com/iolys-company/docs/main/guide/subagents.md): Delegate work with subagents enabled by default, follow child conversations, and control shared workspace capacity, permissions, and usage; available starting with 2026 November Update 1.
+- [Subagents](https://raw.githubusercontent.com/iolys-company/docs/main/guide/subagents.md): Delegate work with subagents enabled by default, follow child conversations, and control shared workspace capacity, permissions, and usage.
 - [Usage and costs](https://raw.githubusercontent.com/iolys-company/docs/main/guide/usage.md): Understand context, quotas, token usage, and cost estimates.
 - [Settings](https://raw.githubusercontent.com/iolys-company/docs/main/guide/settings.md): Find provider, model, permission, integration, and chat controls.
 

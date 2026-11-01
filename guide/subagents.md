@@ -7,9 +7,6 @@ description: Delegate focused tasks to subagents, follow their conversations, an
 
 Subagents let the agent handling your conversation delegate focused tasks, collect findings, and combine the results. Your main agent is the **coordinator**; each child agent has its own conversation and assignment. Use delegation for independent investigations, reviews, or changes with clear file boundaries.
 
-> [!NOTE]
-> Available starting with **2026 November Update 1**.
-
 Subagents work in the same workspace. Creating a child does not create a Git branch or a separate checkout. Use [parallel workspaces](parallel-workspaces.md) when independent tasks need isolated files and build state.
 
 ## Configure subagents
