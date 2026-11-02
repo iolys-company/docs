@@ -63,7 +63,7 @@ The coordinator and its subagents can use **different providers and models in th
 
 First [configure each provider](../providers/index.md) you want to use. Each selected model must support subagent sessions, tools, and the inherited restrictions. Delegation uses those existing connections; it does not install providers or sign in for you.
 
-Name the providers and assignments in your prompt. You can leave model selection to the coordinator so it uses compatible models from your current catalog:
+Name the providers, assignments, reasoning effort, and speed preferences in your prompt. You can leave model selection to the coordinator so it uses compatible models from your current catalog:
 
 ```text
 Investigate why the results grid sometimes stays empty. Delegate these two
@@ -73,8 +73,13 @@ independent investigations in parallel:
 - Use a Codex subagent to review the existing tests and identify missing
   coverage for an empty grid.
 
-Choose a compatible available model for each provider. Keep both
-investigations read-only. Wait for both agents, compare their findings,
+Choose a compatible available model for each provider. For the Codex
+subagent, use high reasoning effort and enable Fast using the selected
+model's advertised options. If high effort is unavailable, use the model's
+default effort; if Fast is unavailable, use standard speed. Report any
+fallback in your summary.
+
+Keep both investigations read-only. Wait for both agents, compare their findings,
 then explain the likely cause with file references and propose the
 smallest fix. If either provider is unavailable or incompatible, report
 the limitation instead of silently substituting another provider.
