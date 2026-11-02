@@ -7,6 +7,8 @@ description: Connect coding agents, hosted APIs, local models, and private endpo
 
 iolys brings your models and coding agents into one Visual Studio workflow. Add the providers you use, then choose a provider and model from the conversation picker. Your available models depend on your account, endpoint, installed CLI version, and model capabilities.
 
+You can also combine agents from different providers in one task: a coordinator can delegate to subagents using other configured, compatible providers and collect their results. See [Use agents from different providers](../guide/subagents.md#use-agents-from-different-providers) for an example prompt.
+
 ## Choose a connection
 
 | You want to use… | Start here | Authentication |

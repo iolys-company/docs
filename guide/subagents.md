@@ -1,6 +1,6 @@
 ---
 title: Delegate work to subagents
-description: Delegate focused tasks to subagents, follow their conversations, and control shared workspace capacity and permissions.
+description: Delegate focused tasks to subagents across different providers, follow their conversations, and control shared workspace capacity and permissions.
 ---
 
 # Delegate work to subagents
@@ -57,12 +57,30 @@ When delegating edits, give each child a distinct area and ask the coordinator t
 
 By default, the coordinator is instructed to pass its current **provider, model, reasoning effort, and speed tier explicitly** when creating a child. It can inspect its current settings through the agent list. Older hidden default-model settings and selection guidance no longer influence delegation. Existing child conversations keep their selected model, settings, and custom-agent definition snapshot; later definition edits do not update that conversation.
 
-When you ask for task-appropriate choices, the coordinator consults the compatible model catalog and can choose a different provider, model, effort, and supported speed tier for each task. For example:
+## Use agents from different providers
+
+The coordinator and its subagents can use **different providers and models in the same task**. For example, a coordinator using Codex can delegate work to a Claude Code agent and another Codex agent. The children can run in parallel within the workspace's concurrency limit, and the coordinator collects their findings in your original conversation.
+
+First [configure each provider](../providers/index.md) you want to use. Each selected model must support subagent sessions, tools, and the inherited restrictions. Delegation uses those existing connections; it does not install providers or sign in for you.
+
+Name the providers and assignments in your prompt. You can leave model selection to the coordinator so it uses compatible models from your current catalog:
 
 ```text
-Choose the provider, model, and reasoning effort best suited to each delegated
-task. Use Fast when available, while respecting my cost constraints.
+Investigate why the results grid sometimes stays empty. Delegate these two
+independent investigations in parallel:
+- Use a Claude Code subagent to trace the data-loading path and identify
+  where results might be lost.
+- Use a Codex subagent to review the existing tests and identify missing
+  coverage for an empty grid.
+
+Choose a compatible available model for each provider. Keep both
+investigations read-only. Wait for both agents, compare their findings,
+then explain the likely cause with file references and propose the
+smallest fix. If either provider is unavailable or incompatible, report
+the limitation instead of silently substituting another provider.
 ```
+
+You can also ask the coordinator to choose the provider, model, reasoning effort, and supported speed tier best suited to each task, rather than naming providers yourself. It consults the compatible model catalog. Include any cost constraints and whether to use Fast when available.
 
 It must use advertised values. If no current effort applies, it uses the target model's advertised default effort; models without selectable efforts omit that setting. Fast is a separate speed tier, not a lower reasoning effort. When requested, the coordinator selects an available accelerated tier using its exact catalog ID, which is not necessarily `fast`. If no suitable accelerated tier is available, it keeps the current or standard tier. These instructions guide the coordinator's judgment; iolys validates the chosen settings without automatically ranking models.
 
