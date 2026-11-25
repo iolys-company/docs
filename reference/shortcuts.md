@@ -45,6 +45,8 @@ Scrolling away from the bottom pauses automatic following of new content. Scroll
 | Conversation title editor | **Enter** | Confirm the edited title. |
 | Conversation title editor | **Escape** | Cancel editing. |
 | History sidebar splitter | **Left / Right** | Resize the sidebar. |
+| Message input resize grip | **Up / Down** | Increase or decrease the height of the draft. |
+| Message input resize grip | **Home** or double-click | Restore automatic height and exit Writing mode if active. |
 | Toolbar tour | **Left / Right** | Move between tour steps. |
 | Toolbar tour | **Escape** | Dismiss the tour. |
 | MCP Server Manager | **Ctrl + L** | Focus its search input. |

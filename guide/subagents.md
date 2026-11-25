@@ -97,9 +97,9 @@ Explorer and Plan delegation require a provider whose tools can enforce those re
 
 Select **Agents** in the chat toolbar. Each row identifies an agent, its status, model, reasoning effort, and fast tier when applicable. Progress or an error appears when available.
 
-![Agents window from an earlier build, showing a coordinator, children, and a legacy nested child.](../assets/screenshots/subagents/agents-window.png)
+![Agents window showing a Claude Code coordinator, a completed DeepSeek Explorer and a running Codex agent.](../assets/screenshots/subagents/agents-window.png)
 
-*Earlier-build example with illustrative names, model settings, and workspace occupancy. New delegation is limited to coordinator and direct children. Older nested conversations remain available in history.*
+*Two of four workspace slots are occupied in this example. The coordinator and the Codex agent are still running, and you can open the completed Explorer conversation to read its findings.*
 
 - Use **Refresh** to update activity and occupancy.
 - Use **Open conversation** to inspect an agent's full conversation.
@@ -123,9 +123,9 @@ Disabling subagents cancels child work and queued assignments while leaving the 
 
 Open **Session statistics** in the coordinator conversation to see how work is distributed across the agent tree. The view starts with **All agents**; select an individual agent to inspect its contribution.
 
-![Session Statistics showing estimated time saved, coordinator and cumulative time, the All agents selector, and individual agent activity.](../assets/screenshots/subagents/session-statistics-dark.png)
+![Session Statistics with a card for the coordinator and separate cards for its delegated tasks.](../assets/screenshots/subagents/session-statistics-dark.png)
 
-*Illustrative session with three agents and two delegated tasks. This capture predates the time-saved correction described below; durations, token counts, and model names are demonstration data.*
+*Each card shows the provider, model, processing time, turns and tool calls for one agent. Expand **Usage details** for its usage breakdown. The tasks and values are examples.*
 
 - Compare **Coordinator time** with **All agents · cumulative time** to understand the total time recorded across agent turns, including simultaneous work and waits.
 - Inspect delegated tasks, agent turns, tool calls, and modified files. Individual agent entries identify the model, reasoning effort, and service tier.

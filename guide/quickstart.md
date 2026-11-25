@@ -11,13 +11,17 @@ First, [install iolys](installation.md) and connect a [provider](../providers/in
 
 ## 1. Open the conversation
 
-Open your solution and click the **iolys button in the Visual Studio title bar**, beside Copilot, or select **View > Iolys Chat**. In the composer, select the provider and model you want to use. If the selected model offers reasoning effort, choose one of its available levels.
+Open your solution and click the **iolys button in the Visual Studio title bar**, beside Copilot, or select **View > Iolys Chat**. Check the model shown below the message box. If iolys has already selected the model you want, you can start typing. To choose another, open the model picker and select a [favorite or another available model](settings.md#save-favorite-models).
 
 Use **New Thread** when you want a separate task. Give each task one clear objective so its conversation and changes are easier to review later.
 
 ## 2. Attach the relevant code
 
 Open the file you want to discuss. Select a method, then use **+ > Selection** in the composer. The context chip identifies the captured selection and its file.
+
+![Chat composer with the attachment and Writing mode buttons above the draft and the model picker below it.](../assets/docs/images/chat-composer.png)
+
+*Use the plus button above your draft to attach the selection. The arrows beside it open Writing mode if you need more space.*
 
 You can also right-click in the Visual Studio editor and use **iolys actions > Add Selection to Chat**. Adding context preserves your draft and does not send the message.
 
@@ -47,11 +51,7 @@ Implement the cancellation change we discussed. Keep the existing public API
 compatible. Add a focused regression test and run the relevant tests.
 ```
 
-iolys shows the agent's tool activity as it works. When an approval request appears, check the action and its scope before choosing an option. You can use **Stop generating** to cancel active work.
-
-![An example cancellation-support task with completed tool calls, the code response, and a summary of verified behavior.](../assets/screenshots/theme/conversation-dark.png)
-
-*Read the tool activity and the explanation together. This example illustrates the workflow; verify the actual changes and tests in your solution.*
+Follow the agent’s [plan and tool activity in Chat](chat.md#inspect-tool-activity). When an approval request appears, check the action and its scope before choosing an option. You can use **Stop generating** to cancel active work.
 
 ## 5. Review the result
 

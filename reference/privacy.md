@@ -17,17 +17,19 @@ IDE attachments are explicit. An active-document attachment shares the file refe
 
 ## Local storage and credentials
 
-Conversations and their artifacts are stored under:
+Stable Visual Studio and Visual Studio 2026 Insiders keep separate iolys profiles. The active channel determines which conversation history, provider settings, and managed CLIs you see.
 
-```text
-<solution-root>\.vs\iolys\sessions\V3\
-```
+| Location | Stable | Insiders |
+| --- | --- | --- |
+| Conversations and artifacts under the solution root | `.vs\iolys\sessions\V3\` | `.vs\iolys-insiders\sessions\V3\` |
+| Per-user MCP configuration | `%LOCALAPPDATA%\Iolys\mcp_servers.json` | `%LOCALAPPDATA%\Iolys\Insiders\mcp_servers.json` |
+| Managed provider CLIs | `%LOCALAPPDATA%\Iolys\Providers\` | `%LOCALAPPDATA%\Iolys\Insiders\Providers\` |
 
-Session folders can contain messages, tool output, attachments, plans, logs, and permission decisions. Other user-level data is stored under `%LOCALAPPDATA%\Iolys`. Treat local session data and backups as project-sensitive information; do not commit them to a public repository.
+Session folders can contain messages, tool output, attachments, plans, logs, and permission decisions. Treat local session data and backups as project-sensitive information. Keep them out of public repositories.
 
 Provider API keys saved through iolys settings use Windows DPAPI in the current-user scope. MCP secret values are also protected in local configuration. This protection applies to those stored credentials, not to every conversation, attachment, or log. Managed CLIs maintain their own authentication state.
 
-Workspace skills and agent definitions are intended to be reviewable project files. Keep credentials out of their Markdown and scripts. Solution-level MCP configuration is shareable, but user-bound protected values are not portable credentials.
+Both channels read the same solution-level MCP file at `<solution-root>\mcp_servers.json` and the same project skills and agent definitions. Keep credentials out of shared Markdown and scripts. User-bound protected values in an MCP file can only be decrypted under the Windows account that saved them.
 
 ## Automatic enrollment and analytics
 
