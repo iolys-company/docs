@@ -11,11 +11,19 @@ An iolys conversation keeps your requests, replies, and tool activity together f
 
 Click the **iolys button in the Visual Studio title bar**, beside Copilot, or select **View > Iolys Chat** to open Chat. Use **New Thread** to start a separate task and **History** to reopen earlier conversations. The task title can be renamed, and tasks you no longer need can be deleted.
 
-![Visual Studio chat with the History sidebar open beside the selected conversation.](../assets/docs/screenshots/wide-chat-history.png)
-
-*History keeps earlier tasks beside the active conversation. Task names and conversation content are examples.*
-
 Choose the provider and model from the composer. Select **Agent** for implementation or **Plan** for investigation and planning. Plan restricts ordinary editing tools; builds, tests, and provider-native tools have additional rules described in [Permissions](../customization/permissions.md#keep-mode-and-permissions-separate). A [custom agent](../customization/agents.md) can provide a reusable role and tool selection.
+
+## Write a message
+
+Use **+** above the draft to attach context. The same row contains **Writing mode** beside the plus button and **Manage Models** on the right. The tools menu and context usage indicator appear there when available. Choose the conversation model below the draft.
+
+For a long prompt, select **Writing mode** to expand the draft into the available conversation space. Select **Exit writing mode** when you want to see more of the conversation again.
+
+![Expanded Writing mode with a multiline prompt, the resize grip above the draft, and the model picker below.](../assets/docs/images/chat-writing-mode.png)
+
+*The highlighted arrows beside the plus button show that Writing mode is active. Drag the grip above the draft for a custom height, or double-click it to restore automatic sizing.*
+
+With keyboard focus on the grip, **Up** and **Down** adjust the height and **Home** restores automatic sizing.
 
 Press **Enter** to send a message and **Shift+Enter** to insert a line break. Use **Stop generating** to cancel the active response. Cancellation does not undo changes already applied; use the [review controls](review.md) to inspect them.
 
@@ -24,6 +32,14 @@ Press **Enter** to send a message and **Shift+Enter** to insert a line break. Us
 For tasks using [subagents](subagents.md), select **Agents** in the toolbar to inspect progress and open child conversations. History groups children under their parent. Assignments, messages, and named child replies also appear in the coordinator chat; send follow-up requests there because child conversations are read-only for direct submissions.
 
 Hover over a tool call in the conversation to see a compact preview of its name, summary, and duration. Long summaries are shortened to keep the preview readable. Use this overview to follow the agent's work, then inspect the relevant tool output and [file changes](review.md) when reviewing the result.
+
+When the agent updates a plan, Chat shows the steps inline. A check mark means a step is complete, a spinning ring marks the current step, and a dotted ring marks a pending step. If the turn ends or you stop it, unfinished active steps return to pending. In Visual Studio, select **Open** on the plan to read its Markdown file.
+
+![An inline CSV export plan with two completed steps, an active test step and one pending documentation step.](../assets/docs/tools/inline-plan-progress.png)
+
+*In this example, the agent is testing fields that contain commas.*
+
+For an [MCP tool call](../customization/mcp.md#read-a-tool-result-in-chat), expand its row to inspect the result returned by the server.
 
 ## Send follow-ups while the agent works
 

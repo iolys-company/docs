@@ -60,9 +60,9 @@ The window also provides the session ID and **Send diagnostics** for support. Se
 
 For a task using [subagents](subagents.md), open **Session statistics** in the coordinator conversation. The view defaults to **All agents**; select an individual agent to inspect its activity and available usage. Human prompts and delegated tasks are counted separately. Modified-file totals count distinct files across the selected tree. Missing measurements remain unknown, partial coverage is identified, and credits are separated by provider.
 
-![Session Statistics with All agents selected, cumulative timing, delegated tasks, and per-agent activity.](../assets/screenshots/subagents/session-statistics-dark.png)
+![Agent cards showing processing time, turns and tool calls, with a Usage details control on each card.](../assets/screenshots/subagents/session-statistics-dark.png)
 
-*Demonstration values from an earlier build, before the time-saved correction below. Model names, usage, and durations are illustrative; the time estimate is not a performance benchmark.*
+*In this example the coordinator used 12 tool calls and the session review used 13. Expand **Usage details** on a card to inspect the measurements available for that agent.*
 
 For trees with delegated work, the timing summary shows:
 

@@ -32,6 +32,8 @@ On first launch, a welcome page opens in the Visual Studio document area. It int
 
 The extension starts its companion local server. Allow startup to finish before configuring a model or sending a message.
 
+Visual Studio 2026 Insiders uses a separate iolys profile. If you already use iolys in stable Visual Studio, configure your providers in Insiders when you first open it there. Conversations created in the former shared profile remain in the stable history. See [local storage and credentials](../reference/privacy.md#local-storage-and-credentials) for the profile paths.
+
 ## Connect your first provider
 
 From the initial chat screen, select **Configure providers**. You can return to setup through the chat's **Settings > Manage Providers**, or **Manage Models** in the model picker.
@@ -44,7 +46,7 @@ Choose one route:
 | Hosted API | Supply the credentials and endpoint required by the provider. |
 | Ollama | Connect to your local or remote Ollama instance and select an available model. |
 
-Follow the matching [provider guide](../providers/index.md), then return to Chat and select a model. The available models and controls depend on the provider and your account.
+Follow the matching [provider guide](../providers/index.md), then return to Chat. Check the model shown beside the composer. You can use the suggested model from your connected provider or open the [model picker](settings.md#choose-the-first-model) to choose another.
 
 ![Manage Providers with configured connections on the left, an Add Provider button, and the selected provider's model catalog on the right.](../assets/screenshots/theme/models-dark.png)
 

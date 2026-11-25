@@ -19,6 +19,18 @@ Use [Providers](../providers/index.md) to compare connection routes and find the
 
 *Provider management with illustrative model names and prices. Each provider presents the controls it supports.*
 
+### Choose the first model
+
+In a new chat, iolys prefers a model from a connected provider when it needs to pick one for you. If all providers are offline, the picker can show a provisional model. Once a provider connects, iolys can replace that automatic choice. If you selected a model yourself and its provider goes offline, the picker keeps your choice. Reconnect that provider or select another model to continue.
+
+### Save favorite models
+
+In **All models**, click the star beside a model, then open **Favorites** to find it again. Click the star a second time to remove it. Starring a model keeps the current chat selection. Favorites are saved by provider, so you can distinguish two connections offering the same model. Removing a provider also removes its favorites.
+
+![Model picker with the Favorites tab selected and a starred Codex model.](../assets/screenshots/model-picker/favorites.png)
+
+*The Favorites tab shows the provider beside each starred model. The Codex model and its capabilities are demonstration data.*
+
 ## Set reasoning effort and speed
 
 Reasoning effort appears only when the selected model offers supported levels. Select one of the values shown for that model. The list is provider-specific: a level available on one model may disappear when you switch to another.

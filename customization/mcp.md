@@ -47,9 +47,17 @@ Each server has its own execution policy:
 
 These policies remain subject to [chat permissions](permissions.md), tool enablement, agent restrictions, and chat mode. The server's **Resources**, **Prompts**, and **Instructions** tabs expose reference material; these are not silently converted into tools or merged into iolys instructions.
 
+## Read a tool result in Chat
+
+Find the server and tool name in the conversation, then select the chevron to expand the result. The row shows the call duration when available. The expanded result can include text or structured data returned by the server.
+
+![Two Sentry MCP calls in Chat, with find_projects expanded to show the returned project and search_logs collapsed.](../assets/screenshots/tool-call-tooltip/mcp-chat-result.png)
+
+*The example server returns one project named `sample-app`.*
+
 ## Share configuration and troubleshoot
 
-Global servers are stored in `%LOCALAPPDATA%\Iolys\mcp_servers.json`. Solution servers use `<solution-root>\mcp_servers.json`. If scopes contain the same stable ID, solution settings take precedence over workspace settings, then user settings.
+Global servers are stored in `%LOCALAPPDATA%\Iolys\mcp_servers.json` on Visual Studio Stable and `%LOCALAPPDATA%\Iolys\Insiders\mcp_servers.json` on Visual Studio Insiders. Both channels read the same solution file at `<solution-root>\mcp_servers.json`. If scopes contain the same stable ID, solution settings take precedence over workspace settings, then user settings. See [local storage and credentials](../reference/privacy.md#local-storage-and-credentials).
 
 Stored environment values are protected with Windows DPAPI and tied to the Windows user. For a shared solution configuration, arrange credentials locally for each developer. When editing, leaving an existing stored environment value blank preserves it; `NAME=` removes it.
 
