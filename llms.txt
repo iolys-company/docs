@@ -1,6 +1,6 @@
 # iolys documentation
 
-> iolys is an AI development workspace for Visual Studio 2022 and 2026 on Windows. Connect coding-agent providers, hosted APIs, or Ollama models to work with your solution, review changes, and customize agent workflows.
+> iolys is an AI development workspace for Visual Studio 2022 and 2026 on Windows. Connect coding-agent providers, hosted APIs, or local model servers to work with your solution, review changes, and customize agent workflows.
 
 The published documentation is at https://docs.getiolys.com/.
 The links below point to the Markdown sources of these guides.
@@ -38,6 +38,7 @@ Available models, tools, authentication, and usage reporting depend on the provi
 - [OpenCode Zen](https://raw.githubusercontent.com/iolys-company/docs/main/providers/opencode-zen-visual-studio-2026.md): Pay-as-you-go setup, reasoning levels, iolys and MCP tools, context, and conditional cost estimates.
 - [Databricks](https://raw.githubusercontent.com/iolys-company/docs/main/providers/databricks-visual-studio-2026.md): Model Serving endpoints and model capabilities.
 - [Ollama](https://raw.githubusercontent.com/iolys-company/docs/main/providers/ollama-visual-studio-2026.md): Local or remote servers, model installation, context and reasoning, RAM / VRAM controls, and generation performance.
+- [llama.app](https://raw.githubusercontent.com/iolys-company/docs/main/providers/llama-app-visual-studio-2026.md): Local AI on your workstation or your own GPU server, Hugging Face GGUF downloads, and model loading. Planned for Iolys 2026 November Update 3.
 - [Reasoning and speed](https://raw.githubusercontent.com/iolys-company/docs/main/providers/reasoning.md): Reasoning effort and supported service tiers.
 
 ## Customize your workflow

@@ -12,8 +12,8 @@ iolys brings AI coding agents, cloud APIs, and local models into Visual Studio. 
 You need:
 
 - **Visual Studio 2022 or Visual Studio 2026 on 64-bit Windows**.
-- An account with a [supported provider](../providers/index.md), API credentials, or an Ollama instance with a model available.
-- Internet access for downloading the extension, managed CLIs, and the private PowerShell 7 runtime prepared on the first shell-script execution, as well as for cloud providers. Later shell scripts reuse the installed runtime. Local model requirements depend on your Ollama setup.
+- An account with a [supported provider](../providers/index.md), API credentials, or a supported model server.
+- Internet access for downloading the extension, managed CLIs, and the private PowerShell 7 runtime prepared on the first shell-script execution, as well as for cloud providers. Later shell scripts reuse the installed runtime. Local model requirements depend on the model and the machine running it.
 - Git if you want to create [parallel workspaces](parallel-workspaces.md).
 
 Your provider account and usage remain separate from the extension. A subscription, an API key, and a local model are different connection routes; choose the route that matches the access you already have.
@@ -43,6 +43,7 @@ Choose one route:
 | Coding-agent CLI | Install the supported CLI from iolys, then complete its sign-in flow. |
 | Hosted API | Supply the credentials and endpoint required by the provider. |
 | Ollama | Connect to your local or remote Ollama instance and select an available model. |
+| [llama.app](../providers/llama-app-visual-studio-2026.md) (planned for November Update 3) | Connect your workstation or GPU server, download a GGUF model, and load it for chat. |
 
 Follow the matching [provider guide](../providers/index.md), then return to Chat and select a model. The available models and controls depend on the provider and your account.
 
