@@ -48,7 +48,7 @@ An agent can inspect project files, explain code, propose a plan, make changes, 
 | Use Claude Code, Codex, Kimi, Kiro, or Grok | [Managed CLI providers](providers/index.md#choose-a-connection) |
 | Connect hosted models or your own endpoint | [API providers](providers/api-providers.md) |
 | Use local or remote Ollama models | [Ollama](providers/ollama-visual-studio-2026.md) |
-| Run GGUF models on your workstation or your GPU server | [llama.app](providers/llama-app-visual-studio-2026.md) (planned for November Update 3) |
+| Run GGUF models on your workstation or your GPU server | [llama.app](providers/llama-app-visual-studio-2026.md) |
 | Ask about a file, selection, or screenshot | [Files, images, and context](guide/context.md) |
 | Work on several tasks independently | [Parallel workspaces](guide/parallel-workspaces.md) |
 | Delegate parts of one task to child agents | [Subagents](guide/subagents.md) |

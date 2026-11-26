@@ -82,3 +82,8 @@ The GIF at `assets/diagrams/agent-creator-workflow.gif` is an illustrated exampl
 - `assets/screenshots/llama-app/hugging-face.png` is an unchanged copy of `screenshots/llama-app/hugging-face.png` from the provider worktree. It shows the Hugging Face tab rendered from the WPF control with demonstration data.
 - Vision badge sources and effort discovery were checked against `LlamaAppHubCatalog.cs`, `LlamaAppProvider.cs`, and `LlamaAppProviderTests.cs` on `jgi/llama-app`. The screenshot question is a suggested prompt. End-to-end image analysis with a real model remains unverified.
 - `installed-models.png` and `chat-memory.png` are unchanged copies from `Iolys.PublicWebSite/src/Iolys.PublicWebsite/wwwroot/img/providers/llama-app/`. They show example model states on the local and office-gpu connections.
+
+## llama.app reply timing and model management (November 27, 2026)
+
+- Checked the final [provider guide from PR #401](https://github.com/iolys-company/iolys/blob/b509e5f5ba2ad40cc4672589e01a3d66f38b9dac/docs/provider/llama_app/README.md) against the merged implementation. [November Update 3](https://github.com/iolys-company/iolys/releases/tag/v2026.11.3.00000) includes that revision. The final implementation reads context presets and memory estimates from the router.
+- Footer labels and timing boundaries follow `ChatPerformanceFormatter`, `LlamaAppProvider` and `OpenAiCompatibleProvider`. The illustrated tooltip reuses the existing Ollama demonstration capture of the shared chat footer. Transfer speed and remaining time follow `DownloadEstimate`.

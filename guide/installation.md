@@ -43,7 +43,7 @@ Choose one route:
 | Coding-agent CLI | Install the supported CLI from iolys, then complete its sign-in flow. |
 | Hosted API | Supply the credentials and endpoint required by the provider. |
 | Ollama | Connect to your local or remote Ollama instance and select an available model. |
-| [llama.app](../providers/llama-app-visual-studio-2026.md) (planned for November Update 3) | Connect your workstation or GPU server, download a GGUF model, and load it for chat. |
+| [llama.app](../providers/llama-app-visual-studio-2026.md) | Connect your workstation or GPU server, download a GGUF model, and load it for chat. |
 
 Follow the matching [provider guide](../providers/index.md), then return to Chat and select a model. The available models and controls depend on the provider and your account.
 

@@ -10,6 +10,7 @@ iolys exposes several kinds of usage information. They answer different question
 | View | What it helps you understand |
 | --- | --- |
 | **Context window usage** | How much information occupies the selected model's conversation context. |
+| [**Elapsed time** on a llama.app reply](../providers/llama-app-visual-studio-2026.md#read-the-timing-for-a-reply) | Hover to see model calls, token counts, and timing for that turn. The footer shows generation speed when available. |
 | **Show usage** | Provider-reported account limits, quota consumption, credits, or reset times. |
 | **Session statistics** | Activity and timing for the current task, plus available cost or credit estimates. |
 

@@ -38,7 +38,7 @@ The selection belongs to the conversation. When switching to a model without eff
 | [OpenCode Zen](opencode-zen-visual-studio-2026.md#choose-a-reasoning-level) | Verified model profiles expose their supported levels. Choices can differ from Go; leaving effort unset keeps the provider default. |
 | [Databricks](databricks-visual-studio-2026.md) | Depends on the endpoint's model profile and transport. |
 | [Ollama](ollama-visual-studio-2026.md#set-reasoning-effort) | Uses named levels reported by the model. Thinking-capable GPT-OSS models also offer low, medium, and high on older Ollama versions without level metadata. |
-| [llama.app](llama-app-visual-studio-2026.md#choose-a-reasoning-effort) (planned for November Update 3) | Offers the levels advertised by the loaded or sleeping model. A model can show **Thinking** without an effort selector. Keeping the default leaves the choice to the server. |
+| [llama.app](llama-app-visual-studio-2026.md#choose-a-reasoning-effort) | Offers the levels advertised by the loaded or sleeping model. A model can show **Thinking** without an effort selector. Keeping the default leaves the choice to the server. |
 
 The generic OpenAI-compatible integration, Google, Groq, and NVIDIA NIM do not expose this shared effort control in the current implementation. Reasoning text may still be displayed where a provider supplies it; that does not imply a configurable effort level. For Ollama, a Thinking badge without named reasoning levels does not provide an Effort selector.
 
