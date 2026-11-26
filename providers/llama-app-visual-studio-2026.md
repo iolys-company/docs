@@ -9,7 +9,7 @@ description: Run a GGUF model on your workstation or your own GPU server. Connec
 
 With llama.app running on your workstation, iolys sends your prompt and its conversation context to the server on that same workstation. The model generates the reply there and returns it to Visual Studio. If you select your own remote GPU server instead, iolys sends the prompt and context to that machine over the network. The GPU server runs the model and sends back the reply.
 
-Hugging Face lets you search for models and download their GGUF weights to the selected server. Browsing either model catalog, downloading weights, and using enabled external tools can use the network even when inference runs on your workstation. See [Data and privacy](../reference/privacy.md).
+Hugging Face lets you search for models and download their GGUF weights to the selected server. Browsing either model catalog, downloading weights, and using enabled external tools can use the network even when inference runs on your workstation.
 
 <p><a class="doc-button" href="https://marketplace.visualstudio.com/items?itemName=iolys.iolys-visual-studio">Install iolys for Visual Studio <span aria-hidden="true">→</span></a></p>
 
