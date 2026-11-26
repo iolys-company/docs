@@ -5,7 +5,7 @@ description: Run a GGUF model on your workstation or your own GPU server. Connec
 
 # Local AI with llama.app in Visual Studio 2022 and 2026
 
-*Availability: llama.app support is planned for Iolys 2026 November Update 3.*
+*Available since Iolys 2026 November Update 3.*
 
 With llama.app running on your workstation, iolys sends your prompt and its conversation context to the server on that same workstation. The model generates the reply there and returns it to Visual Studio. If you select your own remote GPU server instead, iolys sends the prompt and context to that machine over the network. The GPU server runs the model and sends back the reply.
 
@@ -32,6 +32,33 @@ Hugging Face lets you search for models and download their GGUF weights to the s
 
 6. Return to the chat model picker, select the model under **llama.app · local**, and send a message.
 
+You can also select an installed model and send your first message directly. If the model is unloaded, chat shows **Load llama.app model** and waits for it to be ready before sending the request. A sleeping model wakes when it receives the request.
+
+## Read the timing for a reply
+
+Hover over **Elapsed time** at the bottom of a completed reply. The footer shows how long the whole turn took. Beside it, **tok/s** shows how quickly the model generated output when llama.app reports both output tokens and generation time.
+
+| In the tooltip | What it measures for this reply |
+| --- | --- |
+| **Model calls**, **Input tokens**, **Output tokens** | Completed model calls and the tokens they processed or generated. Output includes reasoning tokens when the model reports them. |
+| **Initial model load** | Time spent loading the model before the first request, when iolys loads it for this turn. |
+| **Context processing**, **Generation** | Time spent processing the prompt and producing output, respectively. |
+| **Total model request time** | Time iolys spent waiting for the completed model requests across the turn. |
+
+If the model calls a tool and then answers, the footer combines the completed model calls. For example, 180 output tokens generated in 6 seconds gives **30 tok/s**. Running the tool adds to **Elapsed time** and leaves the generation rate unchanged. The tooltip shows the measurements available for that reply.
+
+![Shared chat footer showing Elapsed time and tok/s beneath a reply, with the timing breakdown open](../assets/docs/provider/ollama/img/performance-tooltip-dark.png)
+
+*The same footer is shown here in an Ollama example. The two model calls took 7.60 seconds in total, including 6 seconds of generation, within a 12-second turn.*
+
+## Track downloads and choose a context length
+
+In **Installed models**, check **Downloads** for progress, transfer speed, and estimated time remaining once enough data has transferred. Choose **Pause download** to pause an active transfer or **Resume** to continue an incomplete one.
+
+If the server publishes several context presets for the same weights, select a **Context length** before choosing **Load**. Configure the presets in llama.app. When the server reports a memory estimate for the selected context, iolys displays it beside the model. Actual memory use can vary.
+
+During a conversation, click the context ring in the chat toolbar to see how much of the model's context is in use. iolys uses the input token count from the last model call when available and estimates it locally otherwise. The breakdown by category is always an estimate.
+
 ## Identify a server and free its memory
 
 To add a second machine, repeat the connection steps with an instance name such as `office-gpu` and that server's reachable HTTP or HTTPS address. Each server has its own downloads and loaded models.
@@ -41,6 +68,10 @@ Open **llama.app** in the chat header, select the named server, and check the ad
 ![Chat memory menu for llama.app · office-gpu showing the server address, Unload beside Q4_K_M, and Load beside Q5_K_M](../assets/screenshots/llama-app/chat-memory.png)
 
 *The address under the server name identifies the example GPU machine, `http://office-gpu:9931/v1`. Choosing **Unload** here releases Q4_K_M from that machine's memory.*
+
+If loading fails, **Installed models** and the chat memory menu show the error beside the model. An automatic load failure also stops the turn before the prompt is sent. If the error reports insufficient memory, try a smaller context preset. If it gives only an exit code, check the llama.app server log.
+
+To remove downloaded weights, use **Delete** in **Installed models** and confirm. Hover over a disabled **Delete** button to see the reason. Manage protected presets in llama.app.
 
 ## Choose a vision model and ask about a screenshot
 

@@ -24,7 +24,7 @@ You can also combine agents from different providers in one task: a coordinator 
 | Curated pay-as-you-go coding models | [OpenCode Zen](opencode-zen-visual-studio-2026.md) | OpenCode Zen API key |
 | Models included in an OpenCode Go subscription | [OpenCode Go](opencode-go-visual-studio-2026.md) | OpenCode API key |
 | Local or cloud models through an Ollama server | [Ollama](ollama-visual-studio-2026.md) | Server URL; cloud sign-in is managed on the Ollama server |
-| GGUF models on your workstation or your own GPU server | [llama.app](llama-app-visual-studio-2026.md) (planned for November Update 3) | Named connection with a server URL |
+| GGUF models on your workstation or your own GPU server | [llama.app](llama-app-visual-studio-2026.md) | Named connection with a server URL |
 | Your organization's Databricks Model Serving endpoints | [Databricks](databricks-visual-studio-2026.md) | Workspace URL and token |
 | A compatible proxy or self-hosted gateway | [Compatible endpoints](api-providers.md#compatible-endpoints) | Gateway URL and its required credentials |
 
