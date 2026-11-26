@@ -53,6 +53,8 @@
       href: ../providers/databricks-visual-studio-2026.md
     - name: Ollama
       href: ../providers/ollama-visual-studio-2026.md
+    - name: llama.app
+      href: ../providers/llama-app-visual-studio-2026.md
     - name: API providers
       href: ../providers/api-providers.md
     - name: Reasoning & speed

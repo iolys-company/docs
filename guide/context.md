@@ -50,6 +50,8 @@ differences, then propose the smallest changes needed to match it.
 
 The `read_image` tool can also inspect supported local image files when exposed by the provider. Image capability and available image tools vary by model and connection route. If an attachment is rejected, check the selected model and the [provider guide](../providers/index.md).
 
+With the planned llama.app integration, choose a **Vision** model, paste a screenshot of an error, and ask **“What does this error mean?”** The selected server receives both the image and the question. Choose your workstation's connection for local analysis or your remote GPU connection to analyze it there. See [Choose a vision model and ask about a screenshot](../providers/llama-app-visual-studio-2026.md#choose-a-vision-model-and-ask-about-a-screenshot).
+
 ## Control what is sent
 
 Explicit IDE context is never attached automatically. The chips make the pending selection or active-document references visible; remove a chip before sending to exclude that item from the next prompt. Those attachments are sent once with the next admitted or queued message and remain attached when a queued message is edited, retried, reordered, or steered.

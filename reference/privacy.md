@@ -13,6 +13,8 @@ Your chosen provider receives the context needed for the conversation: messages,
 
 A local Ollama endpoint can keep model inference on that machine, but other enabled services and iolys analytics may still use the network. Choose endpoints and tools according to your project's requirements.
 
+With the planned [llama.app integration](../providers/llama-app-visual-studio-2026.md), a server on your workstation receives the prompt and conversation context and generates the reply on that workstation. If you choose your own remote GPU server, that machine receives the prompt and context and runs inference. Catalog searches and GGUF downloads can contact llama.app or Hugging Face. Enabled external tools, including MCP tools, can also send data to their configured services.
+
 IDE attachments are explicit. An active-document attachment shares the file reference and display name, while a selection attachment can include the selected text, including unsaved content. Removing a chip stops its proactive inclusion in the next message; it does not disable the agent's file-reading tools.
 
 ## Local storage and credentials
